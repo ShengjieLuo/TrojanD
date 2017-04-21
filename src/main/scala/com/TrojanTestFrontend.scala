@@ -56,10 +56,7 @@ object TrojanTestFrontend {
                         val newPartition = partition.map(p => {
 			  println("  [Debug] Begin Dealing the element: "+p);
 			  val item = new Item("IP-hostmachine",p(0));
-                          item.setSYN(p(2).toInt);
-			  item.setUP(p(5).toInt,p(6).toInt,p(8).toInt);
-                          item.setPSH(p(10).toInt);
-			  item.setDOWN(p(13).toInt,p(14).toInt,p(16).toInt);
+			  item.setFromDataLine(p);
 			  ksession.insert(item);
                           ksession.fireAllRules();
 			  (p,1)
@@ -77,7 +74,6 @@ object TrojanTestFrontend {
     val config:KnowledgeBuilderConfiguration = KnowledgeBuilderFactory.newKnowledgeBuilderConfiguration()
     config.setProperty("drools.dialect.mvel.strict", "false")
     var kbuilder : KnowledgeBuilder  = KnowledgeBuilderFactory.newKnowledgeBuilder(config)
-    //kbuilder.add(ResourceFactory.newFileResource("/usr/local/DBNS/src/main/scala/com/rules/trojan/RuleV1.drl"), ResourceType.DRL)
     kbuilder.add(ResourceFactory.newFileResource("/usr/local/DBNS/mini.drl"), ResourceType.DRL)
     println("  [Debug]  Rule Error:"+kbuilder.getErrors().toString())
     var kbase : KnowledgeBase = KnowledgeBaseFactory.newKnowledgeBase()

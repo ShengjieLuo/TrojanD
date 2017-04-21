@@ -1,6 +1,6 @@
 name := "Simple Project"
 version := "1.0"
-scalaVersion := "2.10.5"
+scalaVersion := "2.11.8"
 libraryDependencies += "org.apache.spark" %% "spark-core" % "1.6.2"
 libraryDependencies += "org.apache.spark" % "spark-streaming_2.10" % "1.6.2"
 libraryDependencies += "org.apache.spark" % "spark-streaming-kafka_2.10" % "1.6.2"
