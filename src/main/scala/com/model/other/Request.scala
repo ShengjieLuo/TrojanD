@@ -16,6 +16,7 @@ class Request(){
   var all:List[AllParameter] = List()
   var single:List[SingleParameter] = List()
   var tool:List[ToolParameter] = List()
+  var ml:List[ML] = List() 
 
   def setTime(time:Time){
     beginTime = time.getbeginTime();
@@ -61,10 +62,16 @@ class Request(){
       tool = tool :+ obj
   }
 
+  def setMLParameter(obj1:Vector){
+      var obj:ML = new ML(obj1)
+      ml = ml :+ obj
+  }
+
   def getAllParameter():AllParameter = {return all.last}
   def getToolParameter():ToolParameter = {return tool.last}
   def getSingleParameter():SingleParameter = { return single.last}
   def getCompareParameter():CompareParameter = { return compare.last}  
+  def getMLParameter():ML = { return ml.last}
 
   def copyTo():Request = {
     var obj = new Request()
@@ -81,6 +88,7 @@ class Request(){
     if (tool.length>0) {obj.tool = this.tool}
     if (single.length>0) {obj.single = this.single}
     if (compare.length>0) {obj.compare = this.compare}
+    if (ml.length>0) {obj.ml = this.ml}
     return obj
   }
 
@@ -101,6 +109,8 @@ class Request(){
         compare.last.print()
       } else if (requestType == "TOOL"){
         tool.last.print()
+      } else if (requestType == "ML"){
+        ml.last.print()
       }
       println("=======================================")
   }
@@ -115,7 +125,10 @@ class Request(){
         return compare.last.equals(obj.compare.last)
       } else if (requestType == "TOOL"){
         return tool.last.equals(obj.tool.last)
-      } else {
+      } else if (requestType == "ML"){
+        return ml.last.equals(obj.ml.last)
+      }
+        else {
         return false
       }
     } else {

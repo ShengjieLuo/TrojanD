@@ -4,18 +4,37 @@ package rpc;
 option java_package = "com.rpc";
 option java_outer_classname = "Interface";
 
+message Vector{
+  repeated float value = 1;
+}
+
+message ML{
+  required Vector = 1;
+}
+
+enum RequestMode{
+  DEFAULT = 0;
+  OPTIMIZED = 1;
+  SIMPLE = 2;
+}
+
+enum RequestType{
+  ALL = 0;
+  COMPARE = 1;
+  SINGLE = 2;
+  TOOL = 3;
+  ML = 4;
+  NONE = 5;
+}
+
 message IRequest{
- 
-  message vector{
-    repeated value = 1;
-  }
 
   required string name = 1;
   required int32 num = 2;
   required int32 parent = 3;
   required int32 beginTime = 4;
   required int32 endTime = 5;
-  optional RequestMode mode = 6 [default=DEFAULT];
-  
-  optional vector = 7;
+  required RequestType type = 6 [default=NONE];
+  optional RequestMode mode = 7 [default=DEFAULT]; 
+  optional ML ml = 8;
 }  

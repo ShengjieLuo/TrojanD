@@ -72,8 +72,7 @@ public class Client {
 	  icom.setMethod(com.getMethod());
 	  icom.setIndex(com.getMethod());
 	  icom.setProblem(com.getProblem());
-          iRequest.setCompare(icom.build());
-	  
+          iRequest.setCompare(icom.build()); 
         } else if ( req.getRequestType().equals("TOOL")){
           iRequest.setType(IRequest.RequestType.TOOL);
 	  com.rpc.Interface.IRequest.ToolParameter.Builder itool = com.rpc.Interface.IRequest.ToolParameter.newBuilder();
@@ -82,6 +81,16 @@ public class Client {
           itool.setKind(tool.getKind());
           itool.setObject(tool.getObj());
           iRequest.setTool(itool.build());
+        } else if ( req.getRequestType().equals("ML")){
+          iRequest.setType(IRequest.RequestType.ML);
+          com.rpc.Interface.IRequest.ML.Builder iml = com.rpc.Interface.IRequest.ML.newBuilder();
+          com.rpc.Interface.IRequest.Vector.Builder ivector = com.rpc.Interface.IRequest.Vector.newBuilder();
+          com.model.other.ML ml = req.getMLParameter();
+          com.model.Vector vector = ml.getVector();
+	  List<Double> values = vector.getValue();
+          for (int i=0; i<values.size();i++){ivector.addValue(values[i])};
+          iml.setVector(ivecter.build());
+          iRequest.setML(iml.build());
         }
  
         if ( req.getRequestMode().equals("DEFAULT")){

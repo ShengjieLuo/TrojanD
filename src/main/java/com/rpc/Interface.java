@@ -8,149 +8,640 @@ public final class Interface {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
+  /**
+   * Protobuf enum {@code rpc.RequestMode}
+   */
+  public enum RequestMode
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>DEFAULT = 0;</code>
+     */
+    DEFAULT(0, 0),
+    /**
+     * <code>OPTIMIZED = 1;</code>
+     */
+    OPTIMIZED(1, 1),
+    /**
+     * <code>SIMPLE = 2;</code>
+     */
+    SIMPLE(2, 2),
+    ;
+
+    /**
+     * <code>DEFAULT = 0;</code>
+     */
+    public static final int DEFAULT_VALUE = 0;
+    /**
+     * <code>OPTIMIZED = 1;</code>
+     */
+    public static final int OPTIMIZED_VALUE = 1;
+    /**
+     * <code>SIMPLE = 2;</code>
+     */
+    public static final int SIMPLE_VALUE = 2;
+
+
+    public final int getNumber() { return value; }
+
+    public static RequestMode valueOf(int value) {
+      switch (value) {
+        case 0: return DEFAULT;
+        case 1: return OPTIMIZED;
+        case 2: return SIMPLE;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<RequestMode>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<RequestMode>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<RequestMode>() {
+            public RequestMode findValueByNumber(int number) {
+              return RequestMode.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rpc.Interface.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final RequestMode[] VALUES = values();
+
+    public static RequestMode valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private RequestMode(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:rpc.RequestMode)
+  }
+
+  public interface VectorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:rpc.Vector)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated float value = 1;</code>
+     */
+    java.util.List<java.lang.Float> getValueList();
+    /**
+     * <code>repeated float value = 1;</code>
+     */
+    int getValueCount();
+    /**
+     * <code>repeated float value = 1;</code>
+     */
+    float getValue(int index);
+  }
+  /**
+   * Protobuf type {@code rpc.Vector}
+   */
+  public static final class Vector extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:rpc.Vector)
+      VectorOrBuilder {
+    // Use Vector.newBuilder() to construct.
+    private Vector(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Vector(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Vector defaultInstance;
+    public static Vector getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Vector getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Vector(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 13: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                value_ = new java.util.ArrayList<java.lang.Float>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              value_.add(input.readFloat());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001) && input.getBytesUntilLimit() > 0) {
+                value_ = new java.util.ArrayList<java.lang.Float>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                value_.add(input.readFloat());
+              }
+              input.popLimit(limit);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          value_ = java.util.Collections.unmodifiableList(value_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.rpc.Interface.internal_static_rpc_Vector_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.rpc.Interface.internal_static_rpc_Vector_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.rpc.Interface.Vector.class, com.rpc.Interface.Vector.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Vector> PARSER =
+        new com.google.protobuf.AbstractParser<Vector>() {
+      public Vector parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Vector(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Vector> getParserForType() {
+      return PARSER;
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 1;
+    private java.util.List<java.lang.Float> value_;
+    /**
+     * <code>repeated float value = 1;</code>
+     */
+    public java.util.List<java.lang.Float>
+        getValueList() {
+      return value_;
+    }
+    /**
+     * <code>repeated float value = 1;</code>
+     */
+    public int getValueCount() {
+      return value_.size();
+    }
+    /**
+     * <code>repeated float value = 1;</code>
+     */
+    public float getValue(int index) {
+      return value_.get(index);
+    }
+
+    private void initFields() {
+      value_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < value_.size(); i++) {
+        output.writeFloat(1, value_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        dataSize = 4 * getValueList().size();
+        size += dataSize;
+        size += 1 * getValueList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.rpc.Interface.Vector parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rpc.Interface.Vector parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rpc.Interface.Vector parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rpc.Interface.Vector parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rpc.Interface.Vector parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.rpc.Interface.Vector parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.rpc.Interface.Vector parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.rpc.Interface.Vector parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.rpc.Interface.Vector parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.rpc.Interface.Vector parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.rpc.Interface.Vector prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code rpc.Vector}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:rpc.Vector)
+        com.rpc.Interface.VectorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.rpc.Interface.internal_static_rpc_Vector_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.rpc.Interface.internal_static_rpc_Vector_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.rpc.Interface.Vector.class, com.rpc.Interface.Vector.Builder.class);
+      }
+
+      // Construct using com.rpc.Interface.Vector.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        value_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.rpc.Interface.internal_static_rpc_Vector_descriptor;
+      }
+
+      public com.rpc.Interface.Vector getDefaultInstanceForType() {
+        return com.rpc.Interface.Vector.getDefaultInstance();
+      }
+
+      public com.rpc.Interface.Vector build() {
+        com.rpc.Interface.Vector result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.rpc.Interface.Vector buildPartial() {
+        com.rpc.Interface.Vector result = new com.rpc.Interface.Vector(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          value_ = java.util.Collections.unmodifiableList(value_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.value_ = value_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.rpc.Interface.Vector) {
+          return mergeFrom((com.rpc.Interface.Vector)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.rpc.Interface.Vector other) {
+        if (other == com.rpc.Interface.Vector.getDefaultInstance()) return this;
+        if (!other.value_.isEmpty()) {
+          if (value_.isEmpty()) {
+            value_ = other.value_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureValueIsMutable();
+            value_.addAll(other.value_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.rpc.Interface.Vector parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.rpc.Interface.Vector) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<java.lang.Float> value_ = java.util.Collections.emptyList();
+      private void ensureValueIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          value_ = new java.util.ArrayList<java.lang.Float>(value_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated float value = 1;</code>
+       */
+      public java.util.List<java.lang.Float>
+          getValueList() {
+        return java.util.Collections.unmodifiableList(value_);
+      }
+      /**
+       * <code>repeated float value = 1;</code>
+       */
+      public int getValueCount() {
+        return value_.size();
+      }
+      /**
+       * <code>repeated float value = 1;</code>
+       */
+      public float getValue(int index) {
+        return value_.get(index);
+      }
+      /**
+       * <code>repeated float value = 1;</code>
+       */
+      public Builder setValue(
+          int index, float value) {
+        ensureValueIsMutable();
+        value_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated float value = 1;</code>
+       */
+      public Builder addValue(float value) {
+        ensureValueIsMutable();
+        value_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated float value = 1;</code>
+       */
+      public Builder addAllValue(
+          java.lang.Iterable<? extends java.lang.Float> values) {
+        ensureValueIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, value_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated float value = 1;</code>
+       */
+      public Builder clearValue() {
+        value_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:rpc.Vector)
+    }
+
+    static {
+      defaultInstance = new Vector(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:rpc.Vector)
+  }
+
   public interface IRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:rpc.IRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .rpc.IRequest.RequestType type = 1;</code>
-     *
-     * <pre>
-     *Use in all Four Modes
-     * </pre>
-     */
-    boolean hasType();
-    /**
-     * <code>required .rpc.IRequest.RequestType type = 1;</code>
-     *
-     * <pre>
-     *Use in all Four Modes
-     * </pre>
-     */
-    com.rpc.Interface.IRequest.RequestType getType();
-
-    /**
-     * <code>required string name = 2;</code>
+     * <code>required string name = 1;</code>
      */
     boolean hasName();
     /**
-     * <code>required string name = 2;</code>
+     * <code>required string name = 1;</code>
      */
     java.lang.String getName();
     /**
-     * <code>required string name = 2;</code>
+     * <code>required string name = 1;</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>required int32 num = 3;</code>
+     * <code>required int32 num = 2;</code>
      */
     boolean hasNum();
     /**
-     * <code>required int32 num = 3;</code>
+     * <code>required int32 num = 2;</code>
      */
     int getNum();
 
     /**
-     * <code>required int32 parent = 4;</code>
+     * <code>required int32 parent = 3;</code>
      */
     boolean hasParent();
     /**
-     * <code>required int32 parent = 4;</code>
+     * <code>required int32 parent = 3;</code>
      */
     int getParent();
 
     /**
-     * <code>required int32 beginTime = 5;</code>
+     * <code>required int32 beginTime = 4;</code>
      */
     boolean hasBeginTime();
     /**
-     * <code>required int32 beginTime = 5;</code>
+     * <code>required int32 beginTime = 4;</code>
      */
     int getBeginTime();
 
     /**
-     * <code>required int32 endTime = 6;</code>
+     * <code>required int32 endTime = 5;</code>
      */
     boolean hasEndTime();
     /**
-     * <code>required int32 endTime = 6;</code>
+     * <code>required int32 endTime = 5;</code>
      */
     int getEndTime();
 
     /**
-     * <code>optional .rpc.IRequest.RequestMode mode = 7 [default = DEFAULT];</code>
+     * <code>optional .rpc.RequestMode mode = 6 [default = DEFAULT];</code>
      */
     boolean hasMode();
     /**
-     * <code>optional .rpc.IRequest.RequestMode mode = 7 [default = DEFAULT];</code>
+     * <code>optional .rpc.RequestMode mode = 6 [default = DEFAULT];</code>
      */
-    com.rpc.Interface.IRequest.RequestMode getMode();
+    com.rpc.Interface.RequestMode getMode();
 
     /**
-     * <code>optional .rpc.IRequest.CompareParameter compare = 8;</code>
-     *
-     * <pre>
-     *Used in Compare-Type Request
-     * </pre>
+     * <code>optional .rpc.Vector vector = 7;</code>
      */
-    boolean hasCompare();
+    boolean hasVector();
     /**
-     * <code>optional .rpc.IRequest.CompareParameter compare = 8;</code>
-     *
-     * <pre>
-     *Used in Compare-Type Request
-     * </pre>
+     * <code>optional .rpc.Vector vector = 7;</code>
      */
-    com.rpc.Interface.IRequest.CompareParameter getCompare();
+    com.rpc.Interface.Vector getVector();
     /**
-     * <code>optional .rpc.IRequest.CompareParameter compare = 8;</code>
-     *
-     * <pre>
-     *Used in Compare-Type Request
-     * </pre>
+     * <code>optional .rpc.Vector vector = 7;</code>
      */
-    com.rpc.Interface.IRequest.CompareParameterOrBuilder getCompareOrBuilder();
-
-    /**
-     * <code>optional .rpc.IRequest.AllParameter all = 9;</code>
-     */
-    boolean hasAll();
-    /**
-     * <code>optional .rpc.IRequest.AllParameter all = 9;</code>
-     */
-    com.rpc.Interface.IRequest.AllParameter getAll();
-    /**
-     * <code>optional .rpc.IRequest.AllParameter all = 9;</code>
-     */
-    com.rpc.Interface.IRequest.AllParameterOrBuilder getAllOrBuilder();
-
-    /**
-     * <code>optional .rpc.IRequest.SingleParameter single = 10;</code>
-     */
-    boolean hasSingle();
-    /**
-     * <code>optional .rpc.IRequest.SingleParameter single = 10;</code>
-     */
-    com.rpc.Interface.IRequest.SingleParameter getSingle();
-    /**
-     * <code>optional .rpc.IRequest.SingleParameter single = 10;</code>
-     */
-    com.rpc.Interface.IRequest.SingleParameterOrBuilder getSingleOrBuilder();
-
-    /**
-     * <code>optional .rpc.IRequest.ToolParameter tool = 11;</code>
-     */
-    boolean hasTool();
-    /**
-     * <code>optional .rpc.IRequest.ToolParameter tool = 11;</code>
-     */
-    com.rpc.Interface.IRequest.ToolParameter getTool();
-    /**
-     * <code>optional .rpc.IRequest.ToolParameter tool = 11;</code>
-     */
-    com.rpc.Interface.IRequest.ToolParameterOrBuilder getToolOrBuilder();
+    com.rpc.Interface.VectorOrBuilder getVectorOrBuilder();
   }
   /**
    * Protobuf type {@code rpc.IRequest}
@@ -204,104 +695,54 @@ public final class Interface {
               }
               break;
             }
-            case 8: {
-              int rawValue = input.readEnum();
-              com.rpc.Interface.IRequest.RequestType value = com.rpc.Interface.IRequest.RequestType.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(1, rawValue);
-              } else {
-                bitField0_ |= 0x00000001;
-                type_ = value;
-              }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              name_ = bs;
               break;
             }
-            case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+            case 16: {
               bitField0_ |= 0x00000002;
-              name_ = bs;
+              num_ = input.readInt32();
               break;
             }
             case 24: {
               bitField0_ |= 0x00000004;
-              num_ = input.readInt32();
+              parent_ = input.readInt32();
               break;
             }
             case 32: {
               bitField0_ |= 0x00000008;
-              parent_ = input.readInt32();
+              beginTime_ = input.readInt32();
               break;
             }
             case 40: {
               bitField0_ |= 0x00000010;
-              beginTime_ = input.readInt32();
-              break;
-            }
-            case 48: {
-              bitField0_ |= 0x00000020;
               endTime_ = input.readInt32();
               break;
             }
-            case 56: {
+            case 48: {
               int rawValue = input.readEnum();
-              com.rpc.Interface.IRequest.RequestMode value = com.rpc.Interface.IRequest.RequestMode.valueOf(rawValue);
+              com.rpc.Interface.RequestMode value = com.rpc.Interface.RequestMode.valueOf(rawValue);
               if (value == null) {
-                unknownFields.mergeVarintField(7, rawValue);
+                unknownFields.mergeVarintField(6, rawValue);
               } else {
-                bitField0_ |= 0x00000040;
+                bitField0_ |= 0x00000020;
                 mode_ = value;
               }
               break;
             }
-            case 66: {
-              com.rpc.Interface.IRequest.CompareParameter.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000080) == 0x00000080)) {
-                subBuilder = compare_.toBuilder();
+            case 58: {
+              com.rpc.Interface.Vector.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000040) == 0x00000040)) {
+                subBuilder = vector_.toBuilder();
               }
-              compare_ = input.readMessage(com.rpc.Interface.IRequest.CompareParameter.PARSER, extensionRegistry);
+              vector_ = input.readMessage(com.rpc.Interface.Vector.PARSER, extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(compare_);
-                compare_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(vector_);
+                vector_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00000080;
-              break;
-            }
-            case 74: {
-              com.rpc.Interface.IRequest.AllParameter.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000100) == 0x00000100)) {
-                subBuilder = all_.toBuilder();
-              }
-              all_ = input.readMessage(com.rpc.Interface.IRequest.AllParameter.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(all_);
-                all_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000100;
-              break;
-            }
-            case 82: {
-              com.rpc.Interface.IRequest.SingleParameter.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000200) == 0x00000200)) {
-                subBuilder = single_.toBuilder();
-              }
-              single_ = input.readMessage(com.rpc.Interface.IRequest.SingleParameter.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(single_);
-                single_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000200;
-              break;
-            }
-            case 90: {
-              com.rpc.Interface.IRequest.ToolParameter.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000400) == 0x00000400)) {
-                subBuilder = tool_.toBuilder();
-              }
-              tool_ = input.readMessage(com.rpc.Interface.IRequest.ToolParameter.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(tool_);
-                tool_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000400;
+              bitField0_ |= 0x00000040;
               break;
             }
           }
@@ -343,4899 +784,17 @@ public final class Interface {
       return PARSER;
     }
 
-    /**
-     * Protobuf enum {@code rpc.IRequest.RequestType}
-     */
-    public enum RequestType
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>ALL = 0;</code>
-       */
-      ALL(0, 0),
-      /**
-       * <code>SINGLE = 1;</code>
-       */
-      SINGLE(1, 1),
-      /**
-       * <code>COMPARE = 2;</code>
-       */
-      COMPARE(2, 2),
-      /**
-       * <code>TOOL = 3;</code>
-       */
-      TOOL(3, 3),
-      ;
-
-      /**
-       * <code>ALL = 0;</code>
-       */
-      public static final int ALL_VALUE = 0;
-      /**
-       * <code>SINGLE = 1;</code>
-       */
-      public static final int SINGLE_VALUE = 1;
-      /**
-       * <code>COMPARE = 2;</code>
-       */
-      public static final int COMPARE_VALUE = 2;
-      /**
-       * <code>TOOL = 3;</code>
-       */
-      public static final int TOOL_VALUE = 3;
-
-
-      public final int getNumber() { return value; }
-
-      public static RequestType valueOf(int value) {
-        switch (value) {
-          case 0: return ALL;
-          case 1: return SINGLE;
-          case 2: return COMPARE;
-          case 3: return TOOL;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<RequestType>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static com.google.protobuf.Internal.EnumLiteMap<RequestType>
-          internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<RequestType>() {
-              public RequestType findValueByNumber(int number) {
-                return RequestType.valueOf(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        return getDescriptor().getValues().get(index);
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return com.rpc.Interface.IRequest.getDescriptor().getEnumTypes().get(0);
-      }
-
-      private static final RequestType[] VALUES = values();
-
-      public static RequestType valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int index;
-      private final int value;
-
-      private RequestType(int index, int value) {
-        this.index = index;
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:rpc.IRequest.RequestType)
-    }
-
-    /**
-     * Protobuf enum {@code rpc.IRequest.RequestMode}
-     */
-    public enum RequestMode
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>DEFAULT = 0;</code>
-       */
-      DEFAULT(0, 0),
-      /**
-       * <code>OPTIMIZED = 1;</code>
-       */
-      OPTIMIZED(1, 1),
-      /**
-       * <code>SIMPLE = 2;</code>
-       */
-      SIMPLE(2, 2),
-      ;
-
-      /**
-       * <code>DEFAULT = 0;</code>
-       */
-      public static final int DEFAULT_VALUE = 0;
-      /**
-       * <code>OPTIMIZED = 1;</code>
-       */
-      public static final int OPTIMIZED_VALUE = 1;
-      /**
-       * <code>SIMPLE = 2;</code>
-       */
-      public static final int SIMPLE_VALUE = 2;
-
-
-      public final int getNumber() { return value; }
-
-      public static RequestMode valueOf(int value) {
-        switch (value) {
-          case 0: return DEFAULT;
-          case 1: return OPTIMIZED;
-          case 2: return SIMPLE;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<RequestMode>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static com.google.protobuf.Internal.EnumLiteMap<RequestMode>
-          internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<RequestMode>() {
-              public RequestMode findValueByNumber(int number) {
-                return RequestMode.valueOf(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        return getDescriptor().getValues().get(index);
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return com.rpc.Interface.IRequest.getDescriptor().getEnumTypes().get(1);
-      }
-
-      private static final RequestMode[] VALUES = values();
-
-      public static RequestMode valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int index;
-      private final int value;
-
-      private RequestMode(int index, int value) {
-        this.index = index;
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:rpc.IRequest.RequestMode)
-    }
-
-    public interface CompareParameterOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:rpc.IRequest.CompareParameter)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>required string objectAType = 1;</code>
-       *
-       * <pre>
-       *Compare Object Type : "IP-SIZE","DNS-COUNT"
-       * </pre>
-       */
-      boolean hasObjectAType();
-      /**
-       * <code>required string objectAType = 1;</code>
-       *
-       * <pre>
-       *Compare Object Type : "IP-SIZE","DNS-COUNT"
-       * </pre>
-       */
-      java.lang.String getObjectAType();
-      /**
-       * <code>required string objectAType = 1;</code>
-       *
-       * <pre>
-       *Compare Object Type : "IP-SIZE","DNS-COUNT"
-       * </pre>
-       */
-      com.google.protobuf.ByteString
-          getObjectATypeBytes();
-
-      /**
-       * <code>required string objectA = 2;</code>
-       *
-       * <pre>
-       *Compare Object A : "202.120.37.78","all-average","all-max","all-min"
-       * </pre>
-       */
-      boolean hasObjectA();
-      /**
-       * <code>required string objectA = 2;</code>
-       *
-       * <pre>
-       *Compare Object A : "202.120.37.78","all-average","all-max","all-min"
-       * </pre>
-       */
-      java.lang.String getObjectA();
-      /**
-       * <code>required string objectA = 2;</code>
-       *
-       * <pre>
-       *Compare Object A : "202.120.37.78","all-average","all-max","all-min"
-       * </pre>
-       */
-      com.google.protobuf.ByteString
-          getObjectABytes();
-
-      /**
-       * <code>required string objectBType = 3;</code>
-       *
-       * <pre>
-       *Compare Object Type : "IP-SIZE","DNS-COUNT"
-       * </pre>
-       */
-      boolean hasObjectBType();
-      /**
-       * <code>required string objectBType = 3;</code>
-       *
-       * <pre>
-       *Compare Object Type : "IP-SIZE","DNS-COUNT"
-       * </pre>
-       */
-      java.lang.String getObjectBType();
-      /**
-       * <code>required string objectBType = 3;</code>
-       *
-       * <pre>
-       *Compare Object Type : "IP-SIZE","DNS-COUNT"
-       * </pre>
-       */
-      com.google.protobuf.ByteString
-          getObjectBTypeBytes();
-
-      /**
-       * <code>required string objectB = 4;</code>
-       *
-       * <pre>
-       *Compare Object B : "202.120.37.78","all-average","all-max","all-min"
-       * </pre>
-       */
-      boolean hasObjectB();
-      /**
-       * <code>required string objectB = 4;</code>
-       *
-       * <pre>
-       *Compare Object B : "202.120.37.78","all-average","all-max","all-min"
-       * </pre>
-       */
-      java.lang.String getObjectB();
-      /**
-       * <code>required string objectB = 4;</code>
-       *
-       * <pre>
-       *Compare Object B : "202.120.37.78","all-average","all-max","all-min"
-       * </pre>
-       */
-      com.google.protobuf.ByteString
-          getObjectBBytes();
-
-      /**
-       * <code>required string method = 5;</code>
-       *
-       * <pre>
-       *Compare Method: "Ratio","ML"
-       * </pre>
-       */
-      boolean hasMethod();
-      /**
-       * <code>required string method = 5;</code>
-       *
-       * <pre>
-       *Compare Method: "Ratio","ML"
-       * </pre>
-       */
-      java.lang.String getMethod();
-      /**
-       * <code>required string method = 5;</code>
-       *
-       * <pre>
-       *Compare Method: "Ratio","ML"
-       * </pre>
-       */
-      com.google.protobuf.ByteString
-          getMethodBytes();
-
-      /**
-       * <code>optional string index = 6;</code>
-       *
-       * <pre>
-       *Compare Index(optional)
-       * </pre>
-       */
-      boolean hasIndex();
-      /**
-       * <code>optional string index = 6;</code>
-       *
-       * <pre>
-       *Compare Index(optional)
-       * </pre>
-       */
-      java.lang.String getIndex();
-      /**
-       * <code>optional string index = 6;</code>
-       *
-       * <pre>
-       *Compare Index(optional)
-       * </pre>
-       */
-      com.google.protobuf.ByteString
-          getIndexBytes();
-
-      /**
-       * <code>optional string problem = 7;</code>
-       *
-       * <pre>
-       *Compare Problem(optional)
-       * </pre>
-       */
-      boolean hasProblem();
-      /**
-       * <code>optional string problem = 7;</code>
-       *
-       * <pre>
-       *Compare Problem(optional)
-       * </pre>
-       */
-      java.lang.String getProblem();
-      /**
-       * <code>optional string problem = 7;</code>
-       *
-       * <pre>
-       *Compare Problem(optional)
-       * </pre>
-       */
-      com.google.protobuf.ByteString
-          getProblemBytes();
-    }
-    /**
-     * Protobuf type {@code rpc.IRequest.CompareParameter}
-     */
-    public static final class CompareParameter extends
-        com.google.protobuf.GeneratedMessage implements
-        // @@protoc_insertion_point(message_implements:rpc.IRequest.CompareParameter)
-        CompareParameterOrBuilder {
-      // Use CompareParameter.newBuilder() to construct.
-      private CompareParameter(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-        super(builder);
-        this.unknownFields = builder.getUnknownFields();
-      }
-      private CompareParameter(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-      private static final CompareParameter defaultInstance;
-      public static CompareParameter getDefaultInstance() {
-        return defaultInstance;
-      }
-
-      public CompareParameter getDefaultInstanceForType() {
-        return defaultInstance;
-      }
-
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-          getUnknownFields() {
-        return this.unknownFields;
-      }
-      private CompareParameter(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        initFields();
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!parseUnknownField(input, unknownFields,
-                                       extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-              case 10: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000001;
-                objectAType_ = bs;
-                break;
-              }
-              case 18: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000002;
-                objectA_ = bs;
-                break;
-              }
-              case 26: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000004;
-                objectBType_ = bs;
-                break;
-              }
-              case 34: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000008;
-                objectB_ = bs;
-                break;
-              }
-              case 42: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000010;
-                method_ = bs;
-                break;
-              }
-              case 50: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000020;
-                index_ = bs;
-                break;
-              }
-              case 58: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000040;
-                problem_ = bs;
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e.getMessage()).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.rpc.Interface.internal_static_rpc_IRequest_CompareParameter_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.rpc.Interface.internal_static_rpc_IRequest_CompareParameter_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.rpc.Interface.IRequest.CompareParameter.class, com.rpc.Interface.IRequest.CompareParameter.Builder.class);
-      }
-
-      public static com.google.protobuf.Parser<CompareParameter> PARSER =
-          new com.google.protobuf.AbstractParser<CompareParameter>() {
-        public CompareParameter parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new CompareParameter(input, extensionRegistry);
-        }
-      };
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<CompareParameter> getParserForType() {
-        return PARSER;
-      }
-
-      private int bitField0_;
-      public static final int OBJECTATYPE_FIELD_NUMBER = 1;
-      private java.lang.Object objectAType_;
-      /**
-       * <code>required string objectAType = 1;</code>
-       *
-       * <pre>
-       *Compare Object Type : "IP-SIZE","DNS-COUNT"
-       * </pre>
-       */
-      public boolean hasObjectAType() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required string objectAType = 1;</code>
-       *
-       * <pre>
-       *Compare Object Type : "IP-SIZE","DNS-COUNT"
-       * </pre>
-       */
-      public java.lang.String getObjectAType() {
-        java.lang.Object ref = objectAType_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            objectAType_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>required string objectAType = 1;</code>
-       *
-       * <pre>
-       *Compare Object Type : "IP-SIZE","DNS-COUNT"
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getObjectATypeBytes() {
-        java.lang.Object ref = objectAType_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          objectAType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int OBJECTA_FIELD_NUMBER = 2;
-      private java.lang.Object objectA_;
-      /**
-       * <code>required string objectA = 2;</code>
-       *
-       * <pre>
-       *Compare Object A : "202.120.37.78","all-average","all-max","all-min"
-       * </pre>
-       */
-      public boolean hasObjectA() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required string objectA = 2;</code>
-       *
-       * <pre>
-       *Compare Object A : "202.120.37.78","all-average","all-max","all-min"
-       * </pre>
-       */
-      public java.lang.String getObjectA() {
-        java.lang.Object ref = objectA_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            objectA_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>required string objectA = 2;</code>
-       *
-       * <pre>
-       *Compare Object A : "202.120.37.78","all-average","all-max","all-min"
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getObjectABytes() {
-        java.lang.Object ref = objectA_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          objectA_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int OBJECTBTYPE_FIELD_NUMBER = 3;
-      private java.lang.Object objectBType_;
-      /**
-       * <code>required string objectBType = 3;</code>
-       *
-       * <pre>
-       *Compare Object Type : "IP-SIZE","DNS-COUNT"
-       * </pre>
-       */
-      public boolean hasObjectBType() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>required string objectBType = 3;</code>
-       *
-       * <pre>
-       *Compare Object Type : "IP-SIZE","DNS-COUNT"
-       * </pre>
-       */
-      public java.lang.String getObjectBType() {
-        java.lang.Object ref = objectBType_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            objectBType_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>required string objectBType = 3;</code>
-       *
-       * <pre>
-       *Compare Object Type : "IP-SIZE","DNS-COUNT"
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getObjectBTypeBytes() {
-        java.lang.Object ref = objectBType_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          objectBType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int OBJECTB_FIELD_NUMBER = 4;
-      private java.lang.Object objectB_;
-      /**
-       * <code>required string objectB = 4;</code>
-       *
-       * <pre>
-       *Compare Object B : "202.120.37.78","all-average","all-max","all-min"
-       * </pre>
-       */
-      public boolean hasObjectB() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
-      }
-      /**
-       * <code>required string objectB = 4;</code>
-       *
-       * <pre>
-       *Compare Object B : "202.120.37.78","all-average","all-max","all-min"
-       * </pre>
-       */
-      public java.lang.String getObjectB() {
-        java.lang.Object ref = objectB_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            objectB_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>required string objectB = 4;</code>
-       *
-       * <pre>
-       *Compare Object B : "202.120.37.78","all-average","all-max","all-min"
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getObjectBBytes() {
-        java.lang.Object ref = objectB_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          objectB_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int METHOD_FIELD_NUMBER = 5;
-      private java.lang.Object method_;
-      /**
-       * <code>required string method = 5;</code>
-       *
-       * <pre>
-       *Compare Method: "Ratio","ML"
-       * </pre>
-       */
-      public boolean hasMethod() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
-      }
-      /**
-       * <code>required string method = 5;</code>
-       *
-       * <pre>
-       *Compare Method: "Ratio","ML"
-       * </pre>
-       */
-      public java.lang.String getMethod() {
-        java.lang.Object ref = method_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            method_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>required string method = 5;</code>
-       *
-       * <pre>
-       *Compare Method: "Ratio","ML"
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getMethodBytes() {
-        java.lang.Object ref = method_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          method_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int INDEX_FIELD_NUMBER = 6;
-      private java.lang.Object index_;
-      /**
-       * <code>optional string index = 6;</code>
-       *
-       * <pre>
-       *Compare Index(optional)
-       * </pre>
-       */
-      public boolean hasIndex() {
-        return ((bitField0_ & 0x00000020) == 0x00000020);
-      }
-      /**
-       * <code>optional string index = 6;</code>
-       *
-       * <pre>
-       *Compare Index(optional)
-       * </pre>
-       */
-      public java.lang.String getIndex() {
-        java.lang.Object ref = index_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            index_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>optional string index = 6;</code>
-       *
-       * <pre>
-       *Compare Index(optional)
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getIndexBytes() {
-        java.lang.Object ref = index_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          index_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int PROBLEM_FIELD_NUMBER = 7;
-      private java.lang.Object problem_;
-      /**
-       * <code>optional string problem = 7;</code>
-       *
-       * <pre>
-       *Compare Problem(optional)
-       * </pre>
-       */
-      public boolean hasProblem() {
-        return ((bitField0_ & 0x00000040) == 0x00000040);
-      }
-      /**
-       * <code>optional string problem = 7;</code>
-       *
-       * <pre>
-       *Compare Problem(optional)
-       * </pre>
-       */
-      public java.lang.String getProblem() {
-        java.lang.Object ref = problem_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            problem_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>optional string problem = 7;</code>
-       *
-       * <pre>
-       *Compare Problem(optional)
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getProblemBytes() {
-        java.lang.Object ref = problem_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          problem_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      private void initFields() {
-        objectAType_ = "";
-        objectA_ = "";
-        objectBType_ = "";
-        objectB_ = "";
-        method_ = "";
-        index_ = "";
-        problem_ = "";
-      }
-      private byte memoizedIsInitialized = -1;
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        if (!hasObjectAType()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        if (!hasObjectA()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        if (!hasObjectBType()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        if (!hasObjectB()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        if (!hasMethod()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        getSerializedSize();
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          output.writeBytes(1, getObjectATypeBytes());
-        }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          output.writeBytes(2, getObjectABytes());
-        }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          output.writeBytes(3, getObjectBTypeBytes());
-        }
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          output.writeBytes(4, getObjectBBytes());
-        }
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
-          output.writeBytes(5, getMethodBytes());
-        }
-        if (((bitField0_ & 0x00000020) == 0x00000020)) {
-          output.writeBytes(6, getIndexBytes());
-        }
-        if (((bitField0_ & 0x00000040) == 0x00000040)) {
-          output.writeBytes(7, getProblemBytes());
-        }
-        getUnknownFields().writeTo(output);
-      }
-
-      private int memoizedSerializedSize = -1;
-      public int getSerializedSize() {
-        int size = memoizedSerializedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(1, getObjectATypeBytes());
-        }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(2, getObjectABytes());
-        }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(3, getObjectBTypeBytes());
-        }
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(4, getObjectBBytes());
-        }
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(5, getMethodBytes());
-        }
-        if (((bitField0_ & 0x00000020) == 0x00000020)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(6, getIndexBytes());
-        }
-        if (((bitField0_ & 0x00000040) == 0x00000040)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(7, getProblemBytes());
-        }
-        size += getUnknownFields().getSerializedSize();
-        memoizedSerializedSize = size;
-        return size;
-      }
-
-      private static final long serialVersionUID = 0L;
-      @java.lang.Override
-      protected java.lang.Object writeReplace()
-          throws java.io.ObjectStreamException {
-        return super.writeReplace();
-      }
-
-      public static com.rpc.Interface.IRequest.CompareParameter parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.rpc.Interface.IRequest.CompareParameter parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.rpc.Interface.IRequest.CompareParameter parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.rpc.Interface.IRequest.CompareParameter parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.rpc.Interface.IRequest.CompareParameter parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input);
-      }
-      public static com.rpc.Interface.IRequest.CompareParameter parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
-      }
-      public static com.rpc.Interface.IRequest.CompareParameter parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
-      }
-      public static com.rpc.Interface.IRequest.CompareParameter parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
-      }
-      public static com.rpc.Interface.IRequest.CompareParameter parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input);
-      }
-      public static com.rpc.Interface.IRequest.CompareParameter parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
-      }
-
-      public static Builder newBuilder() { return Builder.create(); }
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder(com.rpc.Interface.IRequest.CompareParameter prototype) {
-        return newBuilder().mergeFrom(prototype);
-      }
-      public Builder toBuilder() { return newBuilder(this); }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * Protobuf type {@code rpc.IRequest.CompareParameter}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:rpc.IRequest.CompareParameter)
-          com.rpc.Interface.IRequest.CompareParameterOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return com.rpc.Interface.internal_static_rpc_IRequest_CompareParameter_descriptor;
-        }
-
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return com.rpc.Interface.internal_static_rpc_IRequest_CompareParameter_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  com.rpc.Interface.IRequest.CompareParameter.class, com.rpc.Interface.IRequest.CompareParameter.Builder.class);
-        }
-
-        // Construct using com.rpc.Interface.IRequest.CompareParameter.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          }
-        }
-        private static Builder create() {
-          return new Builder();
-        }
-
-        public Builder clear() {
-          super.clear();
-          objectAType_ = "";
-          bitField0_ = (bitField0_ & ~0x00000001);
-          objectA_ = "";
-          bitField0_ = (bitField0_ & ~0x00000002);
-          objectBType_ = "";
-          bitField0_ = (bitField0_ & ~0x00000004);
-          objectB_ = "";
-          bitField0_ = (bitField0_ & ~0x00000008);
-          method_ = "";
-          bitField0_ = (bitField0_ & ~0x00000010);
-          index_ = "";
-          bitField0_ = (bitField0_ & ~0x00000020);
-          problem_ = "";
-          bitField0_ = (bitField0_ & ~0x00000040);
-          return this;
-        }
-
-        public Builder clone() {
-          return create().mergeFrom(buildPartial());
-        }
-
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return com.rpc.Interface.internal_static_rpc_IRequest_CompareParameter_descriptor;
-        }
-
-        public com.rpc.Interface.IRequest.CompareParameter getDefaultInstanceForType() {
-          return com.rpc.Interface.IRequest.CompareParameter.getDefaultInstance();
-        }
-
-        public com.rpc.Interface.IRequest.CompareParameter build() {
-          com.rpc.Interface.IRequest.CompareParameter result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        public com.rpc.Interface.IRequest.CompareParameter buildPartial() {
-          com.rpc.Interface.IRequest.CompareParameter result = new com.rpc.Interface.IRequest.CompareParameter(this);
-          int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
-          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-            to_bitField0_ |= 0x00000001;
-          }
-          result.objectAType_ = objectAType_;
-          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-            to_bitField0_ |= 0x00000002;
-          }
-          result.objectA_ = objectA_;
-          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-            to_bitField0_ |= 0x00000004;
-          }
-          result.objectBType_ = objectBType_;
-          if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-            to_bitField0_ |= 0x00000008;
-          }
-          result.objectB_ = objectB_;
-          if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
-            to_bitField0_ |= 0x00000010;
-          }
-          result.method_ = method_;
-          if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
-            to_bitField0_ |= 0x00000020;
-          }
-          result.index_ = index_;
-          if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
-            to_bitField0_ |= 0x00000040;
-          }
-          result.problem_ = problem_;
-          result.bitField0_ = to_bitField0_;
-          onBuilt();
-          return result;
-        }
-
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof com.rpc.Interface.IRequest.CompareParameter) {
-            return mergeFrom((com.rpc.Interface.IRequest.CompareParameter)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(com.rpc.Interface.IRequest.CompareParameter other) {
-          if (other == com.rpc.Interface.IRequest.CompareParameter.getDefaultInstance()) return this;
-          if (other.hasObjectAType()) {
-            bitField0_ |= 0x00000001;
-            objectAType_ = other.objectAType_;
-            onChanged();
-          }
-          if (other.hasObjectA()) {
-            bitField0_ |= 0x00000002;
-            objectA_ = other.objectA_;
-            onChanged();
-          }
-          if (other.hasObjectBType()) {
-            bitField0_ |= 0x00000004;
-            objectBType_ = other.objectBType_;
-            onChanged();
-          }
-          if (other.hasObjectB()) {
-            bitField0_ |= 0x00000008;
-            objectB_ = other.objectB_;
-            onChanged();
-          }
-          if (other.hasMethod()) {
-            bitField0_ |= 0x00000010;
-            method_ = other.method_;
-            onChanged();
-          }
-          if (other.hasIndex()) {
-            bitField0_ |= 0x00000020;
-            index_ = other.index_;
-            onChanged();
-          }
-          if (other.hasProblem()) {
-            bitField0_ |= 0x00000040;
-            problem_ = other.problem_;
-            onChanged();
-          }
-          this.mergeUnknownFields(other.getUnknownFields());
-          return this;
-        }
-
-        public final boolean isInitialized() {
-          if (!hasObjectAType()) {
-            
-            return false;
-          }
-          if (!hasObjectA()) {
-            
-            return false;
-          }
-          if (!hasObjectBType()) {
-            
-            return false;
-          }
-          if (!hasObjectB()) {
-            
-            return false;
-          }
-          if (!hasMethod()) {
-            
-            return false;
-          }
-          return true;
-        }
-
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          com.rpc.Interface.IRequest.CompareParameter parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (com.rpc.Interface.IRequest.CompareParameter) e.getUnfinishedMessage();
-            throw e;
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-        private int bitField0_;
-
-        private java.lang.Object objectAType_ = "";
-        /**
-         * <code>required string objectAType = 1;</code>
-         *
-         * <pre>
-         *Compare Object Type : "IP-SIZE","DNS-COUNT"
-         * </pre>
-         */
-        public boolean hasObjectAType() {
-          return ((bitField0_ & 0x00000001) == 0x00000001);
-        }
-        /**
-         * <code>required string objectAType = 1;</code>
-         *
-         * <pre>
-         *Compare Object Type : "IP-SIZE","DNS-COUNT"
-         * </pre>
-         */
-        public java.lang.String getObjectAType() {
-          java.lang.Object ref = objectAType_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              objectAType_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>required string objectAType = 1;</code>
-         *
-         * <pre>
-         *Compare Object Type : "IP-SIZE","DNS-COUNT"
-         * </pre>
-         */
-        public com.google.protobuf.ByteString
-            getObjectATypeBytes() {
-          java.lang.Object ref = objectAType_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            objectAType_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>required string objectAType = 1;</code>
-         *
-         * <pre>
-         *Compare Object Type : "IP-SIZE","DNS-COUNT"
-         * </pre>
-         */
-        public Builder setObjectAType(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-          objectAType_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string objectAType = 1;</code>
-         *
-         * <pre>
-         *Compare Object Type : "IP-SIZE","DNS-COUNT"
-         * </pre>
-         */
-        public Builder clearObjectAType() {
-          bitField0_ = (bitField0_ & ~0x00000001);
-          objectAType_ = getDefaultInstance().getObjectAType();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string objectAType = 1;</code>
-         *
-         * <pre>
-         *Compare Object Type : "IP-SIZE","DNS-COUNT"
-         * </pre>
-         */
-        public Builder setObjectATypeBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-          objectAType_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object objectA_ = "";
-        /**
-         * <code>required string objectA = 2;</code>
-         *
-         * <pre>
-         *Compare Object A : "202.120.37.78","all-average","all-max","all-min"
-         * </pre>
-         */
-        public boolean hasObjectA() {
-          return ((bitField0_ & 0x00000002) == 0x00000002);
-        }
-        /**
-         * <code>required string objectA = 2;</code>
-         *
-         * <pre>
-         *Compare Object A : "202.120.37.78","all-average","all-max","all-min"
-         * </pre>
-         */
-        public java.lang.String getObjectA() {
-          java.lang.Object ref = objectA_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              objectA_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>required string objectA = 2;</code>
-         *
-         * <pre>
-         *Compare Object A : "202.120.37.78","all-average","all-max","all-min"
-         * </pre>
-         */
-        public com.google.protobuf.ByteString
-            getObjectABytes() {
-          java.lang.Object ref = objectA_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            objectA_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>required string objectA = 2;</code>
-         *
-         * <pre>
-         *Compare Object A : "202.120.37.78","all-average","all-max","all-min"
-         * </pre>
-         */
-        public Builder setObjectA(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-          objectA_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string objectA = 2;</code>
-         *
-         * <pre>
-         *Compare Object A : "202.120.37.78","all-average","all-max","all-min"
-         * </pre>
-         */
-        public Builder clearObjectA() {
-          bitField0_ = (bitField0_ & ~0x00000002);
-          objectA_ = getDefaultInstance().getObjectA();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string objectA = 2;</code>
-         *
-         * <pre>
-         *Compare Object A : "202.120.37.78","all-average","all-max","all-min"
-         * </pre>
-         */
-        public Builder setObjectABytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-          objectA_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object objectBType_ = "";
-        /**
-         * <code>required string objectBType = 3;</code>
-         *
-         * <pre>
-         *Compare Object Type : "IP-SIZE","DNS-COUNT"
-         * </pre>
-         */
-        public boolean hasObjectBType() {
-          return ((bitField0_ & 0x00000004) == 0x00000004);
-        }
-        /**
-         * <code>required string objectBType = 3;</code>
-         *
-         * <pre>
-         *Compare Object Type : "IP-SIZE","DNS-COUNT"
-         * </pre>
-         */
-        public java.lang.String getObjectBType() {
-          java.lang.Object ref = objectBType_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              objectBType_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>required string objectBType = 3;</code>
-         *
-         * <pre>
-         *Compare Object Type : "IP-SIZE","DNS-COUNT"
-         * </pre>
-         */
-        public com.google.protobuf.ByteString
-            getObjectBTypeBytes() {
-          java.lang.Object ref = objectBType_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            objectBType_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>required string objectBType = 3;</code>
-         *
-         * <pre>
-         *Compare Object Type : "IP-SIZE","DNS-COUNT"
-         * </pre>
-         */
-        public Builder setObjectBType(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-          objectBType_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string objectBType = 3;</code>
-         *
-         * <pre>
-         *Compare Object Type : "IP-SIZE","DNS-COUNT"
-         * </pre>
-         */
-        public Builder clearObjectBType() {
-          bitField0_ = (bitField0_ & ~0x00000004);
-          objectBType_ = getDefaultInstance().getObjectBType();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string objectBType = 3;</code>
-         *
-         * <pre>
-         *Compare Object Type : "IP-SIZE","DNS-COUNT"
-         * </pre>
-         */
-        public Builder setObjectBTypeBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-          objectBType_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object objectB_ = "";
-        /**
-         * <code>required string objectB = 4;</code>
-         *
-         * <pre>
-         *Compare Object B : "202.120.37.78","all-average","all-max","all-min"
-         * </pre>
-         */
-        public boolean hasObjectB() {
-          return ((bitField0_ & 0x00000008) == 0x00000008);
-        }
-        /**
-         * <code>required string objectB = 4;</code>
-         *
-         * <pre>
-         *Compare Object B : "202.120.37.78","all-average","all-max","all-min"
-         * </pre>
-         */
-        public java.lang.String getObjectB() {
-          java.lang.Object ref = objectB_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              objectB_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>required string objectB = 4;</code>
-         *
-         * <pre>
-         *Compare Object B : "202.120.37.78","all-average","all-max","all-min"
-         * </pre>
-         */
-        public com.google.protobuf.ByteString
-            getObjectBBytes() {
-          java.lang.Object ref = objectB_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            objectB_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>required string objectB = 4;</code>
-         *
-         * <pre>
-         *Compare Object B : "202.120.37.78","all-average","all-max","all-min"
-         * </pre>
-         */
-        public Builder setObjectB(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-          objectB_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string objectB = 4;</code>
-         *
-         * <pre>
-         *Compare Object B : "202.120.37.78","all-average","all-max","all-min"
-         * </pre>
-         */
-        public Builder clearObjectB() {
-          bitField0_ = (bitField0_ & ~0x00000008);
-          objectB_ = getDefaultInstance().getObjectB();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string objectB = 4;</code>
-         *
-         * <pre>
-         *Compare Object B : "202.120.37.78","all-average","all-max","all-min"
-         * </pre>
-         */
-        public Builder setObjectBBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-          objectB_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object method_ = "";
-        /**
-         * <code>required string method = 5;</code>
-         *
-         * <pre>
-         *Compare Method: "Ratio","ML"
-         * </pre>
-         */
-        public boolean hasMethod() {
-          return ((bitField0_ & 0x00000010) == 0x00000010);
-        }
-        /**
-         * <code>required string method = 5;</code>
-         *
-         * <pre>
-         *Compare Method: "Ratio","ML"
-         * </pre>
-         */
-        public java.lang.String getMethod() {
-          java.lang.Object ref = method_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              method_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>required string method = 5;</code>
-         *
-         * <pre>
-         *Compare Method: "Ratio","ML"
-         * </pre>
-         */
-        public com.google.protobuf.ByteString
-            getMethodBytes() {
-          java.lang.Object ref = method_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            method_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>required string method = 5;</code>
-         *
-         * <pre>
-         *Compare Method: "Ratio","ML"
-         * </pre>
-         */
-        public Builder setMethod(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
-          method_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string method = 5;</code>
-         *
-         * <pre>
-         *Compare Method: "Ratio","ML"
-         * </pre>
-         */
-        public Builder clearMethod() {
-          bitField0_ = (bitField0_ & ~0x00000010);
-          method_ = getDefaultInstance().getMethod();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string method = 5;</code>
-         *
-         * <pre>
-         *Compare Method: "Ratio","ML"
-         * </pre>
-         */
-        public Builder setMethodBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
-          method_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object index_ = "";
-        /**
-         * <code>optional string index = 6;</code>
-         *
-         * <pre>
-         *Compare Index(optional)
-         * </pre>
-         */
-        public boolean hasIndex() {
-          return ((bitField0_ & 0x00000020) == 0x00000020);
-        }
-        /**
-         * <code>optional string index = 6;</code>
-         *
-         * <pre>
-         *Compare Index(optional)
-         * </pre>
-         */
-        public java.lang.String getIndex() {
-          java.lang.Object ref = index_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              index_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>optional string index = 6;</code>
-         *
-         * <pre>
-         *Compare Index(optional)
-         * </pre>
-         */
-        public com.google.protobuf.ByteString
-            getIndexBytes() {
-          java.lang.Object ref = index_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            index_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>optional string index = 6;</code>
-         *
-         * <pre>
-         *Compare Index(optional)
-         * </pre>
-         */
-        public Builder setIndex(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000020;
-          index_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string index = 6;</code>
-         *
-         * <pre>
-         *Compare Index(optional)
-         * </pre>
-         */
-        public Builder clearIndex() {
-          bitField0_ = (bitField0_ & ~0x00000020);
-          index_ = getDefaultInstance().getIndex();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string index = 6;</code>
-         *
-         * <pre>
-         *Compare Index(optional)
-         * </pre>
-         */
-        public Builder setIndexBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000020;
-          index_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object problem_ = "";
-        /**
-         * <code>optional string problem = 7;</code>
-         *
-         * <pre>
-         *Compare Problem(optional)
-         * </pre>
-         */
-        public boolean hasProblem() {
-          return ((bitField0_ & 0x00000040) == 0x00000040);
-        }
-        /**
-         * <code>optional string problem = 7;</code>
-         *
-         * <pre>
-         *Compare Problem(optional)
-         * </pre>
-         */
-        public java.lang.String getProblem() {
-          java.lang.Object ref = problem_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              problem_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>optional string problem = 7;</code>
-         *
-         * <pre>
-         *Compare Problem(optional)
-         * </pre>
-         */
-        public com.google.protobuf.ByteString
-            getProblemBytes() {
-          java.lang.Object ref = problem_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            problem_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>optional string problem = 7;</code>
-         *
-         * <pre>
-         *Compare Problem(optional)
-         * </pre>
-         */
-        public Builder setProblem(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000040;
-          problem_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string problem = 7;</code>
-         *
-         * <pre>
-         *Compare Problem(optional)
-         * </pre>
-         */
-        public Builder clearProblem() {
-          bitField0_ = (bitField0_ & ~0x00000040);
-          problem_ = getDefaultInstance().getProblem();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string problem = 7;</code>
-         *
-         * <pre>
-         *Compare Problem(optional)
-         * </pre>
-         */
-        public Builder setProblemBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000040;
-          problem_ = value;
-          onChanged();
-          return this;
-        }
-
-        // @@protoc_insertion_point(builder_scope:rpc.IRequest.CompareParameter)
-      }
-
-      static {
-        defaultInstance = new CompareParameter(true);
-        defaultInstance.initFields();
-      }
-
-      // @@protoc_insertion_point(class_scope:rpc.IRequest.CompareParameter)
-    }
-
-    public interface AllParameterOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:rpc.IRequest.AllParameter)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>required string content = 1;</code>
-       *
-       * <pre>
-       *All Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-       * </pre>
-       */
-      boolean hasContent();
-      /**
-       * <code>required string content = 1;</code>
-       *
-       * <pre>
-       *All Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-       * </pre>
-       */
-      java.lang.String getContent();
-      /**
-       * <code>required string content = 1;</code>
-       *
-       * <pre>
-       *All Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-       * </pre>
-       */
-      com.google.protobuf.ByteString
-          getContentBytes();
-
-      /**
-       * <code>required string kind = 2;</code>
-       *
-       * <pre>
-       *All Object Kind : "TCP""UDP""ICMP"
-       * </pre>
-       */
-      boolean hasKind();
-      /**
-       * <code>required string kind = 2;</code>
-       *
-       * <pre>
-       *All Object Kind : "TCP""UDP""ICMP"
-       * </pre>
-       */
-      java.lang.String getKind();
-      /**
-       * <code>required string kind = 2;</code>
-       *
-       * <pre>
-       *All Object Kind : "TCP""UDP""ICMP"
-       * </pre>
-       */
-      com.google.protobuf.ByteString
-          getKindBytes();
-
-      /**
-       * <code>required string method = 3;</code>
-       *
-       * <pre>
-       *All Method : "Total""Average""Max""Min""Count""GroupBy"
-       * </pre>
-       */
-      boolean hasMethod();
-      /**
-       * <code>required string method = 3;</code>
-       *
-       * <pre>
-       *All Method : "Total""Average""Max""Min""Count""GroupBy"
-       * </pre>
-       */
-      java.lang.String getMethod();
-      /**
-       * <code>required string method = 3;</code>
-       *
-       * <pre>
-       *All Method : "Total""Average""Max""Min""Count""GroupBy"
-       * </pre>
-       */
-      com.google.protobuf.ByteString
-          getMethodBytes();
-    }
-    /**
-     * Protobuf type {@code rpc.IRequest.AllParameter}
-     */
-    public static final class AllParameter extends
-        com.google.protobuf.GeneratedMessage implements
-        // @@protoc_insertion_point(message_implements:rpc.IRequest.AllParameter)
-        AllParameterOrBuilder {
-      // Use AllParameter.newBuilder() to construct.
-      private AllParameter(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-        super(builder);
-        this.unknownFields = builder.getUnknownFields();
-      }
-      private AllParameter(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-      private static final AllParameter defaultInstance;
-      public static AllParameter getDefaultInstance() {
-        return defaultInstance;
-      }
-
-      public AllParameter getDefaultInstanceForType() {
-        return defaultInstance;
-      }
-
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-          getUnknownFields() {
-        return this.unknownFields;
-      }
-      private AllParameter(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        initFields();
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!parseUnknownField(input, unknownFields,
-                                       extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-              case 10: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000001;
-                content_ = bs;
-                break;
-              }
-              case 18: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000002;
-                kind_ = bs;
-                break;
-              }
-              case 26: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000004;
-                method_ = bs;
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e.getMessage()).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.rpc.Interface.internal_static_rpc_IRequest_AllParameter_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.rpc.Interface.internal_static_rpc_IRequest_AllParameter_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.rpc.Interface.IRequest.AllParameter.class, com.rpc.Interface.IRequest.AllParameter.Builder.class);
-      }
-
-      public static com.google.protobuf.Parser<AllParameter> PARSER =
-          new com.google.protobuf.AbstractParser<AllParameter>() {
-        public AllParameter parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new AllParameter(input, extensionRegistry);
-        }
-      };
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<AllParameter> getParserForType() {
-        return PARSER;
-      }
-
-      private int bitField0_;
-      public static final int CONTENT_FIELD_NUMBER = 1;
-      private java.lang.Object content_;
-      /**
-       * <code>required string content = 1;</code>
-       *
-       * <pre>
-       *All Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-       * </pre>
-       */
-      public boolean hasContent() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required string content = 1;</code>
-       *
-       * <pre>
-       *All Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-       * </pre>
-       */
-      public java.lang.String getContent() {
-        java.lang.Object ref = content_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            content_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>required string content = 1;</code>
-       *
-       * <pre>
-       *All Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getContentBytes() {
-        java.lang.Object ref = content_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          content_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int KIND_FIELD_NUMBER = 2;
-      private java.lang.Object kind_;
-      /**
-       * <code>required string kind = 2;</code>
-       *
-       * <pre>
-       *All Object Kind : "TCP""UDP""ICMP"
-       * </pre>
-       */
-      public boolean hasKind() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required string kind = 2;</code>
-       *
-       * <pre>
-       *All Object Kind : "TCP""UDP""ICMP"
-       * </pre>
-       */
-      public java.lang.String getKind() {
-        java.lang.Object ref = kind_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            kind_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>required string kind = 2;</code>
-       *
-       * <pre>
-       *All Object Kind : "TCP""UDP""ICMP"
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getKindBytes() {
-        java.lang.Object ref = kind_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          kind_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int METHOD_FIELD_NUMBER = 3;
-      private java.lang.Object method_;
-      /**
-       * <code>required string method = 3;</code>
-       *
-       * <pre>
-       *All Method : "Total""Average""Max""Min""Count""GroupBy"
-       * </pre>
-       */
-      public boolean hasMethod() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>required string method = 3;</code>
-       *
-       * <pre>
-       *All Method : "Total""Average""Max""Min""Count""GroupBy"
-       * </pre>
-       */
-      public java.lang.String getMethod() {
-        java.lang.Object ref = method_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            method_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>required string method = 3;</code>
-       *
-       * <pre>
-       *All Method : "Total""Average""Max""Min""Count""GroupBy"
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getMethodBytes() {
-        java.lang.Object ref = method_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          method_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      private void initFields() {
-        content_ = "";
-        kind_ = "";
-        method_ = "";
-      }
-      private byte memoizedIsInitialized = -1;
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        if (!hasContent()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        if (!hasKind()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        if (!hasMethod()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        getSerializedSize();
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          output.writeBytes(1, getContentBytes());
-        }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          output.writeBytes(2, getKindBytes());
-        }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          output.writeBytes(3, getMethodBytes());
-        }
-        getUnknownFields().writeTo(output);
-      }
-
-      private int memoizedSerializedSize = -1;
-      public int getSerializedSize() {
-        int size = memoizedSerializedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(1, getContentBytes());
-        }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(2, getKindBytes());
-        }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(3, getMethodBytes());
-        }
-        size += getUnknownFields().getSerializedSize();
-        memoizedSerializedSize = size;
-        return size;
-      }
-
-      private static final long serialVersionUID = 0L;
-      @java.lang.Override
-      protected java.lang.Object writeReplace()
-          throws java.io.ObjectStreamException {
-        return super.writeReplace();
-      }
-
-      public static com.rpc.Interface.IRequest.AllParameter parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.rpc.Interface.IRequest.AllParameter parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.rpc.Interface.IRequest.AllParameter parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.rpc.Interface.IRequest.AllParameter parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.rpc.Interface.IRequest.AllParameter parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input);
-      }
-      public static com.rpc.Interface.IRequest.AllParameter parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
-      }
-      public static com.rpc.Interface.IRequest.AllParameter parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
-      }
-      public static com.rpc.Interface.IRequest.AllParameter parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
-      }
-      public static com.rpc.Interface.IRequest.AllParameter parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input);
-      }
-      public static com.rpc.Interface.IRequest.AllParameter parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
-      }
-
-      public static Builder newBuilder() { return Builder.create(); }
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder(com.rpc.Interface.IRequest.AllParameter prototype) {
-        return newBuilder().mergeFrom(prototype);
-      }
-      public Builder toBuilder() { return newBuilder(this); }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * Protobuf type {@code rpc.IRequest.AllParameter}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:rpc.IRequest.AllParameter)
-          com.rpc.Interface.IRequest.AllParameterOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return com.rpc.Interface.internal_static_rpc_IRequest_AllParameter_descriptor;
-        }
-
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return com.rpc.Interface.internal_static_rpc_IRequest_AllParameter_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  com.rpc.Interface.IRequest.AllParameter.class, com.rpc.Interface.IRequest.AllParameter.Builder.class);
-        }
-
-        // Construct using com.rpc.Interface.IRequest.AllParameter.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          }
-        }
-        private static Builder create() {
-          return new Builder();
-        }
-
-        public Builder clear() {
-          super.clear();
-          content_ = "";
-          bitField0_ = (bitField0_ & ~0x00000001);
-          kind_ = "";
-          bitField0_ = (bitField0_ & ~0x00000002);
-          method_ = "";
-          bitField0_ = (bitField0_ & ~0x00000004);
-          return this;
-        }
-
-        public Builder clone() {
-          return create().mergeFrom(buildPartial());
-        }
-
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return com.rpc.Interface.internal_static_rpc_IRequest_AllParameter_descriptor;
-        }
-
-        public com.rpc.Interface.IRequest.AllParameter getDefaultInstanceForType() {
-          return com.rpc.Interface.IRequest.AllParameter.getDefaultInstance();
-        }
-
-        public com.rpc.Interface.IRequest.AllParameter build() {
-          com.rpc.Interface.IRequest.AllParameter result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        public com.rpc.Interface.IRequest.AllParameter buildPartial() {
-          com.rpc.Interface.IRequest.AllParameter result = new com.rpc.Interface.IRequest.AllParameter(this);
-          int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
-          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-            to_bitField0_ |= 0x00000001;
-          }
-          result.content_ = content_;
-          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-            to_bitField0_ |= 0x00000002;
-          }
-          result.kind_ = kind_;
-          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-            to_bitField0_ |= 0x00000004;
-          }
-          result.method_ = method_;
-          result.bitField0_ = to_bitField0_;
-          onBuilt();
-          return result;
-        }
-
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof com.rpc.Interface.IRequest.AllParameter) {
-            return mergeFrom((com.rpc.Interface.IRequest.AllParameter)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(com.rpc.Interface.IRequest.AllParameter other) {
-          if (other == com.rpc.Interface.IRequest.AllParameter.getDefaultInstance()) return this;
-          if (other.hasContent()) {
-            bitField0_ |= 0x00000001;
-            content_ = other.content_;
-            onChanged();
-          }
-          if (other.hasKind()) {
-            bitField0_ |= 0x00000002;
-            kind_ = other.kind_;
-            onChanged();
-          }
-          if (other.hasMethod()) {
-            bitField0_ |= 0x00000004;
-            method_ = other.method_;
-            onChanged();
-          }
-          this.mergeUnknownFields(other.getUnknownFields());
-          return this;
-        }
-
-        public final boolean isInitialized() {
-          if (!hasContent()) {
-            
-            return false;
-          }
-          if (!hasKind()) {
-            
-            return false;
-          }
-          if (!hasMethod()) {
-            
-            return false;
-          }
-          return true;
-        }
-
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          com.rpc.Interface.IRequest.AllParameter parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (com.rpc.Interface.IRequest.AllParameter) e.getUnfinishedMessage();
-            throw e;
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-        private int bitField0_;
-
-        private java.lang.Object content_ = "";
-        /**
-         * <code>required string content = 1;</code>
-         *
-         * <pre>
-         *All Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-         * </pre>
-         */
-        public boolean hasContent() {
-          return ((bitField0_ & 0x00000001) == 0x00000001);
-        }
-        /**
-         * <code>required string content = 1;</code>
-         *
-         * <pre>
-         *All Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-         * </pre>
-         */
-        public java.lang.String getContent() {
-          java.lang.Object ref = content_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              content_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>required string content = 1;</code>
-         *
-         * <pre>
-         *All Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-         * </pre>
-         */
-        public com.google.protobuf.ByteString
-            getContentBytes() {
-          java.lang.Object ref = content_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            content_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>required string content = 1;</code>
-         *
-         * <pre>
-         *All Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-         * </pre>
-         */
-        public Builder setContent(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-          content_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string content = 1;</code>
-         *
-         * <pre>
-         *All Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-         * </pre>
-         */
-        public Builder clearContent() {
-          bitField0_ = (bitField0_ & ~0x00000001);
-          content_ = getDefaultInstance().getContent();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string content = 1;</code>
-         *
-         * <pre>
-         *All Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-         * </pre>
-         */
-        public Builder setContentBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-          content_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object kind_ = "";
-        /**
-         * <code>required string kind = 2;</code>
-         *
-         * <pre>
-         *All Object Kind : "TCP""UDP""ICMP"
-         * </pre>
-         */
-        public boolean hasKind() {
-          return ((bitField0_ & 0x00000002) == 0x00000002);
-        }
-        /**
-         * <code>required string kind = 2;</code>
-         *
-         * <pre>
-         *All Object Kind : "TCP""UDP""ICMP"
-         * </pre>
-         */
-        public java.lang.String getKind() {
-          java.lang.Object ref = kind_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              kind_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>required string kind = 2;</code>
-         *
-         * <pre>
-         *All Object Kind : "TCP""UDP""ICMP"
-         * </pre>
-         */
-        public com.google.protobuf.ByteString
-            getKindBytes() {
-          java.lang.Object ref = kind_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            kind_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>required string kind = 2;</code>
-         *
-         * <pre>
-         *All Object Kind : "TCP""UDP""ICMP"
-         * </pre>
-         */
-        public Builder setKind(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-          kind_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string kind = 2;</code>
-         *
-         * <pre>
-         *All Object Kind : "TCP""UDP""ICMP"
-         * </pre>
-         */
-        public Builder clearKind() {
-          bitField0_ = (bitField0_ & ~0x00000002);
-          kind_ = getDefaultInstance().getKind();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string kind = 2;</code>
-         *
-         * <pre>
-         *All Object Kind : "TCP""UDP""ICMP"
-         * </pre>
-         */
-        public Builder setKindBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-          kind_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object method_ = "";
-        /**
-         * <code>required string method = 3;</code>
-         *
-         * <pre>
-         *All Method : "Total""Average""Max""Min""Count""GroupBy"
-         * </pre>
-         */
-        public boolean hasMethod() {
-          return ((bitField0_ & 0x00000004) == 0x00000004);
-        }
-        /**
-         * <code>required string method = 3;</code>
-         *
-         * <pre>
-         *All Method : "Total""Average""Max""Min""Count""GroupBy"
-         * </pre>
-         */
-        public java.lang.String getMethod() {
-          java.lang.Object ref = method_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              method_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>required string method = 3;</code>
-         *
-         * <pre>
-         *All Method : "Total""Average""Max""Min""Count""GroupBy"
-         * </pre>
-         */
-        public com.google.protobuf.ByteString
-            getMethodBytes() {
-          java.lang.Object ref = method_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            method_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>required string method = 3;</code>
-         *
-         * <pre>
-         *All Method : "Total""Average""Max""Min""Count""GroupBy"
-         * </pre>
-         */
-        public Builder setMethod(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-          method_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string method = 3;</code>
-         *
-         * <pre>
-         *All Method : "Total""Average""Max""Min""Count""GroupBy"
-         * </pre>
-         */
-        public Builder clearMethod() {
-          bitField0_ = (bitField0_ & ~0x00000004);
-          method_ = getDefaultInstance().getMethod();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string method = 3;</code>
-         *
-         * <pre>
-         *All Method : "Total""Average""Max""Min""Count""GroupBy"
-         * </pre>
-         */
-        public Builder setMethodBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-          method_ = value;
-          onChanged();
-          return this;
-        }
-
-        // @@protoc_insertion_point(builder_scope:rpc.IRequest.AllParameter)
-      }
-
-      static {
-        defaultInstance = new AllParameter(true);
-        defaultInstance.initFields();
-      }
-
-      // @@protoc_insertion_point(class_scope:rpc.IRequest.AllParameter)
-    }
-
-    public interface SingleParameterOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:rpc.IRequest.SingleParameter)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>required string content = 1;</code>
-       *
-       * <pre>
-       *Single Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-       * </pre>
-       */
-      boolean hasContent();
-      /**
-       * <code>required string content = 1;</code>
-       *
-       * <pre>
-       *Single Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-       * </pre>
-       */
-      java.lang.String getContent();
-      /**
-       * <code>required string content = 1;</code>
-       *
-       * <pre>
-       *Single Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-       * </pre>
-       */
-      com.google.protobuf.ByteString
-          getContentBytes();
-
-      /**
-       * <code>required string kind = 2;</code>
-       *
-       * <pre>
-       *Single Object Kind : "TCP""UDP""ICMP"
-       * </pre>
-       */
-      boolean hasKind();
-      /**
-       * <code>required string kind = 2;</code>
-       *
-       * <pre>
-       *Single Object Kind : "TCP""UDP""ICMP"
-       * </pre>
-       */
-      java.lang.String getKind();
-      /**
-       * <code>required string kind = 2;</code>
-       *
-       * <pre>
-       *Single Object Kind : "TCP""UDP""ICMP"
-       * </pre>
-       */
-      com.google.protobuf.ByteString
-          getKindBytes();
-
-      /**
-       * <code>required string object = 3;</code>
-       *
-       * <pre>
-       *Single Object : "202.120.37.78"
-       * </pre>
-       */
-      boolean hasObject();
-      /**
-       * <code>required string object = 3;</code>
-       *
-       * <pre>
-       *Single Object : "202.120.37.78"
-       * </pre>
-       */
-      java.lang.String getObject();
-      /**
-       * <code>required string object = 3;</code>
-       *
-       * <pre>
-       *Single Object : "202.120.37.78"
-       * </pre>
-       */
-      com.google.protobuf.ByteString
-          getObjectBytes();
-    }
-    /**
-     * Protobuf type {@code rpc.IRequest.SingleParameter}
-     */
-    public static final class SingleParameter extends
-        com.google.protobuf.GeneratedMessage implements
-        // @@protoc_insertion_point(message_implements:rpc.IRequest.SingleParameter)
-        SingleParameterOrBuilder {
-      // Use SingleParameter.newBuilder() to construct.
-      private SingleParameter(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-        super(builder);
-        this.unknownFields = builder.getUnknownFields();
-      }
-      private SingleParameter(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-      private static final SingleParameter defaultInstance;
-      public static SingleParameter getDefaultInstance() {
-        return defaultInstance;
-      }
-
-      public SingleParameter getDefaultInstanceForType() {
-        return defaultInstance;
-      }
-
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-          getUnknownFields() {
-        return this.unknownFields;
-      }
-      private SingleParameter(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        initFields();
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!parseUnknownField(input, unknownFields,
-                                       extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-              case 10: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000001;
-                content_ = bs;
-                break;
-              }
-              case 18: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000002;
-                kind_ = bs;
-                break;
-              }
-              case 26: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000004;
-                object_ = bs;
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e.getMessage()).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.rpc.Interface.internal_static_rpc_IRequest_SingleParameter_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.rpc.Interface.internal_static_rpc_IRequest_SingleParameter_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.rpc.Interface.IRequest.SingleParameter.class, com.rpc.Interface.IRequest.SingleParameter.Builder.class);
-      }
-
-      public static com.google.protobuf.Parser<SingleParameter> PARSER =
-          new com.google.protobuf.AbstractParser<SingleParameter>() {
-        public SingleParameter parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new SingleParameter(input, extensionRegistry);
-        }
-      };
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<SingleParameter> getParserForType() {
-        return PARSER;
-      }
-
-      private int bitField0_;
-      public static final int CONTENT_FIELD_NUMBER = 1;
-      private java.lang.Object content_;
-      /**
-       * <code>required string content = 1;</code>
-       *
-       * <pre>
-       *Single Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-       * </pre>
-       */
-      public boolean hasContent() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required string content = 1;</code>
-       *
-       * <pre>
-       *Single Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-       * </pre>
-       */
-      public java.lang.String getContent() {
-        java.lang.Object ref = content_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            content_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>required string content = 1;</code>
-       *
-       * <pre>
-       *Single Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getContentBytes() {
-        java.lang.Object ref = content_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          content_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int KIND_FIELD_NUMBER = 2;
-      private java.lang.Object kind_;
-      /**
-       * <code>required string kind = 2;</code>
-       *
-       * <pre>
-       *Single Object Kind : "TCP""UDP""ICMP"
-       * </pre>
-       */
-      public boolean hasKind() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required string kind = 2;</code>
-       *
-       * <pre>
-       *Single Object Kind : "TCP""UDP""ICMP"
-       * </pre>
-       */
-      public java.lang.String getKind() {
-        java.lang.Object ref = kind_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            kind_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>required string kind = 2;</code>
-       *
-       * <pre>
-       *Single Object Kind : "TCP""UDP""ICMP"
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getKindBytes() {
-        java.lang.Object ref = kind_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          kind_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int OBJECT_FIELD_NUMBER = 3;
-      private java.lang.Object object_;
-      /**
-       * <code>required string object = 3;</code>
-       *
-       * <pre>
-       *Single Object : "202.120.37.78"
-       * </pre>
-       */
-      public boolean hasObject() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>required string object = 3;</code>
-       *
-       * <pre>
-       *Single Object : "202.120.37.78"
-       * </pre>
-       */
-      public java.lang.String getObject() {
-        java.lang.Object ref = object_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            object_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>required string object = 3;</code>
-       *
-       * <pre>
-       *Single Object : "202.120.37.78"
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getObjectBytes() {
-        java.lang.Object ref = object_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          object_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      private void initFields() {
-        content_ = "";
-        kind_ = "";
-        object_ = "";
-      }
-      private byte memoizedIsInitialized = -1;
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        if (!hasContent()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        if (!hasKind()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        if (!hasObject()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        getSerializedSize();
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          output.writeBytes(1, getContentBytes());
-        }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          output.writeBytes(2, getKindBytes());
-        }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          output.writeBytes(3, getObjectBytes());
-        }
-        getUnknownFields().writeTo(output);
-      }
-
-      private int memoizedSerializedSize = -1;
-      public int getSerializedSize() {
-        int size = memoizedSerializedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(1, getContentBytes());
-        }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(2, getKindBytes());
-        }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(3, getObjectBytes());
-        }
-        size += getUnknownFields().getSerializedSize();
-        memoizedSerializedSize = size;
-        return size;
-      }
-
-      private static final long serialVersionUID = 0L;
-      @java.lang.Override
-      protected java.lang.Object writeReplace()
-          throws java.io.ObjectStreamException {
-        return super.writeReplace();
-      }
-
-      public static com.rpc.Interface.IRequest.SingleParameter parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.rpc.Interface.IRequest.SingleParameter parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.rpc.Interface.IRequest.SingleParameter parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.rpc.Interface.IRequest.SingleParameter parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.rpc.Interface.IRequest.SingleParameter parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input);
-      }
-      public static com.rpc.Interface.IRequest.SingleParameter parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
-      }
-      public static com.rpc.Interface.IRequest.SingleParameter parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
-      }
-      public static com.rpc.Interface.IRequest.SingleParameter parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
-      }
-      public static com.rpc.Interface.IRequest.SingleParameter parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input);
-      }
-      public static com.rpc.Interface.IRequest.SingleParameter parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
-      }
-
-      public static Builder newBuilder() { return Builder.create(); }
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder(com.rpc.Interface.IRequest.SingleParameter prototype) {
-        return newBuilder().mergeFrom(prototype);
-      }
-      public Builder toBuilder() { return newBuilder(this); }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * Protobuf type {@code rpc.IRequest.SingleParameter}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:rpc.IRequest.SingleParameter)
-          com.rpc.Interface.IRequest.SingleParameterOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return com.rpc.Interface.internal_static_rpc_IRequest_SingleParameter_descriptor;
-        }
-
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return com.rpc.Interface.internal_static_rpc_IRequest_SingleParameter_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  com.rpc.Interface.IRequest.SingleParameter.class, com.rpc.Interface.IRequest.SingleParameter.Builder.class);
-        }
-
-        // Construct using com.rpc.Interface.IRequest.SingleParameter.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          }
-        }
-        private static Builder create() {
-          return new Builder();
-        }
-
-        public Builder clear() {
-          super.clear();
-          content_ = "";
-          bitField0_ = (bitField0_ & ~0x00000001);
-          kind_ = "";
-          bitField0_ = (bitField0_ & ~0x00000002);
-          object_ = "";
-          bitField0_ = (bitField0_ & ~0x00000004);
-          return this;
-        }
-
-        public Builder clone() {
-          return create().mergeFrom(buildPartial());
-        }
-
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return com.rpc.Interface.internal_static_rpc_IRequest_SingleParameter_descriptor;
-        }
-
-        public com.rpc.Interface.IRequest.SingleParameter getDefaultInstanceForType() {
-          return com.rpc.Interface.IRequest.SingleParameter.getDefaultInstance();
-        }
-
-        public com.rpc.Interface.IRequest.SingleParameter build() {
-          com.rpc.Interface.IRequest.SingleParameter result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        public com.rpc.Interface.IRequest.SingleParameter buildPartial() {
-          com.rpc.Interface.IRequest.SingleParameter result = new com.rpc.Interface.IRequest.SingleParameter(this);
-          int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
-          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-            to_bitField0_ |= 0x00000001;
-          }
-          result.content_ = content_;
-          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-            to_bitField0_ |= 0x00000002;
-          }
-          result.kind_ = kind_;
-          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-            to_bitField0_ |= 0x00000004;
-          }
-          result.object_ = object_;
-          result.bitField0_ = to_bitField0_;
-          onBuilt();
-          return result;
-        }
-
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof com.rpc.Interface.IRequest.SingleParameter) {
-            return mergeFrom((com.rpc.Interface.IRequest.SingleParameter)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(com.rpc.Interface.IRequest.SingleParameter other) {
-          if (other == com.rpc.Interface.IRequest.SingleParameter.getDefaultInstance()) return this;
-          if (other.hasContent()) {
-            bitField0_ |= 0x00000001;
-            content_ = other.content_;
-            onChanged();
-          }
-          if (other.hasKind()) {
-            bitField0_ |= 0x00000002;
-            kind_ = other.kind_;
-            onChanged();
-          }
-          if (other.hasObject()) {
-            bitField0_ |= 0x00000004;
-            object_ = other.object_;
-            onChanged();
-          }
-          this.mergeUnknownFields(other.getUnknownFields());
-          return this;
-        }
-
-        public final boolean isInitialized() {
-          if (!hasContent()) {
-            
-            return false;
-          }
-          if (!hasKind()) {
-            
-            return false;
-          }
-          if (!hasObject()) {
-            
-            return false;
-          }
-          return true;
-        }
-
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          com.rpc.Interface.IRequest.SingleParameter parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (com.rpc.Interface.IRequest.SingleParameter) e.getUnfinishedMessage();
-            throw e;
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-        private int bitField0_;
-
-        private java.lang.Object content_ = "";
-        /**
-         * <code>required string content = 1;</code>
-         *
-         * <pre>
-         *Single Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-         * </pre>
-         */
-        public boolean hasContent() {
-          return ((bitField0_ & 0x00000001) == 0x00000001);
-        }
-        /**
-         * <code>required string content = 1;</code>
-         *
-         * <pre>
-         *Single Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-         * </pre>
-         */
-        public java.lang.String getContent() {
-          java.lang.Object ref = content_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              content_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>required string content = 1;</code>
-         *
-         * <pre>
-         *Single Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-         * </pre>
-         */
-        public com.google.protobuf.ByteString
-            getContentBytes() {
-          java.lang.Object ref = content_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            content_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>required string content = 1;</code>
-         *
-         * <pre>
-         *Single Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-         * </pre>
-         */
-        public Builder setContent(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-          content_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string content = 1;</code>
-         *
-         * <pre>
-         *Single Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-         * </pre>
-         */
-        public Builder clearContent() {
-          bitField0_ = (bitField0_ & ~0x00000001);
-          content_ = getDefaultInstance().getContent();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string content = 1;</code>
-         *
-         * <pre>
-         *Single Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-         * </pre>
-         */
-        public Builder setContentBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-          content_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object kind_ = "";
-        /**
-         * <code>required string kind = 2;</code>
-         *
-         * <pre>
-         *Single Object Kind : "TCP""UDP""ICMP"
-         * </pre>
-         */
-        public boolean hasKind() {
-          return ((bitField0_ & 0x00000002) == 0x00000002);
-        }
-        /**
-         * <code>required string kind = 2;</code>
-         *
-         * <pre>
-         *Single Object Kind : "TCP""UDP""ICMP"
-         * </pre>
-         */
-        public java.lang.String getKind() {
-          java.lang.Object ref = kind_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              kind_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>required string kind = 2;</code>
-         *
-         * <pre>
-         *Single Object Kind : "TCP""UDP""ICMP"
-         * </pre>
-         */
-        public com.google.protobuf.ByteString
-            getKindBytes() {
-          java.lang.Object ref = kind_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            kind_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>required string kind = 2;</code>
-         *
-         * <pre>
-         *Single Object Kind : "TCP""UDP""ICMP"
-         * </pre>
-         */
-        public Builder setKind(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-          kind_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string kind = 2;</code>
-         *
-         * <pre>
-         *Single Object Kind : "TCP""UDP""ICMP"
-         * </pre>
-         */
-        public Builder clearKind() {
-          bitField0_ = (bitField0_ & ~0x00000002);
-          kind_ = getDefaultInstance().getKind();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string kind = 2;</code>
-         *
-         * <pre>
-         *Single Object Kind : "TCP""UDP""ICMP"
-         * </pre>
-         */
-        public Builder setKindBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-          kind_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object object_ = "";
-        /**
-         * <code>required string object = 3;</code>
-         *
-         * <pre>
-         *Single Object : "202.120.37.78"
-         * </pre>
-         */
-        public boolean hasObject() {
-          return ((bitField0_ & 0x00000004) == 0x00000004);
-        }
-        /**
-         * <code>required string object = 3;</code>
-         *
-         * <pre>
-         *Single Object : "202.120.37.78"
-         * </pre>
-         */
-        public java.lang.String getObject() {
-          java.lang.Object ref = object_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              object_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>required string object = 3;</code>
-         *
-         * <pre>
-         *Single Object : "202.120.37.78"
-         * </pre>
-         */
-        public com.google.protobuf.ByteString
-            getObjectBytes() {
-          java.lang.Object ref = object_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            object_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>required string object = 3;</code>
-         *
-         * <pre>
-         *Single Object : "202.120.37.78"
-         * </pre>
-         */
-        public Builder setObject(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-          object_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string object = 3;</code>
-         *
-         * <pre>
-         *Single Object : "202.120.37.78"
-         * </pre>
-         */
-        public Builder clearObject() {
-          bitField0_ = (bitField0_ & ~0x00000004);
-          object_ = getDefaultInstance().getObject();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string object = 3;</code>
-         *
-         * <pre>
-         *Single Object : "202.120.37.78"
-         * </pre>
-         */
-        public Builder setObjectBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-          object_ = value;
-          onChanged();
-          return this;
-        }
-
-        // @@protoc_insertion_point(builder_scope:rpc.IRequest.SingleParameter)
-      }
-
-      static {
-        defaultInstance = new SingleParameter(true);
-        defaultInstance.initFields();
-      }
-
-      // @@protoc_insertion_point(class_scope:rpc.IRequest.SingleParameter)
-    }
-
-    public interface ToolParameterOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:rpc.IRequest.ToolParameter)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>required string content = 1;</code>
-       *
-       * <pre>
-       *Tool Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-       * </pre>
-       */
-      boolean hasContent();
-      /**
-       * <code>required string content = 1;</code>
-       *
-       * <pre>
-       *Tool Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-       * </pre>
-       */
-      java.lang.String getContent();
-      /**
-       * <code>required string content = 1;</code>
-       *
-       * <pre>
-       *Tool Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-       * </pre>
-       */
-      com.google.protobuf.ByteString
-          getContentBytes();
-
-      /**
-       * <code>required string kind = 2;</code>
-       *
-       * <pre>
-       *Tool Object Kind : "TCP""UDP""ICMP"
-       * </pre>
-       */
-      boolean hasKind();
-      /**
-       * <code>required string kind = 2;</code>
-       *
-       * <pre>
-       *Tool Object Kind : "TCP""UDP""ICMP"
-       * </pre>
-       */
-      java.lang.String getKind();
-      /**
-       * <code>required string kind = 2;</code>
-       *
-       * <pre>
-       *Tool Object Kind : "TCP""UDP""ICMP"
-       * </pre>
-       */
-      com.google.protobuf.ByteString
-          getKindBytes();
-
-      /**
-       * <code>required string object = 3;</code>
-       *
-       * <pre>
-       *Tool Object : "202.120.37.78"
-       * </pre>
-       */
-      boolean hasObject();
-      /**
-       * <code>required string object = 3;</code>
-       *
-       * <pre>
-       *Tool Object : "202.120.37.78"
-       * </pre>
-       */
-      java.lang.String getObject();
-      /**
-       * <code>required string object = 3;</code>
-       *
-       * <pre>
-       *Tool Object : "202.120.37.78"
-       * </pre>
-       */
-      com.google.protobuf.ByteString
-          getObjectBytes();
-    }
-    /**
-     * Protobuf type {@code rpc.IRequest.ToolParameter}
-     */
-    public static final class ToolParameter extends
-        com.google.protobuf.GeneratedMessage implements
-        // @@protoc_insertion_point(message_implements:rpc.IRequest.ToolParameter)
-        ToolParameterOrBuilder {
-      // Use ToolParameter.newBuilder() to construct.
-      private ToolParameter(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-        super(builder);
-        this.unknownFields = builder.getUnknownFields();
-      }
-      private ToolParameter(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-      private static final ToolParameter defaultInstance;
-      public static ToolParameter getDefaultInstance() {
-        return defaultInstance;
-      }
-
-      public ToolParameter getDefaultInstanceForType() {
-        return defaultInstance;
-      }
-
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-          getUnknownFields() {
-        return this.unknownFields;
-      }
-      private ToolParameter(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        initFields();
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!parseUnknownField(input, unknownFields,
-                                       extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-              case 10: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000001;
-                content_ = bs;
-                break;
-              }
-              case 18: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000002;
-                kind_ = bs;
-                break;
-              }
-              case 26: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000004;
-                object_ = bs;
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e.getMessage()).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.rpc.Interface.internal_static_rpc_IRequest_ToolParameter_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.rpc.Interface.internal_static_rpc_IRequest_ToolParameter_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.rpc.Interface.IRequest.ToolParameter.class, com.rpc.Interface.IRequest.ToolParameter.Builder.class);
-      }
-
-      public static com.google.protobuf.Parser<ToolParameter> PARSER =
-          new com.google.protobuf.AbstractParser<ToolParameter>() {
-        public ToolParameter parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ToolParameter(input, extensionRegistry);
-        }
-      };
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<ToolParameter> getParserForType() {
-        return PARSER;
-      }
-
-      private int bitField0_;
-      public static final int CONTENT_FIELD_NUMBER = 1;
-      private java.lang.Object content_;
-      /**
-       * <code>required string content = 1;</code>
-       *
-       * <pre>
-       *Tool Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-       * </pre>
-       */
-      public boolean hasContent() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required string content = 1;</code>
-       *
-       * <pre>
-       *Tool Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-       * </pre>
-       */
-      public java.lang.String getContent() {
-        java.lang.Object ref = content_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            content_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>required string content = 1;</code>
-       *
-       * <pre>
-       *Tool Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getContentBytes() {
-        java.lang.Object ref = content_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          content_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int KIND_FIELD_NUMBER = 2;
-      private java.lang.Object kind_;
-      /**
-       * <code>required string kind = 2;</code>
-       *
-       * <pre>
-       *Tool Object Kind : "TCP""UDP""ICMP"
-       * </pre>
-       */
-      public boolean hasKind() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required string kind = 2;</code>
-       *
-       * <pre>
-       *Tool Object Kind : "TCP""UDP""ICMP"
-       * </pre>
-       */
-      public java.lang.String getKind() {
-        java.lang.Object ref = kind_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            kind_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>required string kind = 2;</code>
-       *
-       * <pre>
-       *Tool Object Kind : "TCP""UDP""ICMP"
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getKindBytes() {
-        java.lang.Object ref = kind_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          kind_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int OBJECT_FIELD_NUMBER = 3;
-      private java.lang.Object object_;
-      /**
-       * <code>required string object = 3;</code>
-       *
-       * <pre>
-       *Tool Object : "202.120.37.78"
-       * </pre>
-       */
-      public boolean hasObject() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>required string object = 3;</code>
-       *
-       * <pre>
-       *Tool Object : "202.120.37.78"
-       * </pre>
-       */
-      public java.lang.String getObject() {
-        java.lang.Object ref = object_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            object_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>required string object = 3;</code>
-       *
-       * <pre>
-       *Tool Object : "202.120.37.78"
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getObjectBytes() {
-        java.lang.Object ref = object_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          object_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      private void initFields() {
-        content_ = "";
-        kind_ = "";
-        object_ = "";
-      }
-      private byte memoizedIsInitialized = -1;
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        if (!hasContent()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        if (!hasKind()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        if (!hasObject()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        getSerializedSize();
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          output.writeBytes(1, getContentBytes());
-        }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          output.writeBytes(2, getKindBytes());
-        }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          output.writeBytes(3, getObjectBytes());
-        }
-        getUnknownFields().writeTo(output);
-      }
-
-      private int memoizedSerializedSize = -1;
-      public int getSerializedSize() {
-        int size = memoizedSerializedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(1, getContentBytes());
-        }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(2, getKindBytes());
-        }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(3, getObjectBytes());
-        }
-        size += getUnknownFields().getSerializedSize();
-        memoizedSerializedSize = size;
-        return size;
-      }
-
-      private static final long serialVersionUID = 0L;
-      @java.lang.Override
-      protected java.lang.Object writeReplace()
-          throws java.io.ObjectStreamException {
-        return super.writeReplace();
-      }
-
-      public static com.rpc.Interface.IRequest.ToolParameter parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.rpc.Interface.IRequest.ToolParameter parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.rpc.Interface.IRequest.ToolParameter parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.rpc.Interface.IRequest.ToolParameter parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.rpc.Interface.IRequest.ToolParameter parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input);
-      }
-      public static com.rpc.Interface.IRequest.ToolParameter parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
-      }
-      public static com.rpc.Interface.IRequest.ToolParameter parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
-      }
-      public static com.rpc.Interface.IRequest.ToolParameter parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
-      }
-      public static com.rpc.Interface.IRequest.ToolParameter parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input);
-      }
-      public static com.rpc.Interface.IRequest.ToolParameter parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
-      }
-
-      public static Builder newBuilder() { return Builder.create(); }
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder(com.rpc.Interface.IRequest.ToolParameter prototype) {
-        return newBuilder().mergeFrom(prototype);
-      }
-      public Builder toBuilder() { return newBuilder(this); }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * Protobuf type {@code rpc.IRequest.ToolParameter}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:rpc.IRequest.ToolParameter)
-          com.rpc.Interface.IRequest.ToolParameterOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return com.rpc.Interface.internal_static_rpc_IRequest_ToolParameter_descriptor;
-        }
-
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return com.rpc.Interface.internal_static_rpc_IRequest_ToolParameter_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  com.rpc.Interface.IRequest.ToolParameter.class, com.rpc.Interface.IRequest.ToolParameter.Builder.class);
-        }
-
-        // Construct using com.rpc.Interface.IRequest.ToolParameter.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          }
-        }
-        private static Builder create() {
-          return new Builder();
-        }
-
-        public Builder clear() {
-          super.clear();
-          content_ = "";
-          bitField0_ = (bitField0_ & ~0x00000001);
-          kind_ = "";
-          bitField0_ = (bitField0_ & ~0x00000002);
-          object_ = "";
-          bitField0_ = (bitField0_ & ~0x00000004);
-          return this;
-        }
-
-        public Builder clone() {
-          return create().mergeFrom(buildPartial());
-        }
-
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return com.rpc.Interface.internal_static_rpc_IRequest_ToolParameter_descriptor;
-        }
-
-        public com.rpc.Interface.IRequest.ToolParameter getDefaultInstanceForType() {
-          return com.rpc.Interface.IRequest.ToolParameter.getDefaultInstance();
-        }
-
-        public com.rpc.Interface.IRequest.ToolParameter build() {
-          com.rpc.Interface.IRequest.ToolParameter result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        public com.rpc.Interface.IRequest.ToolParameter buildPartial() {
-          com.rpc.Interface.IRequest.ToolParameter result = new com.rpc.Interface.IRequest.ToolParameter(this);
-          int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
-          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-            to_bitField0_ |= 0x00000001;
-          }
-          result.content_ = content_;
-          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-            to_bitField0_ |= 0x00000002;
-          }
-          result.kind_ = kind_;
-          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-            to_bitField0_ |= 0x00000004;
-          }
-          result.object_ = object_;
-          result.bitField0_ = to_bitField0_;
-          onBuilt();
-          return result;
-        }
-
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof com.rpc.Interface.IRequest.ToolParameter) {
-            return mergeFrom((com.rpc.Interface.IRequest.ToolParameter)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(com.rpc.Interface.IRequest.ToolParameter other) {
-          if (other == com.rpc.Interface.IRequest.ToolParameter.getDefaultInstance()) return this;
-          if (other.hasContent()) {
-            bitField0_ |= 0x00000001;
-            content_ = other.content_;
-            onChanged();
-          }
-          if (other.hasKind()) {
-            bitField0_ |= 0x00000002;
-            kind_ = other.kind_;
-            onChanged();
-          }
-          if (other.hasObject()) {
-            bitField0_ |= 0x00000004;
-            object_ = other.object_;
-            onChanged();
-          }
-          this.mergeUnknownFields(other.getUnknownFields());
-          return this;
-        }
-
-        public final boolean isInitialized() {
-          if (!hasContent()) {
-            
-            return false;
-          }
-          if (!hasKind()) {
-            
-            return false;
-          }
-          if (!hasObject()) {
-            
-            return false;
-          }
-          return true;
-        }
-
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          com.rpc.Interface.IRequest.ToolParameter parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (com.rpc.Interface.IRequest.ToolParameter) e.getUnfinishedMessage();
-            throw e;
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-        private int bitField0_;
-
-        private java.lang.Object content_ = "";
-        /**
-         * <code>required string content = 1;</code>
-         *
-         * <pre>
-         *Tool Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-         * </pre>
-         */
-        public boolean hasContent() {
-          return ((bitField0_ & 0x00000001) == 0x00000001);
-        }
-        /**
-         * <code>required string content = 1;</code>
-         *
-         * <pre>
-         *Tool Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-         * </pre>
-         */
-        public java.lang.String getContent() {
-          java.lang.Object ref = content_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              content_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>required string content = 1;</code>
-         *
-         * <pre>
-         *Tool Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-         * </pre>
-         */
-        public com.google.protobuf.ByteString
-            getContentBytes() {
-          java.lang.Object ref = content_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            content_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>required string content = 1;</code>
-         *
-         * <pre>
-         *Tool Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-         * </pre>
-         */
-        public Builder setContent(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-          content_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string content = 1;</code>
-         *
-         * <pre>
-         *Tool Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-         * </pre>
-         */
-        public Builder clearContent() {
-          bitField0_ = (bitField0_ & ~0x00000001);
-          content_ = getDefaultInstance().getContent();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string content = 1;</code>
-         *
-         * <pre>
-         *Tool Object Type : "UPLOAD_SRCIP","DOWNLOAD_DSTIP"
-         * </pre>
-         */
-        public Builder setContentBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-          content_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object kind_ = "";
-        /**
-         * <code>required string kind = 2;</code>
-         *
-         * <pre>
-         *Tool Object Kind : "TCP""UDP""ICMP"
-         * </pre>
-         */
-        public boolean hasKind() {
-          return ((bitField0_ & 0x00000002) == 0x00000002);
-        }
-        /**
-         * <code>required string kind = 2;</code>
-         *
-         * <pre>
-         *Tool Object Kind : "TCP""UDP""ICMP"
-         * </pre>
-         */
-        public java.lang.String getKind() {
-          java.lang.Object ref = kind_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              kind_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>required string kind = 2;</code>
-         *
-         * <pre>
-         *Tool Object Kind : "TCP""UDP""ICMP"
-         * </pre>
-         */
-        public com.google.protobuf.ByteString
-            getKindBytes() {
-          java.lang.Object ref = kind_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            kind_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>required string kind = 2;</code>
-         *
-         * <pre>
-         *Tool Object Kind : "TCP""UDP""ICMP"
-         * </pre>
-         */
-        public Builder setKind(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-          kind_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string kind = 2;</code>
-         *
-         * <pre>
-         *Tool Object Kind : "TCP""UDP""ICMP"
-         * </pre>
-         */
-        public Builder clearKind() {
-          bitField0_ = (bitField0_ & ~0x00000002);
-          kind_ = getDefaultInstance().getKind();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string kind = 2;</code>
-         *
-         * <pre>
-         *Tool Object Kind : "TCP""UDP""ICMP"
-         * </pre>
-         */
-        public Builder setKindBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-          kind_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object object_ = "";
-        /**
-         * <code>required string object = 3;</code>
-         *
-         * <pre>
-         *Tool Object : "202.120.37.78"
-         * </pre>
-         */
-        public boolean hasObject() {
-          return ((bitField0_ & 0x00000004) == 0x00000004);
-        }
-        /**
-         * <code>required string object = 3;</code>
-         *
-         * <pre>
-         *Tool Object : "202.120.37.78"
-         * </pre>
-         */
-        public java.lang.String getObject() {
-          java.lang.Object ref = object_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              object_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>required string object = 3;</code>
-         *
-         * <pre>
-         *Tool Object : "202.120.37.78"
-         * </pre>
-         */
-        public com.google.protobuf.ByteString
-            getObjectBytes() {
-          java.lang.Object ref = object_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            object_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>required string object = 3;</code>
-         *
-         * <pre>
-         *Tool Object : "202.120.37.78"
-         * </pre>
-         */
-        public Builder setObject(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-          object_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string object = 3;</code>
-         *
-         * <pre>
-         *Tool Object : "202.120.37.78"
-         * </pre>
-         */
-        public Builder clearObject() {
-          bitField0_ = (bitField0_ & ~0x00000004);
-          object_ = getDefaultInstance().getObject();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string object = 3;</code>
-         *
-         * <pre>
-         *Tool Object : "202.120.37.78"
-         * </pre>
-         */
-        public Builder setObjectBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-          object_ = value;
-          onChanged();
-          return this;
-        }
-
-        // @@protoc_insertion_point(builder_scope:rpc.IRequest.ToolParameter)
-      }
-
-      static {
-        defaultInstance = new ToolParameter(true);
-        defaultInstance.initFields();
-      }
-
-      // @@protoc_insertion_point(class_scope:rpc.IRequest.ToolParameter)
-    }
-
     private int bitField0_;
-    public static final int TYPE_FIELD_NUMBER = 1;
-    private com.rpc.Interface.IRequest.RequestType type_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private java.lang.Object name_;
     /**
-     * <code>required .rpc.IRequest.RequestType type = 1;</code>
-     *
-     * <pre>
-     *Use in all Four Modes
-     * </pre>
+     * <code>required string name = 1;</code>
      */
-    public boolean hasType() {
+    public boolean hasName() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .rpc.IRequest.RequestType type = 1;</code>
-     *
-     * <pre>
-     *Use in all Four Modes
-     * </pre>
-     */
-    public com.rpc.Interface.IRequest.RequestType getType() {
-      return type_;
-    }
-
-    public static final int NAME_FIELD_NUMBER = 2;
-    private java.lang.Object name_;
-    /**
-     * <code>required string name = 2;</code>
-     */
-    public boolean hasName() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required string name = 2;</code>
+     * <code>required string name = 1;</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -5252,7 +811,7 @@ public final class Interface {
       }
     }
     /**
-     * <code>required string name = 2;</code>
+     * <code>required string name = 1;</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -5268,189 +827,110 @@ public final class Interface {
       }
     }
 
-    public static final int NUM_FIELD_NUMBER = 3;
+    public static final int NUM_FIELD_NUMBER = 2;
     private int num_;
     /**
-     * <code>required int32 num = 3;</code>
+     * <code>required int32 num = 2;</code>
      */
     public boolean hasNum() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
+      return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required int32 num = 3;</code>
+     * <code>required int32 num = 2;</code>
      */
     public int getNum() {
       return num_;
     }
 
-    public static final int PARENT_FIELD_NUMBER = 4;
+    public static final int PARENT_FIELD_NUMBER = 3;
     private int parent_;
     /**
-     * <code>required int32 parent = 4;</code>
+     * <code>required int32 parent = 3;</code>
      */
     public boolean hasParent() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
+      return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>required int32 parent = 4;</code>
+     * <code>required int32 parent = 3;</code>
      */
     public int getParent() {
       return parent_;
     }
 
-    public static final int BEGINTIME_FIELD_NUMBER = 5;
+    public static final int BEGINTIME_FIELD_NUMBER = 4;
     private int beginTime_;
     /**
-     * <code>required int32 beginTime = 5;</code>
+     * <code>required int32 beginTime = 4;</code>
      */
     public boolean hasBeginTime() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
+      return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>required int32 beginTime = 5;</code>
+     * <code>required int32 beginTime = 4;</code>
      */
     public int getBeginTime() {
       return beginTime_;
     }
 
-    public static final int ENDTIME_FIELD_NUMBER = 6;
+    public static final int ENDTIME_FIELD_NUMBER = 5;
     private int endTime_;
     /**
-     * <code>required int32 endTime = 6;</code>
+     * <code>required int32 endTime = 5;</code>
      */
     public boolean hasEndTime() {
-      return ((bitField0_ & 0x00000020) == 0x00000020);
+      return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
-     * <code>required int32 endTime = 6;</code>
+     * <code>required int32 endTime = 5;</code>
      */
     public int getEndTime() {
       return endTime_;
     }
 
-    public static final int MODE_FIELD_NUMBER = 7;
-    private com.rpc.Interface.IRequest.RequestMode mode_;
+    public static final int MODE_FIELD_NUMBER = 6;
+    private com.rpc.Interface.RequestMode mode_;
     /**
-     * <code>optional .rpc.IRequest.RequestMode mode = 7 [default = DEFAULT];</code>
+     * <code>optional .rpc.RequestMode mode = 6 [default = DEFAULT];</code>
      */
     public boolean hasMode() {
-      return ((bitField0_ & 0x00000040) == 0x00000040);
+      return ((bitField0_ & 0x00000020) == 0x00000020);
     }
     /**
-     * <code>optional .rpc.IRequest.RequestMode mode = 7 [default = DEFAULT];</code>
+     * <code>optional .rpc.RequestMode mode = 6 [default = DEFAULT];</code>
      */
-    public com.rpc.Interface.IRequest.RequestMode getMode() {
+    public com.rpc.Interface.RequestMode getMode() {
       return mode_;
     }
 
-    public static final int COMPARE_FIELD_NUMBER = 8;
-    private com.rpc.Interface.IRequest.CompareParameter compare_;
+    public static final int VECTOR_FIELD_NUMBER = 7;
+    private com.rpc.Interface.Vector vector_;
     /**
-     * <code>optional .rpc.IRequest.CompareParameter compare = 8;</code>
-     *
-     * <pre>
-     *Used in Compare-Type Request
-     * </pre>
+     * <code>optional .rpc.Vector vector = 7;</code>
      */
-    public boolean hasCompare() {
-      return ((bitField0_ & 0x00000080) == 0x00000080);
+    public boolean hasVector() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
     }
     /**
-     * <code>optional .rpc.IRequest.CompareParameter compare = 8;</code>
-     *
-     * <pre>
-     *Used in Compare-Type Request
-     * </pre>
+     * <code>optional .rpc.Vector vector = 7;</code>
      */
-    public com.rpc.Interface.IRequest.CompareParameter getCompare() {
-      return compare_;
+    public com.rpc.Interface.Vector getVector() {
+      return vector_;
     }
     /**
-     * <code>optional .rpc.IRequest.CompareParameter compare = 8;</code>
-     *
-     * <pre>
-     *Used in Compare-Type Request
-     * </pre>
+     * <code>optional .rpc.Vector vector = 7;</code>
      */
-    public com.rpc.Interface.IRequest.CompareParameterOrBuilder getCompareOrBuilder() {
-      return compare_;
-    }
-
-    public static final int ALL_FIELD_NUMBER = 9;
-    private com.rpc.Interface.IRequest.AllParameter all_;
-    /**
-     * <code>optional .rpc.IRequest.AllParameter all = 9;</code>
-     */
-    public boolean hasAll() {
-      return ((bitField0_ & 0x00000100) == 0x00000100);
-    }
-    /**
-     * <code>optional .rpc.IRequest.AllParameter all = 9;</code>
-     */
-    public com.rpc.Interface.IRequest.AllParameter getAll() {
-      return all_;
-    }
-    /**
-     * <code>optional .rpc.IRequest.AllParameter all = 9;</code>
-     */
-    public com.rpc.Interface.IRequest.AllParameterOrBuilder getAllOrBuilder() {
-      return all_;
-    }
-
-    public static final int SINGLE_FIELD_NUMBER = 10;
-    private com.rpc.Interface.IRequest.SingleParameter single_;
-    /**
-     * <code>optional .rpc.IRequest.SingleParameter single = 10;</code>
-     */
-    public boolean hasSingle() {
-      return ((bitField0_ & 0x00000200) == 0x00000200);
-    }
-    /**
-     * <code>optional .rpc.IRequest.SingleParameter single = 10;</code>
-     */
-    public com.rpc.Interface.IRequest.SingleParameter getSingle() {
-      return single_;
-    }
-    /**
-     * <code>optional .rpc.IRequest.SingleParameter single = 10;</code>
-     */
-    public com.rpc.Interface.IRequest.SingleParameterOrBuilder getSingleOrBuilder() {
-      return single_;
-    }
-
-    public static final int TOOL_FIELD_NUMBER = 11;
-    private com.rpc.Interface.IRequest.ToolParameter tool_;
-    /**
-     * <code>optional .rpc.IRequest.ToolParameter tool = 11;</code>
-     */
-    public boolean hasTool() {
-      return ((bitField0_ & 0x00000400) == 0x00000400);
-    }
-    /**
-     * <code>optional .rpc.IRequest.ToolParameter tool = 11;</code>
-     */
-    public com.rpc.Interface.IRequest.ToolParameter getTool() {
-      return tool_;
-    }
-    /**
-     * <code>optional .rpc.IRequest.ToolParameter tool = 11;</code>
-     */
-    public com.rpc.Interface.IRequest.ToolParameterOrBuilder getToolOrBuilder() {
-      return tool_;
+    public com.rpc.Interface.VectorOrBuilder getVectorOrBuilder() {
+      return vector_;
     }
 
     private void initFields() {
-      type_ = com.rpc.Interface.IRequest.RequestType.ALL;
       name_ = "";
       num_ = 0;
       parent_ = 0;
       beginTime_ = 0;
       endTime_ = 0;
-      mode_ = com.rpc.Interface.IRequest.RequestMode.DEFAULT;
-      compare_ = com.rpc.Interface.IRequest.CompareParameter.getDefaultInstance();
-      all_ = com.rpc.Interface.IRequest.AllParameter.getDefaultInstance();
-      single_ = com.rpc.Interface.IRequest.SingleParameter.getDefaultInstance();
-      tool_ = com.rpc.Interface.IRequest.ToolParameter.getDefaultInstance();
+      mode_ = com.rpc.Interface.RequestMode.DEFAULT;
+      vector_ = com.rpc.Interface.Vector.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -5458,10 +938,6 @@ public final class Interface {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasType()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       if (!hasName()) {
         memoizedIsInitialized = 0;
         return false;
@@ -5482,30 +958,6 @@ public final class Interface {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (hasCompare()) {
-        if (!getCompare().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      if (hasAll()) {
-        if (!getAll().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      if (hasSingle()) {
-        if (!getSingle().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      if (hasTool()) {
-        if (!getTool().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -5514,37 +966,25 @@ public final class Interface {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeEnum(1, type_.getNumber());
+        output.writeBytes(1, getNameBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, getNameBytes());
+        output.writeInt32(2, num_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeInt32(3, num_);
+        output.writeInt32(3, parent_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeInt32(4, parent_);
+        output.writeInt32(4, beginTime_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeInt32(5, beginTime_);
+        output.writeInt32(5, endTime_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        output.writeInt32(6, endTime_);
+        output.writeEnum(6, mode_.getNumber());
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        output.writeEnum(7, mode_.getNumber());
-      }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        output.writeMessage(8, compare_);
-      }
-      if (((bitField0_ & 0x00000100) == 0x00000100)) {
-        output.writeMessage(9, all_);
-      }
-      if (((bitField0_ & 0x00000200) == 0x00000200)) {
-        output.writeMessage(10, single_);
-      }
-      if (((bitField0_ & 0x00000400) == 0x00000400)) {
-        output.writeMessage(11, tool_);
+        output.writeMessage(7, vector_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -5557,47 +997,31 @@ public final class Interface {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, type_.getNumber());
+          .computeBytesSize(1, getNameBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getNameBytes());
+          .computeInt32Size(2, num_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, num_);
+          .computeInt32Size(3, parent_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, parent_);
+          .computeInt32Size(4, beginTime_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, beginTime_);
+          .computeInt32Size(5, endTime_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(6, endTime_);
+          .computeEnumSize(6, mode_.getNumber());
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(7, mode_.getNumber());
-      }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, compare_);
-      }
-      if (((bitField0_ & 0x00000100) == 0x00000100)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, all_);
-      }
-      if (((bitField0_ & 0x00000200) == 0x00000200)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, single_);
-      }
-      if (((bitField0_ & 0x00000400) == 0x00000400)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, tool_);
+          .computeMessageSize(7, vector_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -5708,10 +1132,7 @@ public final class Interface {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getCompareFieldBuilder();
-          getAllFieldBuilder();
-          getSingleFieldBuilder();
-          getToolFieldBuilder();
+          getVectorFieldBuilder();
         }
       }
       private static Builder create() {
@@ -5720,44 +1141,24 @@ public final class Interface {
 
       public Builder clear() {
         super.clear();
-        type_ = com.rpc.Interface.IRequest.RequestType.ALL;
-        bitField0_ = (bitField0_ & ~0x00000001);
         name_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         num_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         parent_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         beginTime_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         endTime_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        mode_ = com.rpc.Interface.RequestMode.DEFAULT;
         bitField0_ = (bitField0_ & ~0x00000020);
-        mode_ = com.rpc.Interface.IRequest.RequestMode.DEFAULT;
+        if (vectorBuilder_ == null) {
+          vector_ = com.rpc.Interface.Vector.getDefaultInstance();
+        } else {
+          vectorBuilder_.clear();
+        }
         bitField0_ = (bitField0_ & ~0x00000040);
-        if (compareBuilder_ == null) {
-          compare_ = com.rpc.Interface.IRequest.CompareParameter.getDefaultInstance();
-        } else {
-          compareBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000080);
-        if (allBuilder_ == null) {
-          all_ = com.rpc.Interface.IRequest.AllParameter.getDefaultInstance();
-        } else {
-          allBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000100);
-        if (singleBuilder_ == null) {
-          single_ = com.rpc.Interface.IRequest.SingleParameter.getDefaultInstance();
-        } else {
-          singleBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000200);
-        if (toolBuilder_ == null) {
-          tool_ = com.rpc.Interface.IRequest.ToolParameter.getDefaultInstance();
-        } else {
-          toolBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000400);
         return this;
       }
 
@@ -5789,62 +1190,34 @@ public final class Interface {
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.type_ = type_;
+        result.name_ = name_;
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        result.name_ = name_;
+        result.num_ = num_;
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        result.num_ = num_;
+        result.parent_ = parent_;
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
         }
-        result.parent_ = parent_;
+        result.beginTime_ = beginTime_;
         if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
           to_bitField0_ |= 0x00000010;
         }
-        result.beginTime_ = beginTime_;
+        result.endTime_ = endTime_;
         if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
           to_bitField0_ |= 0x00000020;
         }
-        result.endTime_ = endTime_;
+        result.mode_ = mode_;
         if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
           to_bitField0_ |= 0x00000040;
         }
-        result.mode_ = mode_;
-        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
-          to_bitField0_ |= 0x00000080;
-        }
-        if (compareBuilder_ == null) {
-          result.compare_ = compare_;
+        if (vectorBuilder_ == null) {
+          result.vector_ = vector_;
         } else {
-          result.compare_ = compareBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
-          to_bitField0_ |= 0x00000100;
-        }
-        if (allBuilder_ == null) {
-          result.all_ = all_;
-        } else {
-          result.all_ = allBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
-          to_bitField0_ |= 0x00000200;
-        }
-        if (singleBuilder_ == null) {
-          result.single_ = single_;
-        } else {
-          result.single_ = singleBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
-          to_bitField0_ |= 0x00000400;
-        }
-        if (toolBuilder_ == null) {
-          result.tool_ = tool_;
-        } else {
-          result.tool_ = toolBuilder_.build();
+          result.vector_ = vectorBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -5862,11 +1235,8 @@ public final class Interface {
 
       public Builder mergeFrom(com.rpc.Interface.IRequest other) {
         if (other == com.rpc.Interface.IRequest.getDefaultInstance()) return this;
-        if (other.hasType()) {
-          setType(other.getType());
-        }
         if (other.hasName()) {
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
           name_ = other.name_;
           onChanged();
         }
@@ -5885,27 +1255,14 @@ public final class Interface {
         if (other.hasMode()) {
           setMode(other.getMode());
         }
-        if (other.hasCompare()) {
-          mergeCompare(other.getCompare());
-        }
-        if (other.hasAll()) {
-          mergeAll(other.getAll());
-        }
-        if (other.hasSingle()) {
-          mergeSingle(other.getSingle());
-        }
-        if (other.hasTool()) {
-          mergeTool(other.getTool());
+        if (other.hasVector()) {
+          mergeVector(other.getVector());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
-        if (!hasType()) {
-          
-          return false;
-        }
         if (!hasName()) {
           
           return false;
@@ -5925,30 +1282,6 @@ public final class Interface {
         if (!hasEndTime()) {
           
           return false;
-        }
-        if (hasCompare()) {
-          if (!getCompare().isInitialized()) {
-            
-            return false;
-          }
-        }
-        if (hasAll()) {
-          if (!getAll().isInitialized()) {
-            
-            return false;
-          }
-        }
-        if (hasSingle()) {
-          if (!getSingle().isInitialized()) {
-            
-            return false;
-          }
-        }
-        if (hasTool()) {
-          if (!getTool().isInitialized()) {
-            
-            return false;
-          }
         }
         return true;
       }
@@ -5972,66 +1305,15 @@ public final class Interface {
       }
       private int bitField0_;
 
-      private com.rpc.Interface.IRequest.RequestType type_ = com.rpc.Interface.IRequest.RequestType.ALL;
+      private java.lang.Object name_ = "";
       /**
-       * <code>required .rpc.IRequest.RequestType type = 1;</code>
-       *
-       * <pre>
-       *Use in all Four Modes
-       * </pre>
+       * <code>required string name = 1;</code>
        */
-      public boolean hasType() {
+      public boolean hasName() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .rpc.IRequest.RequestType type = 1;</code>
-       *
-       * <pre>
-       *Use in all Four Modes
-       * </pre>
-       */
-      public com.rpc.Interface.IRequest.RequestType getType() {
-        return type_;
-      }
-      /**
-       * <code>required .rpc.IRequest.RequestType type = 1;</code>
-       *
-       * <pre>
-       *Use in all Four Modes
-       * </pre>
-       */
-      public Builder setType(com.rpc.Interface.IRequest.RequestType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000001;
-        type_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required .rpc.IRequest.RequestType type = 1;</code>
-       *
-       * <pre>
-       *Use in all Four Modes
-       * </pre>
-       */
-      public Builder clearType() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        type_ = com.rpc.Interface.IRequest.RequestType.ALL;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object name_ = "";
-      /**
-       * <code>required string name = 2;</code>
-       */
-      public boolean hasName() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required string name = 2;</code>
+       * <code>required string name = 1;</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -6048,7 +1330,7 @@ public final class Interface {
         }
       }
       /**
-       * <code>required string name = 2;</code>
+       * <code>required string name = 1;</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -6064,36 +1346,36 @@ public final class Interface {
         }
       }
       /**
-       * <code>required string name = 2;</code>
+       * <code>required string name = 1;</code>
        */
       public Builder setName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000002;
+  bitField0_ |= 0x00000001;
         name_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required string name = 2;</code>
+       * <code>required string name = 1;</code>
        */
       public Builder clearName() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         name_ = getDefaultInstance().getName();
         onChanged();
         return this;
       }
       /**
-       * <code>required string name = 2;</code>
+       * <code>required string name = 1;</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000002;
+  bitField0_ |= 0x00000001;
         name_ = value;
         onChanged();
         return this;
@@ -6101,31 +1383,31 @@ public final class Interface {
 
       private int num_ ;
       /**
-       * <code>required int32 num = 3;</code>
+       * <code>required int32 num = 2;</code>
        */
       public boolean hasNum() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
+        return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required int32 num = 3;</code>
+       * <code>required int32 num = 2;</code>
        */
       public int getNum() {
         return num_;
       }
       /**
-       * <code>required int32 num = 3;</code>
+       * <code>required int32 num = 2;</code>
        */
       public Builder setNum(int value) {
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         num_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required int32 num = 3;</code>
+       * <code>required int32 num = 2;</code>
        */
       public Builder clearNum() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         num_ = 0;
         onChanged();
         return this;
@@ -6133,31 +1415,31 @@ public final class Interface {
 
       private int parent_ ;
       /**
-       * <code>required int32 parent = 4;</code>
+       * <code>required int32 parent = 3;</code>
        */
       public boolean hasParent() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
+        return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>required int32 parent = 4;</code>
+       * <code>required int32 parent = 3;</code>
        */
       public int getParent() {
         return parent_;
       }
       /**
-       * <code>required int32 parent = 4;</code>
+       * <code>required int32 parent = 3;</code>
        */
       public Builder setParent(int value) {
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         parent_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required int32 parent = 4;</code>
+       * <code>required int32 parent = 3;</code>
        */
       public Builder clearParent() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         parent_ = 0;
         onChanged();
         return this;
@@ -6165,31 +1447,31 @@ public final class Interface {
 
       private int beginTime_ ;
       /**
-       * <code>required int32 beginTime = 5;</code>
+       * <code>required int32 beginTime = 4;</code>
        */
       public boolean hasBeginTime() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
+        return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>required int32 beginTime = 5;</code>
+       * <code>required int32 beginTime = 4;</code>
        */
       public int getBeginTime() {
         return beginTime_;
       }
       /**
-       * <code>required int32 beginTime = 5;</code>
+       * <code>required int32 beginTime = 4;</code>
        */
       public Builder setBeginTime(int value) {
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         beginTime_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required int32 beginTime = 5;</code>
+       * <code>required int32 beginTime = 4;</code>
        */
       public Builder clearBeginTime() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         beginTime_ = 0;
         onChanged();
         return this;
@@ -6197,569 +1479,185 @@ public final class Interface {
 
       private int endTime_ ;
       /**
-       * <code>required int32 endTime = 6;</code>
+       * <code>required int32 endTime = 5;</code>
        */
       public boolean hasEndTime() {
-        return ((bitField0_ & 0x00000020) == 0x00000020);
+        return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>required int32 endTime = 6;</code>
+       * <code>required int32 endTime = 5;</code>
        */
       public int getEndTime() {
         return endTime_;
       }
       /**
-       * <code>required int32 endTime = 6;</code>
+       * <code>required int32 endTime = 5;</code>
        */
       public Builder setEndTime(int value) {
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         endTime_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required int32 endTime = 6;</code>
+       * <code>required int32 endTime = 5;</code>
        */
       public Builder clearEndTime() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
         endTime_ = 0;
         onChanged();
         return this;
       }
 
-      private com.rpc.Interface.IRequest.RequestMode mode_ = com.rpc.Interface.IRequest.RequestMode.DEFAULT;
+      private com.rpc.Interface.RequestMode mode_ = com.rpc.Interface.RequestMode.DEFAULT;
       /**
-       * <code>optional .rpc.IRequest.RequestMode mode = 7 [default = DEFAULT];</code>
+       * <code>optional .rpc.RequestMode mode = 6 [default = DEFAULT];</code>
        */
       public boolean hasMode() {
-        return ((bitField0_ & 0x00000040) == 0x00000040);
+        return ((bitField0_ & 0x00000020) == 0x00000020);
       }
       /**
-       * <code>optional .rpc.IRequest.RequestMode mode = 7 [default = DEFAULT];</code>
+       * <code>optional .rpc.RequestMode mode = 6 [default = DEFAULT];</code>
        */
-      public com.rpc.Interface.IRequest.RequestMode getMode() {
+      public com.rpc.Interface.RequestMode getMode() {
         return mode_;
       }
       /**
-       * <code>optional .rpc.IRequest.RequestMode mode = 7 [default = DEFAULT];</code>
+       * <code>optional .rpc.RequestMode mode = 6 [default = DEFAULT];</code>
        */
-      public Builder setMode(com.rpc.Interface.IRequest.RequestMode value) {
+      public Builder setMode(com.rpc.Interface.RequestMode value) {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000020;
         mode_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional .rpc.IRequest.RequestMode mode = 7 [default = DEFAULT];</code>
+       * <code>optional .rpc.RequestMode mode = 6 [default = DEFAULT];</code>
        */
       public Builder clearMode() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        mode_ = com.rpc.Interface.RequestMode.DEFAULT;
+        onChanged();
+        return this;
+      }
+
+      private com.rpc.Interface.Vector vector_ = com.rpc.Interface.Vector.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.rpc.Interface.Vector, com.rpc.Interface.Vector.Builder, com.rpc.Interface.VectorOrBuilder> vectorBuilder_;
+      /**
+       * <code>optional .rpc.Vector vector = 7;</code>
+       */
+      public boolean hasVector() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional .rpc.Vector vector = 7;</code>
+       */
+      public com.rpc.Interface.Vector getVector() {
+        if (vectorBuilder_ == null) {
+          return vector_;
+        } else {
+          return vectorBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .rpc.Vector vector = 7;</code>
+       */
+      public Builder setVector(com.rpc.Interface.Vector value) {
+        if (vectorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          vector_ = value;
+          onChanged();
+        } else {
+          vectorBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .rpc.Vector vector = 7;</code>
+       */
+      public Builder setVector(
+          com.rpc.Interface.Vector.Builder builderForValue) {
+        if (vectorBuilder_ == null) {
+          vector_ = builderForValue.build();
+          onChanged();
+        } else {
+          vectorBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .rpc.Vector vector = 7;</code>
+       */
+      public Builder mergeVector(com.rpc.Interface.Vector value) {
+        if (vectorBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) == 0x00000040) &&
+              vector_ != com.rpc.Interface.Vector.getDefaultInstance()) {
+            vector_ =
+              com.rpc.Interface.Vector.newBuilder(vector_).mergeFrom(value).buildPartial();
+          } else {
+            vector_ = value;
+          }
+          onChanged();
+        } else {
+          vectorBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .rpc.Vector vector = 7;</code>
+       */
+      public Builder clearVector() {
+        if (vectorBuilder_ == null) {
+          vector_ = com.rpc.Interface.Vector.getDefaultInstance();
+          onChanged();
+        } else {
+          vectorBuilder_.clear();
+        }
         bitField0_ = (bitField0_ & ~0x00000040);
-        mode_ = com.rpc.Interface.IRequest.RequestMode.DEFAULT;
+        return this;
+      }
+      /**
+       * <code>optional .rpc.Vector vector = 7;</code>
+       */
+      public com.rpc.Interface.Vector.Builder getVectorBuilder() {
+        bitField0_ |= 0x00000040;
         onChanged();
-        return this;
-      }
-
-      private com.rpc.Interface.IRequest.CompareParameter compare_ = com.rpc.Interface.IRequest.CompareParameter.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          com.rpc.Interface.IRequest.CompareParameter, com.rpc.Interface.IRequest.CompareParameter.Builder, com.rpc.Interface.IRequest.CompareParameterOrBuilder> compareBuilder_;
-      /**
-       * <code>optional .rpc.IRequest.CompareParameter compare = 8;</code>
-       *
-       * <pre>
-       *Used in Compare-Type Request
-       * </pre>
-       */
-      public boolean hasCompare() {
-        return ((bitField0_ & 0x00000080) == 0x00000080);
+        return getVectorFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .rpc.IRequest.CompareParameter compare = 8;</code>
-       *
-       * <pre>
-       *Used in Compare-Type Request
-       * </pre>
+       * <code>optional .rpc.Vector vector = 7;</code>
        */
-      public com.rpc.Interface.IRequest.CompareParameter getCompare() {
-        if (compareBuilder_ == null) {
-          return compare_;
+      public com.rpc.Interface.VectorOrBuilder getVectorOrBuilder() {
+        if (vectorBuilder_ != null) {
+          return vectorBuilder_.getMessageOrBuilder();
         } else {
-          return compareBuilder_.getMessage();
+          return vector_;
         }
       }
       /**
-       * <code>optional .rpc.IRequest.CompareParameter compare = 8;</code>
-       *
-       * <pre>
-       *Used in Compare-Type Request
-       * </pre>
-       */
-      public Builder setCompare(com.rpc.Interface.IRequest.CompareParameter value) {
-        if (compareBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          compare_ = value;
-          onChanged();
-        } else {
-          compareBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000080;
-        return this;
-      }
-      /**
-       * <code>optional .rpc.IRequest.CompareParameter compare = 8;</code>
-       *
-       * <pre>
-       *Used in Compare-Type Request
-       * </pre>
-       */
-      public Builder setCompare(
-          com.rpc.Interface.IRequest.CompareParameter.Builder builderForValue) {
-        if (compareBuilder_ == null) {
-          compare_ = builderForValue.build();
-          onChanged();
-        } else {
-          compareBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000080;
-        return this;
-      }
-      /**
-       * <code>optional .rpc.IRequest.CompareParameter compare = 8;</code>
-       *
-       * <pre>
-       *Used in Compare-Type Request
-       * </pre>
-       */
-      public Builder mergeCompare(com.rpc.Interface.IRequest.CompareParameter value) {
-        if (compareBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) == 0x00000080) &&
-              compare_ != com.rpc.Interface.IRequest.CompareParameter.getDefaultInstance()) {
-            compare_ =
-              com.rpc.Interface.IRequest.CompareParameter.newBuilder(compare_).mergeFrom(value).buildPartial();
-          } else {
-            compare_ = value;
-          }
-          onChanged();
-        } else {
-          compareBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000080;
-        return this;
-      }
-      /**
-       * <code>optional .rpc.IRequest.CompareParameter compare = 8;</code>
-       *
-       * <pre>
-       *Used in Compare-Type Request
-       * </pre>
-       */
-      public Builder clearCompare() {
-        if (compareBuilder_ == null) {
-          compare_ = com.rpc.Interface.IRequest.CompareParameter.getDefaultInstance();
-          onChanged();
-        } else {
-          compareBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000080);
-        return this;
-      }
-      /**
-       * <code>optional .rpc.IRequest.CompareParameter compare = 8;</code>
-       *
-       * <pre>
-       *Used in Compare-Type Request
-       * </pre>
-       */
-      public com.rpc.Interface.IRequest.CompareParameter.Builder getCompareBuilder() {
-        bitField0_ |= 0x00000080;
-        onChanged();
-        return getCompareFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .rpc.IRequest.CompareParameter compare = 8;</code>
-       *
-       * <pre>
-       *Used in Compare-Type Request
-       * </pre>
-       */
-      public com.rpc.Interface.IRequest.CompareParameterOrBuilder getCompareOrBuilder() {
-        if (compareBuilder_ != null) {
-          return compareBuilder_.getMessageOrBuilder();
-        } else {
-          return compare_;
-        }
-      }
-      /**
-       * <code>optional .rpc.IRequest.CompareParameter compare = 8;</code>
-       *
-       * <pre>
-       *Used in Compare-Type Request
-       * </pre>
+       * <code>optional .rpc.Vector vector = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          com.rpc.Interface.IRequest.CompareParameter, com.rpc.Interface.IRequest.CompareParameter.Builder, com.rpc.Interface.IRequest.CompareParameterOrBuilder> 
-          getCompareFieldBuilder() {
-        if (compareBuilder_ == null) {
-          compareBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.rpc.Interface.IRequest.CompareParameter, com.rpc.Interface.IRequest.CompareParameter.Builder, com.rpc.Interface.IRequest.CompareParameterOrBuilder>(
-                  getCompare(),
+          com.rpc.Interface.Vector, com.rpc.Interface.Vector.Builder, com.rpc.Interface.VectorOrBuilder> 
+          getVectorFieldBuilder() {
+        if (vectorBuilder_ == null) {
+          vectorBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.rpc.Interface.Vector, com.rpc.Interface.Vector.Builder, com.rpc.Interface.VectorOrBuilder>(
+                  getVector(),
                   getParentForChildren(),
                   isClean());
-          compare_ = null;
+          vector_ = null;
         }
-        return compareBuilder_;
-      }
-
-      private com.rpc.Interface.IRequest.AllParameter all_ = com.rpc.Interface.IRequest.AllParameter.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          com.rpc.Interface.IRequest.AllParameter, com.rpc.Interface.IRequest.AllParameter.Builder, com.rpc.Interface.IRequest.AllParameterOrBuilder> allBuilder_;
-      /**
-       * <code>optional .rpc.IRequest.AllParameter all = 9;</code>
-       */
-      public boolean hasAll() {
-        return ((bitField0_ & 0x00000100) == 0x00000100);
-      }
-      /**
-       * <code>optional .rpc.IRequest.AllParameter all = 9;</code>
-       */
-      public com.rpc.Interface.IRequest.AllParameter getAll() {
-        if (allBuilder_ == null) {
-          return all_;
-        } else {
-          return allBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .rpc.IRequest.AllParameter all = 9;</code>
-       */
-      public Builder setAll(com.rpc.Interface.IRequest.AllParameter value) {
-        if (allBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          all_ = value;
-          onChanged();
-        } else {
-          allBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000100;
-        return this;
-      }
-      /**
-       * <code>optional .rpc.IRequest.AllParameter all = 9;</code>
-       */
-      public Builder setAll(
-          com.rpc.Interface.IRequest.AllParameter.Builder builderForValue) {
-        if (allBuilder_ == null) {
-          all_ = builderForValue.build();
-          onChanged();
-        } else {
-          allBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000100;
-        return this;
-      }
-      /**
-       * <code>optional .rpc.IRequest.AllParameter all = 9;</code>
-       */
-      public Builder mergeAll(com.rpc.Interface.IRequest.AllParameter value) {
-        if (allBuilder_ == null) {
-          if (((bitField0_ & 0x00000100) == 0x00000100) &&
-              all_ != com.rpc.Interface.IRequest.AllParameter.getDefaultInstance()) {
-            all_ =
-              com.rpc.Interface.IRequest.AllParameter.newBuilder(all_).mergeFrom(value).buildPartial();
-          } else {
-            all_ = value;
-          }
-          onChanged();
-        } else {
-          allBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000100;
-        return this;
-      }
-      /**
-       * <code>optional .rpc.IRequest.AllParameter all = 9;</code>
-       */
-      public Builder clearAll() {
-        if (allBuilder_ == null) {
-          all_ = com.rpc.Interface.IRequest.AllParameter.getDefaultInstance();
-          onChanged();
-        } else {
-          allBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000100);
-        return this;
-      }
-      /**
-       * <code>optional .rpc.IRequest.AllParameter all = 9;</code>
-       */
-      public com.rpc.Interface.IRequest.AllParameter.Builder getAllBuilder() {
-        bitField0_ |= 0x00000100;
-        onChanged();
-        return getAllFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .rpc.IRequest.AllParameter all = 9;</code>
-       */
-      public com.rpc.Interface.IRequest.AllParameterOrBuilder getAllOrBuilder() {
-        if (allBuilder_ != null) {
-          return allBuilder_.getMessageOrBuilder();
-        } else {
-          return all_;
-        }
-      }
-      /**
-       * <code>optional .rpc.IRequest.AllParameter all = 9;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          com.rpc.Interface.IRequest.AllParameter, com.rpc.Interface.IRequest.AllParameter.Builder, com.rpc.Interface.IRequest.AllParameterOrBuilder> 
-          getAllFieldBuilder() {
-        if (allBuilder_ == null) {
-          allBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.rpc.Interface.IRequest.AllParameter, com.rpc.Interface.IRequest.AllParameter.Builder, com.rpc.Interface.IRequest.AllParameterOrBuilder>(
-                  getAll(),
-                  getParentForChildren(),
-                  isClean());
-          all_ = null;
-        }
-        return allBuilder_;
-      }
-
-      private com.rpc.Interface.IRequest.SingleParameter single_ = com.rpc.Interface.IRequest.SingleParameter.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          com.rpc.Interface.IRequest.SingleParameter, com.rpc.Interface.IRequest.SingleParameter.Builder, com.rpc.Interface.IRequest.SingleParameterOrBuilder> singleBuilder_;
-      /**
-       * <code>optional .rpc.IRequest.SingleParameter single = 10;</code>
-       */
-      public boolean hasSingle() {
-        return ((bitField0_ & 0x00000200) == 0x00000200);
-      }
-      /**
-       * <code>optional .rpc.IRequest.SingleParameter single = 10;</code>
-       */
-      public com.rpc.Interface.IRequest.SingleParameter getSingle() {
-        if (singleBuilder_ == null) {
-          return single_;
-        } else {
-          return singleBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .rpc.IRequest.SingleParameter single = 10;</code>
-       */
-      public Builder setSingle(com.rpc.Interface.IRequest.SingleParameter value) {
-        if (singleBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          single_ = value;
-          onChanged();
-        } else {
-          singleBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000200;
-        return this;
-      }
-      /**
-       * <code>optional .rpc.IRequest.SingleParameter single = 10;</code>
-       */
-      public Builder setSingle(
-          com.rpc.Interface.IRequest.SingleParameter.Builder builderForValue) {
-        if (singleBuilder_ == null) {
-          single_ = builderForValue.build();
-          onChanged();
-        } else {
-          singleBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000200;
-        return this;
-      }
-      /**
-       * <code>optional .rpc.IRequest.SingleParameter single = 10;</code>
-       */
-      public Builder mergeSingle(com.rpc.Interface.IRequest.SingleParameter value) {
-        if (singleBuilder_ == null) {
-          if (((bitField0_ & 0x00000200) == 0x00000200) &&
-              single_ != com.rpc.Interface.IRequest.SingleParameter.getDefaultInstance()) {
-            single_ =
-              com.rpc.Interface.IRequest.SingleParameter.newBuilder(single_).mergeFrom(value).buildPartial();
-          } else {
-            single_ = value;
-          }
-          onChanged();
-        } else {
-          singleBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000200;
-        return this;
-      }
-      /**
-       * <code>optional .rpc.IRequest.SingleParameter single = 10;</code>
-       */
-      public Builder clearSingle() {
-        if (singleBuilder_ == null) {
-          single_ = com.rpc.Interface.IRequest.SingleParameter.getDefaultInstance();
-          onChanged();
-        } else {
-          singleBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000200);
-        return this;
-      }
-      /**
-       * <code>optional .rpc.IRequest.SingleParameter single = 10;</code>
-       */
-      public com.rpc.Interface.IRequest.SingleParameter.Builder getSingleBuilder() {
-        bitField0_ |= 0x00000200;
-        onChanged();
-        return getSingleFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .rpc.IRequest.SingleParameter single = 10;</code>
-       */
-      public com.rpc.Interface.IRequest.SingleParameterOrBuilder getSingleOrBuilder() {
-        if (singleBuilder_ != null) {
-          return singleBuilder_.getMessageOrBuilder();
-        } else {
-          return single_;
-        }
-      }
-      /**
-       * <code>optional .rpc.IRequest.SingleParameter single = 10;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          com.rpc.Interface.IRequest.SingleParameter, com.rpc.Interface.IRequest.SingleParameter.Builder, com.rpc.Interface.IRequest.SingleParameterOrBuilder> 
-          getSingleFieldBuilder() {
-        if (singleBuilder_ == null) {
-          singleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.rpc.Interface.IRequest.SingleParameter, com.rpc.Interface.IRequest.SingleParameter.Builder, com.rpc.Interface.IRequest.SingleParameterOrBuilder>(
-                  getSingle(),
-                  getParentForChildren(),
-                  isClean());
-          single_ = null;
-        }
-        return singleBuilder_;
-      }
-
-      private com.rpc.Interface.IRequest.ToolParameter tool_ = com.rpc.Interface.IRequest.ToolParameter.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          com.rpc.Interface.IRequest.ToolParameter, com.rpc.Interface.IRequest.ToolParameter.Builder, com.rpc.Interface.IRequest.ToolParameterOrBuilder> toolBuilder_;
-      /**
-       * <code>optional .rpc.IRequest.ToolParameter tool = 11;</code>
-       */
-      public boolean hasTool() {
-        return ((bitField0_ & 0x00000400) == 0x00000400);
-      }
-      /**
-       * <code>optional .rpc.IRequest.ToolParameter tool = 11;</code>
-       */
-      public com.rpc.Interface.IRequest.ToolParameter getTool() {
-        if (toolBuilder_ == null) {
-          return tool_;
-        } else {
-          return toolBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .rpc.IRequest.ToolParameter tool = 11;</code>
-       */
-      public Builder setTool(com.rpc.Interface.IRequest.ToolParameter value) {
-        if (toolBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          tool_ = value;
-          onChanged();
-        } else {
-          toolBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000400;
-        return this;
-      }
-      /**
-       * <code>optional .rpc.IRequest.ToolParameter tool = 11;</code>
-       */
-      public Builder setTool(
-          com.rpc.Interface.IRequest.ToolParameter.Builder builderForValue) {
-        if (toolBuilder_ == null) {
-          tool_ = builderForValue.build();
-          onChanged();
-        } else {
-          toolBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000400;
-        return this;
-      }
-      /**
-       * <code>optional .rpc.IRequest.ToolParameter tool = 11;</code>
-       */
-      public Builder mergeTool(com.rpc.Interface.IRequest.ToolParameter value) {
-        if (toolBuilder_ == null) {
-          if (((bitField0_ & 0x00000400) == 0x00000400) &&
-              tool_ != com.rpc.Interface.IRequest.ToolParameter.getDefaultInstance()) {
-            tool_ =
-              com.rpc.Interface.IRequest.ToolParameter.newBuilder(tool_).mergeFrom(value).buildPartial();
-          } else {
-            tool_ = value;
-          }
-          onChanged();
-        } else {
-          toolBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000400;
-        return this;
-      }
-      /**
-       * <code>optional .rpc.IRequest.ToolParameter tool = 11;</code>
-       */
-      public Builder clearTool() {
-        if (toolBuilder_ == null) {
-          tool_ = com.rpc.Interface.IRequest.ToolParameter.getDefaultInstance();
-          onChanged();
-        } else {
-          toolBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000400);
-        return this;
-      }
-      /**
-       * <code>optional .rpc.IRequest.ToolParameter tool = 11;</code>
-       */
-      public com.rpc.Interface.IRequest.ToolParameter.Builder getToolBuilder() {
-        bitField0_ |= 0x00000400;
-        onChanged();
-        return getToolFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .rpc.IRequest.ToolParameter tool = 11;</code>
-       */
-      public com.rpc.Interface.IRequest.ToolParameterOrBuilder getToolOrBuilder() {
-        if (toolBuilder_ != null) {
-          return toolBuilder_.getMessageOrBuilder();
-        } else {
-          return tool_;
-        }
-      }
-      /**
-       * <code>optional .rpc.IRequest.ToolParameter tool = 11;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          com.rpc.Interface.IRequest.ToolParameter, com.rpc.Interface.IRequest.ToolParameter.Builder, com.rpc.Interface.IRequest.ToolParameterOrBuilder> 
-          getToolFieldBuilder() {
-        if (toolBuilder_ == null) {
-          toolBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.rpc.Interface.IRequest.ToolParameter, com.rpc.Interface.IRequest.ToolParameter.Builder, com.rpc.Interface.IRequest.ToolParameterOrBuilder>(
-                  getTool(),
-                  getParentForChildren(),
-                  isClean());
-          tool_ = null;
-        }
-        return toolBuilder_;
+        return vectorBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:rpc.IRequest)
@@ -6774,30 +1672,15 @@ public final class Interface {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rpc_Vector_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_rpc_Vector_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_rpc_IRequest_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_rpc_IRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rpc_IRequest_CompareParameter_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_rpc_IRequest_CompareParameter_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rpc_IRequest_AllParameter_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_rpc_IRequest_AllParameter_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rpc_IRequest_SingleParameter_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_rpc_IRequest_SingleParameter_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rpc_IRequest_ToolParameter_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_rpc_IRequest_ToolParameter_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -6807,28 +1690,14 @@ public final class Interface {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017interface.proto\022\003rpc\"\254\006\n\010IRequest\022\'\n\004t" +
-      "ype\030\001 \002(\0162\031.rpc.IRequest.RequestType\022\014\n\004" +
-      "name\030\002 \002(\t\022\013\n\003num\030\003 \002(\005\022\016\n\006parent\030\004 \002(\005\022" +
-      "\021\n\tbeginTime\030\005 \002(\005\022\017\n\007endTime\030\006 \002(\005\0220\n\004m" +
-      "ode\030\007 \001(\0162\031.rpc.IRequest.RequestMode:\007DE" +
-      "FAULT\022/\n\007compare\030\010 \001(\0132\036.rpc.IRequest.Co" +
-      "mpareParameter\022\'\n\003all\030\t \001(\0132\032.rpc.IReque" +
-      "st.AllParameter\022-\n\006single\030\n \001(\0132\035.rpc.IR" +
-      "equest.SingleParameter\022)\n\004tool\030\013 \001(\0132\033.r" +
-      "pc.IRequest.ToolParameter\032\216\001\n\020ComparePar",
-      "ameter\022\023\n\013objectAType\030\001 \002(\t\022\017\n\007objectA\030\002" +
-      " \002(\t\022\023\n\013objectBType\030\003 \002(\t\022\017\n\007objectB\030\004 \002" +
-      "(\t\022\016\n\006method\030\005 \002(\t\022\r\n\005index\030\006 \001(\t\022\017\n\007pro" +
-      "blem\030\007 \001(\t\032=\n\014AllParameter\022\017\n\007content\030\001 " +
-      "\002(\t\022\014\n\004kind\030\002 \002(\t\022\016\n\006method\030\003 \002(\t\032@\n\017Sin" +
-      "gleParameter\022\017\n\007content\030\001 \002(\t\022\014\n\004kind\030\002 " +
-      "\002(\t\022\016\n\006object\030\003 \002(\t\032>\n\rToolParameter\022\017\n\007" +
-      "content\030\001 \002(\t\022\014\n\004kind\030\002 \002(\t\022\016\n\006object\030\003 " +
-      "\002(\t\"9\n\013RequestType\022\007\n\003ALL\020\000\022\n\n\006SINGLE\020\001\022" +
-      "\013\n\007COMPARE\020\002\022\010\n\004TOOL\020\003\"5\n\013RequestMode\022\013\n",
-      "\007DEFAULT\020\000\022\r\n\tOPTIMIZED\020\001\022\n\n\006SIMPLE\020\002B\024\n" +
-      "\007com.rpcB\tInterface"
+      "\n\017interface.proto\022\003rpc\"\027\n\006Vector\022\r\n\005valu" +
+      "e\030\001 \003(\002\"\237\001\n\010IRequest\022\014\n\004name\030\001 \002(\t\022\013\n\003nu" +
+      "m\030\002 \002(\005\022\016\n\006parent\030\003 \002(\005\022\021\n\tbeginTime\030\004 \002" +
+      "(\005\022\017\n\007endTime\030\005 \002(\005\022\'\n\004mode\030\006 \001(\0162\020.rpc." +
+      "RequestMode:\007DEFAULT\022\033\n\006vector\030\007 \001(\0132\013.r" +
+      "pc.Vector*5\n\013RequestMode\022\013\n\007DEFAULT\020\000\022\r\n" +
+      "\tOPTIMIZED\020\001\022\n\n\006SIMPLE\020\002B\024\n\007com.rpcB\tInt" +
+      "erface"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6842,36 +1711,18 @@ public final class Interface {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_rpc_IRequest_descriptor =
+    internal_static_rpc_Vector_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_rpc_Vector_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_rpc_Vector_descriptor,
+        new java.lang.String[] { "Value", });
+    internal_static_rpc_IRequest_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_rpc_IRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_rpc_IRequest_descriptor,
-        new java.lang.String[] { "Type", "Name", "Num", "Parent", "BeginTime", "EndTime", "Mode", "Compare", "All", "Single", "Tool", });
-    internal_static_rpc_IRequest_CompareParameter_descriptor =
-      internal_static_rpc_IRequest_descriptor.getNestedTypes().get(0);
-    internal_static_rpc_IRequest_CompareParameter_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_rpc_IRequest_CompareParameter_descriptor,
-        new java.lang.String[] { "ObjectAType", "ObjectA", "ObjectBType", "ObjectB", "Method", "Index", "Problem", });
-    internal_static_rpc_IRequest_AllParameter_descriptor =
-      internal_static_rpc_IRequest_descriptor.getNestedTypes().get(1);
-    internal_static_rpc_IRequest_AllParameter_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_rpc_IRequest_AllParameter_descriptor,
-        new java.lang.String[] { "Content", "Kind", "Method", });
-    internal_static_rpc_IRequest_SingleParameter_descriptor =
-      internal_static_rpc_IRequest_descriptor.getNestedTypes().get(2);
-    internal_static_rpc_IRequest_SingleParameter_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_rpc_IRequest_SingleParameter_descriptor,
-        new java.lang.String[] { "Content", "Kind", "Object", });
-    internal_static_rpc_IRequest_ToolParameter_descriptor =
-      internal_static_rpc_IRequest_descriptor.getNestedTypes().get(3);
-    internal_static_rpc_IRequest_ToolParameter_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_rpc_IRequest_ToolParameter_descriptor,
-        new java.lang.String[] { "Content", "Kind", "Object", });
+        new java.lang.String[] { "Name", "Num", "Parent", "BeginTime", "EndTime", "Mode", "Vector", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

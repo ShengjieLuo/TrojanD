@@ -113,3 +113,21 @@ class ToolParameter(obj1:String,obj2:String,obj3:String){
    def getKind():String = {return kind}
    def getObj():String = {return obj}
 }
+
+class ML(obj:Vector){
+
+   var vector = obj
+   
+   def print(){
+     str:String = ""
+     obj.values.foreach(str = str + _.toString + " ")
+     println("  [ML] Machine Learning vector: "+str)
+   }
+
+   def equals(ml:ML):Boolean = {
+     return vector==ml.vector
+   }   
+
+   def getVector():Vector = {return vector}
+
+}

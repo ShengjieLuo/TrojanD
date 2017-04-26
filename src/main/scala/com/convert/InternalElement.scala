@@ -21,19 +21,19 @@ class InternalElement (elementName:String,req:Request){
   def buildInterface(request:Request):Request = {
     var req:Request = new Request()
     //TODO:Need a graceful implement
-    req.name = request.name
-    req.requestMode = request.requestMode
-    req.beginTime = request.beginTime
-    req.endTime = request.endTime
-    req.num = request.num
-    req.parent = request.parent    
+    //req.name = request.name
+    //req.requestMode = request.requestMode
+    //req.beginTime = request.beginTime
+    //req.endTime = request.endTime
+    //req.num = request.num
+    //req.parent = request.parent    
 
-    if (name == "_SA_KMEANS_JUDGEMENT"){
-      req.setParent(request.num)
-      req.setNum(num)
-      req.setName(name)
-      println("  [Request] Build Internal Interface: "+"_SA_KMEANS_JUDGEMENT")
-    }
+    //Graceful Implementation Here
+    request.copyTo(req)
+    req.setParent(request.num)
+    req.setNum(num)
+    req.setName(name)
+    println("  [Request] Build Internal Interface: "+name)
     req
   }
 

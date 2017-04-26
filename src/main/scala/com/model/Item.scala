@@ -1,6 +1,6 @@
 package com.model
 
-import com.service.TCPservice
+import com.service.TroDservice
 
 class Dimension(dname:String,dvalue:Double){
   var name:String = dname
@@ -13,7 +13,8 @@ class Problem(pname:String){
 
 class Vector(){
   var values:List[Double] = List()
-  var addValue(a:Double){values = values :+ a}
+  def addValue(a:Double){values = values :+ a}
+  def getValue():List[Double] = {values}
 }
 
 class Item(itemname:String,itemobj:String) {
@@ -56,7 +57,8 @@ class Item(itemname:String,itemobj:String) {
   def getProblem(i:Int):Problem = problems.apply(i)
   def getVector():Vector = vector
 
-  def addDimension(di:Dimension){dimensions = dimensions :+ di}
+  def addDimension(di:Dimension):Unit = {dimensions = dimensions :+ di}
+  def addDimension(str:String,va:Double):Unit = {dimensions = dimensions :+ new Dimension(str,va)}
   def insertProblem(problem:String){problems = problems::Problem(problem)}
   def insertProblems(problemList:List[String]){problemList.foreach(p => this.insertProblem(p))}
   def printProblems():String = { var str = "";problems.foreach(p => str = str+p.name);str}

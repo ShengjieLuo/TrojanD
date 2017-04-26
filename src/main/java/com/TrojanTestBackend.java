@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 
 
-public class TrojanTestBackend
+public class TrojanDBackend
 {
   public static void main(String[] args) throws Exception {
     Context context = ZMQ.context(1);
@@ -79,7 +79,13 @@ public class TrojanTestBackend
 	    String obj7 = comobj.getProblem();
 	    req.setCompareParameter(obj1,obj2,obj3,obj4,obj5,obj6,obj7);
           }
-	  break;
+ 	  break;
+        case ML:
+          {
+	    req.setRequestType("ML");
+            IRequest.ML mlobj = ireq.getML();
+            
+          }
       }
 
       switch (ireq.getMode()){
