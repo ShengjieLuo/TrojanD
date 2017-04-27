@@ -21,9 +21,16 @@ import org.drools.runtime._
 import org.drools.builder._
 
 import com.model.other.Time
-import com.model.other.Item
+import com.model.Item
 import com.model.other.Type
 import com.model.problem.Trojan
+import com.service.TroDItem
+
+import org.apache.spark.streaming._
+import org.apache.spark.streaming.kafka._
+import org.apache.spark.streaming.StreamingContext._
+import org.apache.spark.streaming.kafka.KafkaUtils
+import scala.util.matching.Regex
 
 object TrojanTestFrontend {
 
@@ -36,18 +43,18 @@ object TrojanTestFrontend {
 
     //Step1:Receive Data From Kafka
     val zkQuorum = "spark-master:2182" //Zookeeper服务器地址
-    val group = "TrojanD"  //Kafka Group Name
-    val topic = "TrojanD" //Kafka Topic Name
+    val group = "trojanD"  //Kafka Group Name
+    val topic = "trojanD" //Kafka Topic Name
     val numThreads = 1
-    val topicMap = topic1.split(",").map((_,numThreads.toInt)).toMap
+    val topicMap = topic.split(",").map((_,numThreads.toInt)).toMap
     val lineMap = KafkaUtils.createStream(ssc,zkQuorum,group,topicMap)
-    val lines = lineMap.map(_._2).map(_.split("\t")).filter(_.length>=16)
+    val lines = lineMap.map(_._2)
 
     println("  [Debug] Begin Execution!")
     val pairRDD = lines.foreachRDD( dataRDD =>
                      dataRDD.mapPartitions{ partition => {
 			println("  [Debug] Load the knowledge session");
-			ksession:StatefulKnowledgeSession = GetKnowledgeSession()
+			var ksession:StatefulKnowledgeSession = GetKnowledgeSession()
 			val time = new Time();
 			ksession.insert(time);
 			val ty   = new Type();
@@ -55,7 +62,7 @@ object TrojanTestFrontend {
 			
                         val newPartition = partition.map(p => {
 			  println("  [Debug] Begin Dealing the element: "+p);
-			  val item = new Item("IP-hostmachine",p(0));
+			  val item = new TroDItem("IP-hostmachine",p.split(" ")(0));
 			  item.setFromDataLine(p);
 			  ksession.insert(item);
                           ksession.fireAllRules();
@@ -68,6 +75,8 @@ object TrojanTestFrontend {
                     .reduceByKey(_+_)
                     .foreach{p => println("  [Debug] Detection Object: " + p._1.toString + ": Number :"+ p._2.toString)}
                   )
+    ssc.start
+    ssc.awaitTermination
   }
 
   def GetKnowledgeSession() : StatefulKnowledgeSession = {

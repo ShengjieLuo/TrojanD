@@ -1,5 +1,7 @@
 package com.model.other;
 
+import com.model.Vector;
+
 class Request(){
 
   var requestType:String = ""

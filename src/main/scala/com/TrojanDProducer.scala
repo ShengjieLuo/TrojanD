@@ -33,8 +33,6 @@ object TrojanDProducer{
       "org.apache.kafka.common.serialization.StringSerializer")
     props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG,
       "org.apache.kafka.common.serialization.StringSerializer")
-    for (i <- 0 to 1){
-      threadPool.execute(new Message(props,sourcepool(i),topicpool(i),speed))
-    }
+    threadPool.execute(new Message(props,sourcepool(0),topicpool(0),speed))
   }
 }

@@ -1,7 +1,7 @@
 package com.model.problem
 
 import com.model.other.Time
-import com.model.other.Item
+import com.model.Item
 
 class Trojan(detectItem:Item,detectTime:Time){
   
@@ -32,8 +32,8 @@ class Trojan(detectItem:Item,detectTime:Time){
      var str =  "BeingTime :	      "   + time.getbeginTime.toString() +
                 "\nEndTime :		" + time.getendTime.toString() +
                 "\nDetection Hazard :	" + hazard.toString() +
-                "\nDetection Object : 	" + item.getname().toString() +
-                "\nDetection Target : 	" + item.getobj().toString() +
+                "\nDetection Object : 	" + item.getName().toString() +
+                "\nDetection Target : 	" + item.getObj().toString() +
                 "\nDetection Reasons : 	" + item.printProblems().toString +
                 "\nSuggestted Method :	" + method.toString() + "\n"
      str

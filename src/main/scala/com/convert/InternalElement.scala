@@ -29,7 +29,7 @@ class InternalElement (elementName:String,req:Request){
     //req.parent = request.parent    
 
     //Graceful Implementation Here
-    request.copyTo(req)
+    req = request.copyTo()
     req.setParent(request.num)
     req.setNum(num)
     req.setName(name)

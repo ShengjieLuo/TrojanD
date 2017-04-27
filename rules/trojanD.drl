@@ -3,18 +3,24 @@
 import com.model.problem.Trojan
 import com.model.other.Time
 import com.model.other.Type
-import com.model.other.Item
+import com.model.Item
+import com.service.TroDItem
 
 // This rule is a naive simple to detect Trojan in KMeans
 // Key Logic:
-1. 进行数据筛选，将只有upload/download的数据筛选出来
-2. 从基础数据中获取八个维度的数据,组成一个向量
-3. 这个向量，通过已经学习好的KMEANS模型进行判定
-4. 判定出的结果输出到数据库
+//1. 进行数据筛选，将只有upload/download的数据筛选出来
+//2. 从基础数据中获取八个维度的数据,组成一个向量
+//3. 这个向量，通过已经学习好的KMEANS模型进行判定
+//4. 判定出的结果输出到数据库
+
+
 
 //=========================================================================
 // Set the runtime environment
 //=========================================================================
+
+global java.util.List kvector
+
 rule "SET: begin detection time"
    salience 100
    lock-on-active true
@@ -57,6 +63,7 @@ rule "SET: detection type"
      $type.setType("Trojan in KMeans")
      System.out.println("  [Rule]  SET: end detection type Trojan")
      update($type)
+     drools.setFocus("Filter")
 end
 
 
@@ -65,116 +72,177 @@ end
 //=========================================================================
 
 rule "Filter : Filter the item with both upload&download"
-   lock-on-active true
-   salience 20
+   no-loop true
+   //lock-on-active true
+   agenda-group "Filter"
+   salience 25
    dialect "mvel"
    when
-     $item : Item( up_count>0 && down_count>0)
+     $item : Item( up_count>0 && down_count>0 && status == 0)
    then
      $item.setValid()
      System.out.println("  [Rule]  Filter : Filter the item with both upload&download "+$item.obj)
-     //update($item)
+     update($item)
 end
 
+rule "Filter : Conclusion"
+   no-loop true
+   //lock-on-active true
+   agenda-group "Filter"
+   salience 20
+   dialect "mvel"
+   when
+     $item : Item( valid == true && status == 0)
+   then
+     $item.setStatus(1)
+     update($item)
+     System.out.println("  [Rule]  Filter : Filter conclusion "+$item.obj)
+     drools.setFocus("Dimension Addition")
+end
+
+//==========================================================================
+// Insert Dimension
+//=========================================================================
 
 rule "Add Dimesion: Upload-Download-Count-Ratio "
+   no-loop true
    lock-on-active true
+   agenda-group "Dimension Addition"
    salience 10
    dialect "mvel"
    when
-     $item : Item(isValid==True)
+     $item : Item( valid == true)
    then
-     $item.addDimension("Upload-Download-Count-Ratio",$item.up_count/$item.down_count)
-     System.out.println("  [Rule]  Add Dimesion: Upload-Download-Count-Ratio "+$item.obj)
-     //update($item)
+     Double newD = $item.up_count/$item.down_count
+     $item.addDimension("Upload-Download-Count-Ratio",newD)
+     System.out.println("  [Rule]  Add Dimesion: Upload-Download-Count-Ratio " + $item.obj + " "+ newD)
+     update($item)
 end
 
 
 rule "Add Dimesion: Upload-Download-Size-Ratio "
+   no-loop true
    lock-on-active true
+   agenda-group "Dimension Addition"
    salience 10
    dialect "mvel"
    when
-     $item : Item(isValid==True)
+     $item : Item( valid == true)
    then
-     $item.addDimension("Upload-Download-Size-Ratio",$item.up_size/$item.down_size)
-     System.out.println("  [Rule]  Add Dimesion: Upload-Download-Size-Ratio "+$item.obj)
-     //update($item)
+     Double newD = $item.up_size/$item.down_size
+     $item.addDimension("Upload-Download-Size-Ratio",newD)
+     System.out.println("  [Rule]  Add Dimesion: Upload-Download-Size-Ratio "+$item.obj + " "+ newD)
+     update($item)
 end
 
 rule "Add Dimesion: SYN-Ratio "
+   no-loop true
    lock-on-active true
+   agenda-group "Dimension Addition"
    salience 10
    dialect "mvel"
    when
-     $item : Item(isValid==True)
+     $item : Item( valid == true)
    then
-     $item.addDimension("SYN-Ratio",$item.syn/$item.up_count)
-     System.out.println("  [Rule]  Add Dimesion: SYN-Ratio "+$item.obj)
-     //update($item)
+     Double newD = $item.syn/$item.up_count
+     $item.addDimension("SYN-Ratio",  newD)
+     System.out.println("  [Rule]  Add Dimesion: SYN-Ratio "+$item.obj+ " "+ newD)
+     update($item)
 end
 
 rule "Add Dimesion: PSH-Ratio "
+   no-loop true
    lock-on-active true
+   agenda-group "Dimension Addition"
    salience 10
    dialect "mvel"
    when
-     $item : Item(isValid==True)
+     $item : Item( valid == true)
    then
-     $item.addDimension("PSH-Ratio",$item.psh/$item.down_count)
-     System.out.println("  [Rule]  Add Dimesion: PSH-Ratio "+$item.obj)
-     //update($item)
+     Double newD = $item.psh/$item.down_count
+     $item.addDimension("PSH-Ratio",newD)
+     System.out.println("  [Rule]  Add Dimesion: PSH-Ratio "+$item.obj + " "+ newD)
+     update($item)
 end
 
 rule "Add Dimension: DNS Count"
+   no-loop true
    lock-on-active true
+   agenda-group "Dimension Addition"
    salience 10
    dialect "mvel"
    when
-     $item : Item(isValid==True)
+     $item : Item( valid == true)
    then
      $item.addDimension("DNS",$item.dns)
-     System.out.println("  [Rule]  Add Dimesion: DNS "+$item.obj)
-     //update($item)
+     System.out.println("  [Rule]  Add Dimesion: DNS "+$item.obj+ " "+$item.dns)
+     update($item)
 end
 
 rule "Add Dimension: Upload Small Ration"
+   no-loop true
    lock-on-active true
+   agenda-group "Dimension Addition"
    salience 10
    dialect "mvel"
    when
-     $item : Item(isValid==True)
+     $item : Item( valid == true)
    then
-     $item.addDimension("Upload-Small-Ratio",$item.up_small/$item.up_count)
-     System.out.println("  [Rule]  Add Dimension: Upload Small Ration "+$item.obj)
-     //update($item)
+     Double newD = $item.up_small/$item.up_count
+     $item.addDimension("Upload-Small-Ratio", newD)
+     System.out.println("  [Rule]  Add Dimension: Upload Small Ration "+$item.obj + " "+ newD)
+     update($item)
 end
 
 rule "Add Dimension: Session Time"
+   no-loop true
    lock-on-active true
+   agenda-group "Dimension Addition"
    salience 10
    dialect "mvel"
    when
-     $item : Item(isValid==True)
+     $item : Item( valid == true)
    then
-     $item.addDimension("Session Time",$item.sessionTime)
-     System.out.println("  [Rule]  Add Dimension: Upload Small Ration "+$item.obj)
-     //update($item)
+     Double newD = $item.session_total / $item.session_count
+     $item.addDimension("Session Time",newD)
+     System.out.println("  [Rule]  Add Dimension: Average Session Time "+$item.obj+ " "+ newD)
+     update($item)
 end
 
+rule "Add Dimension: Conclusion"
+   no-loop true
+   lock-on-active true
+   agenda-group "Dimension Addition"
+   salience 9
+   dialect "mvel"
+   when
+     $item : Item( valid == true && status == 1)
+   then
+     $item.setStatus(2)
+     update($item)
+     System.out.println("  [Rule]  Add Dimension: Conclusion "+$item.obj)
+     drools.setFocus("Judgement")
+end
+
+//==========================================================================
+// Insert Dimension
+//=========================================================================
 rule "KMeans Judgement"
    lock-on-active true
+   agenda-group "Judgement" 
    salience 5
    dialect "mvel"
    when
-     $item : Item(dimensionNum==7)
+     $item :TroDItem( valid == true)
+     $time :Time()
    then
      $item.SA_KMEANS_JUDGEMENT($time,["Upload-Download-Count-Ratio","Upload-Download-Size-Ratio","SYN-Ratio","PSH-Ratio","DNS","Upload-Small-Ratio","Session Time"])
      System.out.println("  [Rule]  KMeans Judgement: "+$item.obj)
 end
 
+
+/*
 rule "Save to Data Base"
-   lock-on-active true
    salience 1
    dialect "mvel"
    when
@@ -183,3 +251,4 @@ rule "Save to Data Base"
      $item.save_to_database()
      System.out.println("  [Rule]  Save to Data Base: "+$item.obj)
 end
+*/

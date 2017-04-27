@@ -1,5 +1,7 @@
 package com.model.other;
 
+import com.model.Vector;
+
 class CompareParameter(obj1:String,obj2:String,obj3:String,obj4:String,obj5:String,obj6:String,obj7:String){
 
    var objectAType = obj1
@@ -119,8 +121,8 @@ class ML(obj:Vector){
    var vector = obj
    
    def print(){
-     str:String = ""
-     obj.values.foreach(str = str + _.toString + " ")
+     var str:String = ""
+     obj.values.foreach(p => str = str + p.toString + " ")
      println("  [ML] Machine Learning vector: "+str)
    }
 
