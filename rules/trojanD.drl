@@ -236,7 +236,7 @@ rule "KMeans Judgement"
      $item :TroDItem( valid == true)
      $time :Time()
    then
-     $item.SA_KMEANS_JUDGEMENT($time,["Upload-Download-Count-Ratio","Upload-Download-Size-Ratio","SYN-Ratio","PSH-Ratio","DNS","Upload-Small-Ratio","Session Time"])
+     $item.SA_KMEANS_JUDGEMENT($time,["Session Time","DNS","Upload-Download-Count-Ratio","Upload-Download-Size-Ratio","SYN_RATIO","PSH_RATIO","Upload-Small-Ratio"])
      System.out.println("  [Rule]  KMeans Judgement: "+$item.obj)
 end
 

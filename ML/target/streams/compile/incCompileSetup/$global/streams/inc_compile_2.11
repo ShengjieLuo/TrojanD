@@ -1,0 +1,137 @@
+format version: 5
+output mode:
+1 items
+0 -> single
+output directories:
+1 items
+output dir -> /usr/local/TrojanD/ML/target/scala-2.11/classes
+compile options:
+0 items
+javac options:
+0 items
+compiler version:
+1 items
+0 -> 2.11.8
+compile order:
+1 items
+0 -> Mixed
+name hashing:
+1 items
+0 -> true
+products:
+3 items
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansTrain$$anonfun$main$1.class
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansTrain$.class
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansTrain.class
+binary dependencies:
+6 items
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> /root/.ivy2/cache/org.apache.spark/spark-core_2.11/jars/spark-core_2.11-2.1.0.jar
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> /root/.ivy2/cache/org.apache.spark/spark-mllib-local_2.11/jars/spark-mllib-local_2.11-2.1.0.jar
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> /root/.ivy2/cache/org.apache.spark/spark-mllib_2.11/jars/spark-mllib_2.11-2.1.0.jar
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> /root/.ivy2/cache/org.apache.spark/spark-sql_2.11/jars/spark-sql_2.11-2.1.0.jar
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> /root/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar
+direct source dependencies:
+0 items
+direct external dependencies:
+0 items
+public inherited source dependencies:
+0 items
+public inherited external dependencies:
+0 items
+member reference internal dependencies:
+0 items
+member reference external dependencies:
+0 items
+inheritance internal dependencies:
+0 items
+inheritance external dependencies:
+0 items
+class names:
+3 items
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> com.KmeansTrain
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> com.KmeansTrain$
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> com.KmeansTrain$$anonfun$main$1
+used names:
+43 items
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> <init>
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> AnyRef
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> Array
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> KMeans
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> KmeansTrain
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> Predef
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> SparkConf
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> SparkContext
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> SparkSession
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> String
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> StringContext
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> Unit
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> WSSSE
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> apache
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> appName
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> builder
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> clusterCenters
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> clustering
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> com
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> computeCost
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> dataset
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> fit
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> foreach
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> format
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> getClass
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> getOrCreate
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> getSimpleName
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> kmeans
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> load
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> ml
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> model
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> org
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> println
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> read
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> refArrayOps
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> s
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> scala
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> setAppName
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> setK
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> setSeed
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> spark
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> sparkconf
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> sql
+product stamps:
+3 items
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansTrain$$anonfun$main$1.class -> lastModified(1493730321000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansTrain$.class -> lastModified(1493730321000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansTrain.class -> lastModified(1493730320000)
+source stamps:
+1 items
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> hash(fb81a48f113f963fb6e353f009d943d5a6f18fd0)
+binary stamps:
+6 items
+/root/.ivy2/cache/org.apache.spark/spark-core_2.11/jars/spark-core_2.11-2.1.0.jar -> lastModified(1481871925000)
+/root/.ivy2/cache/org.apache.spark/spark-mllib-local_2.11/jars/spark-mllib-local_2.11-2.1.0.jar -> lastModified(1481871681000)
+/root/.ivy2/cache/org.apache.spark/spark-mllib_2.11/jars/spark-mllib_2.11-2.1.0.jar -> lastModified(1481872352000)
+/root/.ivy2/cache/org.apache.spark/spark-sql_2.11/jars/spark-sql_2.11-2.1.0.jar -> lastModified(1481872304000)
+/root/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar -> lastModified(1457105192000)
+/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar -> lastModified(1485187082000)
+class names:
+6 items
+/root/.ivy2/cache/org.apache.spark/spark-core_2.11/jars/spark-core_2.11-2.1.0.jar -> org.apache.spark.SparkConf
+/root/.ivy2/cache/org.apache.spark/spark-mllib-local_2.11/jars/spark-mllib-local_2.11-2.1.0.jar -> org.apache.spark.ml.linalg.Vector
+/root/.ivy2/cache/org.apache.spark/spark-mllib_2.11/jars/spark-mllib_2.11-2.1.0.jar -> org.apache.spark.ml.clustering.KMeans$
+/root/.ivy2/cache/org.apache.spark/spark-sql_2.11/jars/spark-sql_2.11-2.1.0.jar -> org.apache.spark.sql.package$
+/root/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar -> scala.Double
+/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar -> java.lang.Object
+internal apis:
+1 items
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHAtu4r/AHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAFXNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cPwhQQd0AAZub3RpZnlzcQB+AAwi2eqgdAAEd2FpdHNxAH4ADJ/bh1V0AA0kYXNJbnN0YW5jZU9mc3EAfgAMv3K8lnQABmVxdWFsc3NxAH4ADKS3LV50AAxhc0luc3RhbmNlT2ZzcQB+AAypJ8IBdAAMc3luY2hyb25pemVkc3EAfgAMHxapZXQADSRpc0luc3RhbmNlT2ZzcQB+AAy0WUffdAAEbWFpbnNxAH4ADHcA41F0AAlub3RpZnlBbGxzcQB+AAzOqBmzdAAMaXNJbnN0YW5jZU9mc3EAfgAMefDscHQAC0ttZWFuc1RyYWluc3EAfgAMu57v3XQAAj09c3EAfgAMIRYPE3QABWNsb25lc3EAfgAM9wJju3QACHRvU3RyaW5nc3EAfgAMYfjKp3QAAiE9c3EAfgAMLDMNF3QACGdldENsYXNzc3EAfgAMKD1W93QAAm5lc3EAfgAMIXE1LXQAAmVxc3EAfgAMQZFFR3QAAiMjc3EAfgAMRcDT1nQACGZpbmFsaXplc3EAfgAMjh+HFHQACGhhc2hDb2Rlc3IAE3hzYnRpLmFwaS5Tb3VyY2VBUEm5Xqf5KSM4pAIAAlsAC2RlZmluaXRpb25zdAAXW0x4c2J0aS9hcGkvRGVmaW5pdGlvbjtbAAhwYWNrYWdlc3QAFFtMeHNidGkvYXBpL1BhY2thZ2U7eHB1cgAXW0x4c2J0aS5hcGkuRGVmaW5pdGlvbjuIyVzntONeDgIAAHhwAAAAAXNyABN4c2J0aS5hcGkuQ2xhc3NMaWtlgzQcod+wl2wCAARMAA5kZWZpbml0aW9uVHlwZXQAGkx4c2J0aS9hcGkvRGVmaW5pdGlvblR5cGU7WwAQc2F2ZWRBbm5vdGF0aW9uc3QAE1tMamF2YS9sYW5nL1N0cmluZztMAAhzZWxmVHlwZXQAEEx4c2J0aS9hcGkvTGF6eTtMAAlzdHJ1Y3R1cmVxAH4AQXhyACF4c2J0aS5hcGkuUGFyYW1ldGVyaXplZERlZmluaXRpb275EW6x1VA84gIAAVsADnR5cGVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvVHlwZVBhcmFtZXRlcjt4cgAUeHNidGkuYXBpLkRlZmluaXRpb26HKhvocULjRgIABEwABmFjY2Vzc3QAEkx4c2J0aS9hcGkvQWNjZXNzO1sAC2Fubm90YXRpb25zdAAXW0x4c2J0aS9hcGkvQW5ub3RhdGlvbjtMAAltb2RpZmllcnN0ABVMeHNidGkvYXBpL01vZGlmaWVycztMAARuYW1lcQB+AA14cHNyABB4c2J0aS5hcGkuUHVibGljulg9rmwtYEICAAB4cgAQeHNidGkuYXBpLkFjY2Vzc91imvgdYzFIAgAAeHB1cgAXW0x4c2J0aS5hcGkuQW5ub3RhdGlvbjvrl+sZEPaNSAIAAHhwAAAAAHNyABN4c2J0aS5hcGkuTW9kaWZpZXJzl+dh3BMme7MCAAFCAAVmbGFnc3hwAHQAD2NvbS5LbWVhbnNUcmFpbnVyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQABk1vZHVsZXVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgAheHNidGkuYXBpLkFic3RyYWN0TGF6eSRTdHJpY3RMYXp5DWYcaykWKrgCAAFMAAV2YWx1ZXQAEkxqYXZhL2xhbmcvT2JqZWN0O3hwc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHNxAH4AWXNyABN4c2J0aS5hcGkuU3RydWN0dXJlqar5gJNv2AACAANMAAhkZWNsYXJlZHEAfgBBTAAJaW5oZXJpdGVkcQB+AEFMAAdwYXJlbnRzcQB+AEF4cQB+AF5zcQB+AFl1cQB+ADwAAAABc3IADXhzYnRpLmFwaS5EZWZSvp/ifLQ2aQIAAkwACnJldHVyblR5cGV0ABBMeHNidGkvYXBpL1R5cGU7WwAPdmFsdWVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvUGFyYW1ldGVyTGlzdDt4cQB+AEJxAH4AS3VxAH4ATAAAAABzcQB+AE4AcQB+AB11cQB+AFEAAAAAc3IAFHhzYnRpLmFwaS5Qcm9qZWN0aW9u89KNVOlFpC0CAAJMAAJpZHEAfgANTAAGcHJlZml4dAAWTHhzYnRpL2FwaS9TaW1wbGVUeXBlO3hxAH4AXXQABFVuaXRzcgATeHNidGkuYXBpLlNpbmdsZXRvbvynX/jPVuRGAgABTAAEcGF0aHQAEEx4c2J0aS9hcGkvUGF0aDt4cQB+AF1zcgAOeHNidGkuYXBpLlBhdGibPVwIzqUnhAIAAVsACmNvbXBvbmVudHN0ABpbTHhzYnRpL2FwaS9QYXRoQ29tcG9uZW50O3hwdXIAGltMeHNidGkuYXBpLlBhdGhDb21wb25lbnQ7Q9oJdC1nFnQCAAB4cAAAAAJzcgAMeHNidGkuYXBpLklkmDJsizdTxEACAAFMAAJpZHEAfgANeHIAF3hzYnRpLmFwaS5QYXRoQ29tcG9uZW50X5oiWy6Gn7wCAAB4cHQABXNjYWxhc3IADnhzYnRpLmFwaS5UaGlz2wntpsxaQFwCAAB4cQB+AHl1cgAaW0x4c2J0aS5hcGkuUGFyYW1ldGVyTGlzdDv10zod8rNw7gIAAHhwAAAAAXNyABd4c2J0aS5hcGkuUGFyYW1ldGVyTGlzdNbFvBxkSXTjAgACWgAKaXNJbXBsaWNpdFsACnBhcmFtZXRlcnN0ABxbTHhzYnRpL2FwaS9NZXRob2RQYXJhbWV0ZXI7eHAAdXIAHFtMeHNidGkuYXBpLk1ldGhvZFBhcmFtZXRlcjvPuMVdpd21bQIAAHhwAAAAAXNyABl4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyH0WuF9NJsOoCAARaAApoYXNEZWZhdWx0TAAIbW9kaWZpZXJ0AB1MeHNidGkvYXBpL1BhcmFtZXRlck1vZGlmaWVyO0wABG5hbWVxAH4ADUwAA3RwZXEAfgBmeHAAfnIAG3hzYnRpLmFwaS5QYXJhbWV0ZXJNb2RpZmllcgAAAAAAAAAAEgAAeHEAfgBUdAAFUGxhaW50AARhcmdzc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJpemVkFmzuaQPJu38CAAJMAAhiYXNlVHlwZXEAfgBtWwANdHlwZUFyZ3VtZW50c3QAEVtMeHNidGkvYXBpL1R5cGU7eHEAfgBdc3EAfgBsdAAFQXJyYXlxAH4AcnVyABFbTHhzYnRpLmFwaS5UeXBlO3T/pVp7+elBAgAAeHAAAAABc3EAfgBsdAAGU3RyaW5nc3EAfgBwc3EAfgBzdXEAfgB2AAAAA3NxAH4AeHQABGphdmFzcQB+AHh0AARsYW5ncQB+AH1zcQB+AFl1cQB+ADwAAAAAc3EAfgBZdXEAfgCRAAAAAnNxAH4AbHQABk9iamVjdHEAfgCVc3EAfgBsdAADQW55cQB+AHJ1cgAUW0x4c2J0aS5hcGkuUGFja2FnZTtbExk3cKcnoQIAAHhwAAAAAXNyABF4c2J0aS5hcGkuUGFja2FnZX5Zj/auzjlYAgABTAAEbmFtZXEAfgANeHB0AANjb21zcgAVeHNidGkuYXBpLkNvbXBpbGF0aW9u7frgw2rooEICAAJKAAlzdGFydFRpbWVbAAdvdXRwdXRzdAAaW0x4c2J0aS9hcGkvT3V0cHV0U2V0dGluZzt4cAAAAVvJQ9UsdXIAGltMeHNidGkuYXBpLk91dHB1dFNldHRpbmc7f2rC86eHpUICAAB4cAAAAAFzcgAXeHNidGkuYXBpLk91dHB1dFNldHRpbmd62ZpHdPsdewIAAkwAD291dHB1dERpcmVjdG9yeXEAfgANTAAPc291cmNlRGlyZWN0b3J5cQB+AA14cHQALy91c3IvbG9jYWwvVHJvamFuRC9NTC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAU+4GkjxE/lj+241PwCdlD1abxj9A=
+external apis:
+0 items
+source infos:
+1 items
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> 
+AAAAAAAAAAA=
+compilations:
+2 items
+0 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABW8lCG1Z1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQALy91c3IvbG9jYWwvVHJvamFuRC9NTC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
+1 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABW8lD1Sx1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQALy91c3IvbG9jYWwvVHJvamFuRC9NTC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
