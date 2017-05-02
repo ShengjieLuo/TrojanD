@@ -7,7 +7,8 @@ object ProduceTrain{
   val counter1:Int = 0
   val counter2:Int = 0  
 
-  def _loadFromString(data:String):List[Double]{
+  def _loadFromString(data:String):List[Double] = {
+
     //Use Regular Experssion Here
     //Data Sample1: 88.238.138.180 syn 2 2 up 2 128 small 2
     val pattern1 = "\\d{1,3}.\\d{1,3}.\\d{1,3}.\\d{1,3} syn (\\d{1,}) \\d{1,} up (\\d{1,}) (\\d{1,}) small (\\d{1,})".r

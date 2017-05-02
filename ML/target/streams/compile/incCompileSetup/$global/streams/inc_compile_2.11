@@ -19,18 +19,26 @@ name hashing:
 1 items
 0 -> true
 products:
-3 items
+9 items
 /usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansTrain$$anonfun$main$1.class
 /usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansTrain$.class
 /usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansTrain.class
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/ProduceTrain$$anonfun$_saveToTrain$1.class
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/ProduceTrain$$anonfun$_saveToTrain$2.class
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/ProduceTrain$$anonfun$main$1.class
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/ProduceTrain$$anonfun$main$2.class
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/ProduceTrain$.class
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/ProduceTrain.class
 binary dependencies:
-6 items
+8 items
 /usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> /root/.ivy2/cache/org.apache.spark/spark-core_2.11/jars/spark-core_2.11-2.1.0.jar
 /usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> /root/.ivy2/cache/org.apache.spark/spark-mllib-local_2.11/jars/spark-mllib-local_2.11-2.1.0.jar
 /usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> /root/.ivy2/cache/org.apache.spark/spark-mllib_2.11/jars/spark-mllib_2.11-2.1.0.jar
 /usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> /root/.ivy2/cache/org.apache.spark/spark-sql_2.11/jars/spark-sql_2.11-2.1.0.jar
 /usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> /root/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar
 /usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> /root/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar
 direct source dependencies:
 0 items
 direct external dependencies:
@@ -48,12 +56,18 @@ inheritance internal dependencies:
 inheritance external dependencies:
 0 items
 class names:
-3 items
+9 items
 /usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> com.KmeansTrain
 /usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> com.KmeansTrain$
 /usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> com.KmeansTrain$$anonfun$main$1
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> ProduceTrain
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> ProduceTrain$
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> ProduceTrain$$anonfun$_saveToTrain$1
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> ProduceTrain$$anonfun$_saveToTrain$2
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> ProduceTrain$$anonfun$main$1
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> ProduceTrain$$anonfun$main$2
 used names:
-43 items
+116 items
 /usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> <init>
 /usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> AnyRef
 /usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> Array
@@ -97,14 +111,94 @@ used names:
 /usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> spark
 /usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> sparkconf
 /usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> sql
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> !=
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> &&
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> +
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> /
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> <init>
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> ==
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> AnyRef
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> Array
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> Double
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> File
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> Int
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> List
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> Nil
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> Predef
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> PrintWriter
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> ProduceTrain
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> Regex
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> Source
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> String
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> Unit
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> _loadFromString
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> _saveToTrain
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> apply
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> augmentString
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> canBuildFrom
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> close
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> counter1
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> counter2
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> data
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> di
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> dns
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> down_count
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> down_size
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> foreach
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> fromFile
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> get
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> getLines
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> immutable
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> io
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> isEmpty
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> java
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> length
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> lengthCompare
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> line
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> lines
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> map
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> matching
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> package
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> pattern4
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> pattern9
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> psh
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> r
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> result
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> scala
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> session_count
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> session_total
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> syn
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> tmpcount
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> toDouble
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> toInt
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> toList
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> toString
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> trainList
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> train_data
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> unapplySeq
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> unary_!
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> up_count
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> up_size
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> up_small
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> util
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> write
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> writer1
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> writer2
 product stamps:
-3 items
+9 items
+/usr/local/TrojanD/ML/target/scala-2.11/classes/ProduceTrain$$anonfun$_saveToTrain$1.class -> lastModified(1493733870000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/ProduceTrain$$anonfun$_saveToTrain$2.class -> lastModified(1493733870000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/ProduceTrain$$anonfun$main$1.class -> lastModified(1493733870000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/ProduceTrain$$anonfun$main$2.class -> lastModified(1493733870000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/ProduceTrain$.class -> lastModified(1493733870000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/ProduceTrain.class -> lastModified(1493733870000)
 /usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansTrain$$anonfun$main$1.class -> lastModified(1493730321000)
 /usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansTrain$.class -> lastModified(1493730321000)
 /usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansTrain.class -> lastModified(1493730320000)
 source stamps:
-1 items
+2 items
 /usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> hash(fb81a48f113f963fb6e353f009d943d5a6f18fd0)
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> hash(da84bb092ddfd0f6331f3017977624c93a4d05cd)
 binary stamps:
 6 items
 /root/.ivy2/cache/org.apache.spark/spark-core_2.11/jars/spark-core_2.11-2.1.0.jar -> lastModified(1481871925000)
@@ -119,19 +213,24 @@ class names:
 /root/.ivy2/cache/org.apache.spark/spark-mllib-local_2.11/jars/spark-mllib-local_2.11-2.1.0.jar -> org.apache.spark.ml.linalg.Vector
 /root/.ivy2/cache/org.apache.spark/spark-mllib_2.11/jars/spark-mllib_2.11-2.1.0.jar -> org.apache.spark.ml.clustering.KMeans$
 /root/.ivy2/cache/org.apache.spark/spark-sql_2.11/jars/spark-sql_2.11-2.1.0.jar -> org.apache.spark.sql.package$
-/root/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar -> scala.Double
+/root/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar -> scala.io.BufferedSource
 /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar -> java.lang.Object
 internal apis:
-1 items
+2 items
 /usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> 
 rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHAtu4r/AHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAFXNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cPwhQQd0AAZub3RpZnlzcQB+AAwi2eqgdAAEd2FpdHNxAH4ADJ/bh1V0AA0kYXNJbnN0YW5jZU9mc3EAfgAMv3K8lnQABmVxdWFsc3NxAH4ADKS3LV50AAxhc0luc3RhbmNlT2ZzcQB+AAypJ8IBdAAMc3luY2hyb25pemVkc3EAfgAMHxapZXQADSRpc0luc3RhbmNlT2ZzcQB+AAy0WUffdAAEbWFpbnNxAH4ADHcA41F0AAlub3RpZnlBbGxzcQB+AAzOqBmzdAAMaXNJbnN0YW5jZU9mc3EAfgAMefDscHQAC0ttZWFuc1RyYWluc3EAfgAMu57v3XQAAj09c3EAfgAMIRYPE3QABWNsb25lc3EAfgAM9wJju3QACHRvU3RyaW5nc3EAfgAMYfjKp3QAAiE9c3EAfgAMLDMNF3QACGdldENsYXNzc3EAfgAMKD1W93QAAm5lc3EAfgAMIXE1LXQAAmVxc3EAfgAMQZFFR3QAAiMjc3EAfgAMRcDT1nQACGZpbmFsaXplc3EAfgAMjh+HFHQACGhhc2hDb2Rlc3IAE3hzYnRpLmFwaS5Tb3VyY2VBUEm5Xqf5KSM4pAIAAlsAC2RlZmluaXRpb25zdAAXW0x4c2J0aS9hcGkvRGVmaW5pdGlvbjtbAAhwYWNrYWdlc3QAFFtMeHNidGkvYXBpL1BhY2thZ2U7eHB1cgAXW0x4c2J0aS5hcGkuRGVmaW5pdGlvbjuIyVzntONeDgIAAHhwAAAAAXNyABN4c2J0aS5hcGkuQ2xhc3NMaWtlgzQcod+wl2wCAARMAA5kZWZpbml0aW9uVHlwZXQAGkx4c2J0aS9hcGkvRGVmaW5pdGlvblR5cGU7WwAQc2F2ZWRBbm5vdGF0aW9uc3QAE1tMamF2YS9sYW5nL1N0cmluZztMAAhzZWxmVHlwZXQAEEx4c2J0aS9hcGkvTGF6eTtMAAlzdHJ1Y3R1cmVxAH4AQXhyACF4c2J0aS5hcGkuUGFyYW1ldGVyaXplZERlZmluaXRpb275EW6x1VA84gIAAVsADnR5cGVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvVHlwZVBhcmFtZXRlcjt4cgAUeHNidGkuYXBpLkRlZmluaXRpb26HKhvocULjRgIABEwABmFjY2Vzc3QAEkx4c2J0aS9hcGkvQWNjZXNzO1sAC2Fubm90YXRpb25zdAAXW0x4c2J0aS9hcGkvQW5ub3RhdGlvbjtMAAltb2RpZmllcnN0ABVMeHNidGkvYXBpL01vZGlmaWVycztMAARuYW1lcQB+AA14cHNyABB4c2J0aS5hcGkuUHVibGljulg9rmwtYEICAAB4cgAQeHNidGkuYXBpLkFjY2Vzc91imvgdYzFIAgAAeHB1cgAXW0x4c2J0aS5hcGkuQW5ub3RhdGlvbjvrl+sZEPaNSAIAAHhwAAAAAHNyABN4c2J0aS5hcGkuTW9kaWZpZXJzl+dh3BMme7MCAAFCAAVmbGFnc3hwAHQAD2NvbS5LbWVhbnNUcmFpbnVyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQABk1vZHVsZXVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgAheHNidGkuYXBpLkFic3RyYWN0TGF6eSRTdHJpY3RMYXp5DWYcaykWKrgCAAFMAAV2YWx1ZXQAEkxqYXZhL2xhbmcvT2JqZWN0O3hwc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHNxAH4AWXNyABN4c2J0aS5hcGkuU3RydWN0dXJlqar5gJNv2AACAANMAAhkZWNsYXJlZHEAfgBBTAAJaW5oZXJpdGVkcQB+AEFMAAdwYXJlbnRzcQB+AEF4cQB+AF5zcQB+AFl1cQB+ADwAAAABc3IADXhzYnRpLmFwaS5EZWZSvp/ifLQ2aQIAAkwACnJldHVyblR5cGV0ABBMeHNidGkvYXBpL1R5cGU7WwAPdmFsdWVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvUGFyYW1ldGVyTGlzdDt4cQB+AEJxAH4AS3VxAH4ATAAAAABzcQB+AE4AcQB+AB11cQB+AFEAAAAAc3IAFHhzYnRpLmFwaS5Qcm9qZWN0aW9u89KNVOlFpC0CAAJMAAJpZHEAfgANTAAGcHJlZml4dAAWTHhzYnRpL2FwaS9TaW1wbGVUeXBlO3hxAH4AXXQABFVuaXRzcgATeHNidGkuYXBpLlNpbmdsZXRvbvynX/jPVuRGAgABTAAEcGF0aHQAEEx4c2J0aS9hcGkvUGF0aDt4cQB+AF1zcgAOeHNidGkuYXBpLlBhdGibPVwIzqUnhAIAAVsACmNvbXBvbmVudHN0ABpbTHhzYnRpL2FwaS9QYXRoQ29tcG9uZW50O3hwdXIAGltMeHNidGkuYXBpLlBhdGhDb21wb25lbnQ7Q9oJdC1nFnQCAAB4cAAAAAJzcgAMeHNidGkuYXBpLklkmDJsizdTxEACAAFMAAJpZHEAfgANeHIAF3hzYnRpLmFwaS5QYXRoQ29tcG9uZW50X5oiWy6Gn7wCAAB4cHQABXNjYWxhc3IADnhzYnRpLmFwaS5UaGlz2wntpsxaQFwCAAB4cQB+AHl1cgAaW0x4c2J0aS5hcGkuUGFyYW1ldGVyTGlzdDv10zod8rNw7gIAAHhwAAAAAXNyABd4c2J0aS5hcGkuUGFyYW1ldGVyTGlzdNbFvBxkSXTjAgACWgAKaXNJbXBsaWNpdFsACnBhcmFtZXRlcnN0ABxbTHhzYnRpL2FwaS9NZXRob2RQYXJhbWV0ZXI7eHAAdXIAHFtMeHNidGkuYXBpLk1ldGhvZFBhcmFtZXRlcjvPuMVdpd21bQIAAHhwAAAAAXNyABl4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyH0WuF9NJsOoCAARaAApoYXNEZWZhdWx0TAAIbW9kaWZpZXJ0AB1MeHNidGkvYXBpL1BhcmFtZXRlck1vZGlmaWVyO0wABG5hbWVxAH4ADUwAA3RwZXEAfgBmeHAAfnIAG3hzYnRpLmFwaS5QYXJhbWV0ZXJNb2RpZmllcgAAAAAAAAAAEgAAeHEAfgBUdAAFUGxhaW50AARhcmdzc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJpemVkFmzuaQPJu38CAAJMAAhiYXNlVHlwZXEAfgBtWwANdHlwZUFyZ3VtZW50c3QAEVtMeHNidGkvYXBpL1R5cGU7eHEAfgBdc3EAfgBsdAAFQXJyYXlxAH4AcnVyABFbTHhzYnRpLmFwaS5UeXBlO3T/pVp7+elBAgAAeHAAAAABc3EAfgBsdAAGU3RyaW5nc3EAfgBwc3EAfgBzdXEAfgB2AAAAA3NxAH4AeHQABGphdmFzcQB+AHh0AARsYW5ncQB+AH1zcQB+AFl1cQB+ADwAAAAAc3EAfgBZdXEAfgCRAAAAAnNxAH4AbHQABk9iamVjdHEAfgCVc3EAfgBsdAADQW55cQB+AHJ1cgAUW0x4c2J0aS5hcGkuUGFja2FnZTtbExk3cKcnoQIAAHhwAAAAAXNyABF4c2J0aS5hcGkuUGFja2FnZX5Zj/auzjlYAgABTAAEbmFtZXEAfgANeHB0AANjb21zcgAVeHNidGkuYXBpLkNvbXBpbGF0aW9u7frgw2rooEICAAJKAAlzdGFydFRpbWVbAAdvdXRwdXRzdAAaW0x4c2J0aS9hcGkvT3V0cHV0U2V0dGluZzt4cAAAAVvJQ9UsdXIAGltMeHNidGkuYXBpLk91dHB1dFNldHRpbmc7f2rC86eHpUICAAB4cAAAAAFzcgAXeHNidGkuYXBpLk91dHB1dFNldHRpbmd62ZpHdPsdewIAAkwAD291dHB1dERpcmVjdG9yeXEAfgANTAAPc291cmNlRGlyZWN0b3J5cQB+AA14cHQALy91c3IvbG9jYWwvVHJvamFuRC9NTC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAU+4GkjxE/lj+241PwCdlD1abxj9A=
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHBcE2GiAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAGXNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cLgZzoh0AA9fbG9hZEZyb21TdHJpbmdzcQB+AAwhuSC2dAAGbm90aWZ5c3EAfgAMXCSEdXQABHdhaXRzcQB+AAzSm9u2dAANJGFzSW5zdGFuY2VPZnNxAH4ADPznz250AAxfc2F2ZVRvVHJhaW5zcQB+AAyLYg56dAAGZXF1YWxzc3EAfgAMx53aAXQADGFzSW5zdGFuY2VPZnNxAH4ADFP+Bb50AAxzeW5jaHJvbml6ZWRzcQB+AAzXIi0WdAANJGlzSW5zdGFuY2VPZnNxAH4ADAII86h0AAxQcm9kdWNlVHJhaW5zcQB+AAyhBpFcdAAEbWFpbnNxAH4ADK+epVZ0AAlub3RpZnlBbGxzcQB+AAzaqRRpdAAMaXNJbnN0YW5jZU9mc3EAfgAMM7Zr9HQAAj09c3EAfgAMe9Ef83QABWNsb25lc3EAfgAMJMqR0XQACGNvdW50ZXIxc3EAfgAMKHVH2nQACHRvU3RyaW5nc3EAfgAMyGjOq3QAAiE9c3EAfgAM5wiR8XQACGdldENsYXNzc3EAfgAMZ95kbXQAAm5lc3EAfgAMuhz2LnQACGNvdW50ZXIyc3EAfgAMCdivGHQAAmVxc3EAfgAMkTOgcXQAAiMjc3EAfgAMqeD14nQACGZpbmFsaXplc3EAfgAMhtjshnQACGhhc2hDb2Rlc3IAE3hzYnRpLmFwaS5Tb3VyY2VBUEm5Xqf5KSM4pAIAAlsAC2RlZmluaXRpb25zdAAXW0x4c2J0aS9hcGkvRGVmaW5pdGlvbjtbAAhwYWNrYWdlc3QAFFtMeHNidGkvYXBpL1BhY2thZ2U7eHB1cgAXW0x4c2J0aS5hcGkuRGVmaW5pdGlvbjuIyVzntONeDgIAAHhwAAAAAXNyABN4c2J0aS5hcGkuQ2xhc3NMaWtlgzQcod+wl2wCAARMAA5kZWZpbml0aW9uVHlwZXQAGkx4c2J0aS9hcGkvRGVmaW5pdGlvblR5cGU7WwAQc2F2ZWRBbm5vdGF0aW9uc3QAE1tMamF2YS9sYW5nL1N0cmluZztMAAhzZWxmVHlwZXQAEEx4c2J0aS9hcGkvTGF6eTtMAAlzdHJ1Y3R1cmVxAH4ASXhyACF4c2J0aS5hcGkuUGFyYW1ldGVyaXplZERlZmluaXRpb275EW6x1VA84gIAAVsADnR5cGVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvVHlwZVBhcmFtZXRlcjt4cgAUeHNidGkuYXBpLkRlZmluaXRpb26HKhvocULjRgIABEwABmFjY2Vzc3QAEkx4c2J0aS9hcGkvQWNjZXNzO1sAC2Fubm90YXRpb25zdAAXW0x4c2J0aS9hcGkvQW5ub3RhdGlvbjtMAAltb2RpZmllcnN0ABVMeHNidGkvYXBpL01vZGlmaWVycztMAARuYW1lcQB+AA14cHNyABB4c2J0aS5hcGkuUHVibGljulg9rmwtYEICAAB4cgAQeHNidGkuYXBpLkFjY2Vzc91imvgdYzFIAgAAeHB1cgAXW0x4c2J0aS5hcGkuQW5ub3RhdGlvbjvrl+sZEPaNSAIAAHhwAAAAAHNyABN4c2J0aS5hcGkuTW9kaWZpZXJzl+dh3BMme7MCAAFCAAVmbGFnc3hwAHEAfgAhdXIAGltMeHNidGkuYXBpLlR5cGVQYXJhbWV0ZXI72W0mDyid8rYCAAB4cAAAAAB+cgAYeHNidGkuYXBpLkRlZmluaXRpb25UeXBlAAAAAAAAAAASAAB4cgAOamF2YS5sYW5nLkVudW0AAAAAAAAAABIAAHhwdAAGTW9kdWxldXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAHNyACF4c2J0aS5hcGkuQWJzdHJhY3RMYXp5JFN0cmljdExhenkNZhxrKRYquAIAAUwABXZhbHVldAASTGphdmEvbGFuZy9PYmplY3Q7eHBzcgATeHNidGkuYXBpLkVtcHR5VHlwZbz9nkZJO4kkAgAAeHIAFHhzYnRpLmFwaS5TaW1wbGVUeXBlcnhiiCEjv0ACAAB4cgAOeHNidGkuYXBpLlR5cGU/atkhFkmqygIAAHhwc3EAfgBgc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AElMAAlpbmhlcml0ZWRxAH4ASUwAB3BhcmVudHNxAH4ASXhxAH4AZXNxAH4AYHVxAH4ARAAAAAFzcgANeHNidGkuYXBpLkRlZlK+n+J8tDZpAgACTAAKcmV0dXJuVHlwZXQAEEx4c2J0aS9hcGkvVHlwZTtbAA92YWx1ZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9QYXJhbWV0ZXJMaXN0O3hxAH4ASnEAfgBTdXEAfgBUAAAAAHNxAH4AVgBxAH4AI3VxAH4AWAAAAABzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+AA1MAAZwcmVmaXh0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7eHEAfgBkdAAEVW5pdHNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4AZHNyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAAAnNyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AA14cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAAFc2NhbGFzcgAOeHNidGkuYXBpLlRoaXPbCe2mzFpAXAIAAHhxAH4AgHVyABpbTHhzYnRpLmFwaS5QYXJhbWV0ZXJMaXN0O/XTOh3ys3DuAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJMaXN01sW8HGRJdOMCAAJaAAppc0ltcGxpY2l0WwAKcGFyYW1ldGVyc3QAHFtMeHNidGkvYXBpL01ldGhvZFBhcmFtZXRlcjt4cAB1cgAcW0x4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyO8+4xV2l3bVtAgAAeHAAAAABc3IAGXhzYnRpLmFwaS5NZXRob2RQYXJhbWV0ZXIfRa4X00mw6gIABFoACmhhc0RlZmF1bHRMAAhtb2RpZmllcnQAHUx4c2J0aS9hcGkvUGFyYW1ldGVyTW9kaWZpZXI7TAAEbmFtZXEAfgANTAADdHBlcQB+AG14cAB+cgAbeHNidGkuYXBpLlBhcmFtZXRlck1vZGlmaWVyAAAAAAAAAAASAAB4cQB+AFt0AAVQbGFpbnQAA2Fyc3NyABd4c2J0aS5hcGkuUGFyYW1ldGVyaXplZBZs7mkDybt/AgACTAAIYmFzZVR5cGVxAH4AdFsADXR5cGVBcmd1bWVudHN0ABFbTHhzYnRpL2FwaS9UeXBlO3hxAH4AZHNxAH4Ac3QABUFycmF5cQB+AHl1cgARW0x4c2J0aS5hcGkuVHlwZTt0/6Vae/npQQIAAHhwAAAAAXNxAH4Ac3QABlN0cmluZ3NxAH4Ad3NxAH4AenVxAH4AfQAAAANzcQB+AH90AARqYXZhc3EAfgB/dAAEbGFuZ3EAfgCEc3EAfgBgdXEAfgBEAAAAAHNxAH4AYHVxAH4AmAAAAAJzcQB+AHN0AAZPYmplY3RxAH4AnHNxAH4Ac3QAA0FueXEAfgB5dXIAFFtMeHNidGkuYXBpLlBhY2thZ2U7WxMZN3CnJ6ECAAB4cAAAAABzcgAVeHNidGkuYXBpLkNvbXBpbGF0aW9u7frgw2rooEICAAJKAAlzdGFydFRpbWVbAAdvdXRwdXRzdAAaW0x4c2J0aS9hcGkvT3V0cHV0U2V0dGluZzt4cAAAAVvJefuXdXIAGltMeHNidGkuYXBpLk91dHB1dFNldHRpbmc7f2rC86eHpUICAAB4cAAAAAFzcgAXeHNidGkuYXBpLk91dHB1dFNldHRpbmd62ZpHdPsdewIAAkwAD291dHB1dERpcmVjdG9yeXEAfgANTAAPc291cmNlRGlyZWN0b3J5cQB+AA14cHQALy91c3IvbG9jYWwvVHJvamFuRC9NTC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAU2oS7CS3f0PYzHzAXl3YkyTpNBc0=
 external apis:
 0 items
 source infos:
-1 items
+2 items
 /usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> 
 AAAAAAAAAAA=
+/usr/local/TrojanD/ML/src/main/scala/com/ProduceTrain.scala -> 
+AAAAAAAAAAA=
 compilations:
-2 items
+3 items
 0 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABW8lCG1Z1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQALy91c3IvbG9jYWwvVHJvamFuRC9NTC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
 1 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABW8lD1Sx1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQALy91c3IvbG9jYWwvVHJvamFuRC9NTC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
+2 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABW8l5+5d1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQALy91c3IvbG9jYWwvVHJvamFuRC9NTC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==

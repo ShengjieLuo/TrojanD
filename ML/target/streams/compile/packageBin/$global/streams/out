@@ -1,1 +1,23 @@
-[0m[[0mdebug[0m] [0mJar uptodate: /usr/local/TrojanD/ML/target/scala-2.11/simple-project_2.11-1.0.jar[0m
+[0m[[0minfo[0m] [0mPackaging /usr/local/TrojanD/ML/target/scala-2.11/simple-project_2.11-1.0.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	ProduceTrain$$anonfun$_saveToTrain$1.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/ProduceTrain$$anonfun$_saveToTrain$1.class[0m
+[0m[[0mdebug[0m] [0m	com[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com[0m
+[0m[[0mdebug[0m] [0m	com/KmeansTrain$.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansTrain$.class[0m
+[0m[[0mdebug[0m] [0m	ProduceTrain$.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/ProduceTrain$.class[0m
+[0m[[0mdebug[0m] [0m	com/KmeansTrain.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansTrain.class[0m
+[0m[[0mdebug[0m] [0m	com/KmeansTrain$$anonfun$main$1.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansTrain$$anonfun$main$1.class[0m
+[0m[[0mdebug[0m] [0m	ProduceTrain.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/ProduceTrain.class[0m
+[0m[[0mdebug[0m] [0m	ProduceTrain$$anonfun$_saveToTrain$2.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/ProduceTrain$$anonfun$_saveToTrain$2.class[0m
+[0m[[0mdebug[0m] [0m	ProduceTrain$$anonfun$main$1.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/ProduceTrain$$anonfun$main$1.class[0m
+[0m[[0mdebug[0m] [0m	ProduceTrain$$anonfun$main$2.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/ProduceTrain$$anonfun$main$2.class[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m
