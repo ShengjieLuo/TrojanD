@@ -1,0 +1,16 @@
+Spark MLlib K-means clustering test finished.
+4990
+1
+1
+1175
+1
+453
+4983
+385
+5
+1548
+11
+2625
+2
+4980
+78

@@ -1,11 +1,69 @@
+package com;
+
 import java.io._
 import scala.io.Source
 import scala.util.matching.Regex
+import org.apache.spark.rdd.RDD
+
+class Summer(sname:String){
+
+  val name:String = sname
+  var value:Double = 0
+
+  def addValue(va:Double){ value += va}
+  def addValue(va:Int) {value += va}
+  def getValue():Double =  value
+
+  def print():String = {
+    val str:String = "Item: " + name + " Sum: "+ value.toString
+    println(str)
+    str
+  }
+}
+
+class Statistic(){
+
+  var counter:Int = 0
+  var summerList:List[Summer] = List()
+  var meanList:Array[Double] = Array(0,0,0,0,0,0,0)
+  var devList:Array[Double] = Array(0,0,0,0,0,0,0)
+  summerListInit()
+
+  def summerListInit(){
+    summerList = summerList :+ new Summer("Session")
+    summerList = summerList :+ new Summer("dns")
+    summerList = summerList :+ new Summer("Size-Ratio")
+    summerList = summerList :+ new Summer("Count-Ratio")
+    summerList = summerList :+ new Summer("SYN-Ratio")
+    summerList = summerList :+ new Summer("PSH-Ratio")
+    summerList = summerList :+ new Summer("Small-Ratio")
+  }
+
+  def addValue(index:Int,va:Double){ summerList.apply(index).addValue(va)}
+  def addValue(index:Int,va:Int){ summerList.apply(index).addValue(va)}
+  def addDev(index:Int,va:Double){ devList(index) = devList(index) + (va-meanList(index))*(va-meanList(index))}
+  def addCount(){counter += 1}
+
+  def updateMean():Array[Double] = {
+    for (i <- 0 to 6) {meanList(i) = summerList.apply(i).getValue()/counter}
+    return meanList
+  }
+
+  def updateDev():Array[Double] = {
+    for (i <- 0 to 6) {devList(i) = math.sqrt(devList(i)/counter)}
+    return devList
+  }
+  def print(){
+    summerList.foreach(_.print())
+    meanList.foreach(println)
+    devList.foreach(println)
+  }
+}
 
 object ProduceTrain{
  
-  val counter1:Int = 0
-  val counter2:Int = 0  
+  var stat= new Statistic()
+  var counter = 1
 
   def _loadFromString(data:String):List[Double] = {
 
@@ -38,23 +96,29 @@ object ProduceTrain{
     //Match-Case
     var train_data:List[Double] = List()
     data match {
-      case pattern4(syn,up_count,up_size,up_small,psh,down_count,down_size,down_small,session_count,session_total) => {
-        train_data =            List((session_count.toInt/session_total.toInt).toDouble,
-                                    (up_size.toInt/down_size.toInt).toDouble,
-                                    (down_count.toInt/down_count.toInt).toDouble,
-                                    (syn.toInt/up_count.toInt).toDouble,
-                                    (psh.toInt/down_count.toInt).toDouble,
-                                    (up_small.toInt/up_count.toInt).toDouble)
-
-      }
       case pattern9(syn,up_count,up_size,up_small,psh,down_count,down_size,down_small,dns,session_count,session_total) => {
-        train_data =            List((session_count.toInt/session_total.toInt).toDouble,
+        if (session_count.toInt==0) {return train_data}
+        println("Pattern9",syn,up_count,up_size,up_small,psh,down_count,down_size,down_small,dns,session_count,session_total)
+        train_data =            List((session_total.toDouble/session_count.toInt).toDouble,
                                     dns.toDouble,
-                                    (up_size.toInt/down_size.toInt).toDouble,
-                                    (down_count.toInt/down_count.toInt).toDouble,
-                                    (syn.toInt/up_count.toInt).toDouble,
-                                    (psh.toInt/down_count.toInt).toDouble,
-                                    (up_small.toInt/up_count.toInt).toDouble)
+                                    (up_size.toDouble/down_size.toLong).toDouble,
+                                    (up_count.toDouble/down_count.toInt).toDouble,
+                                    (syn.toDouble/up_count.toInt).toDouble,
+                                    (psh.toDouble/down_count.toInt).toDouble,
+                                    (up_small.toDouble/up_count.toInt).toDouble)
+      }
+      case pattern4(syn,up_count,up_size,up_small,psh,down_count,down_size,down_small,session_count,session_total) => {
+        if (session_count.toInt==0) {return train_data}
+	val dns:Double = 0
+        println("Pattern4",syn,up_count,up_size,up_small,psh,down_count,down_size,down_small,session_count,session_total)
+        train_data =            List((session_total.toDouble/session_count.toInt).toDouble,
+                                    dns,
+                                    (up_size.toDouble/down_size.toLong).toDouble,
+                                    (up_count.toDouble/down_count.toInt).toDouble,
+                                    (syn.toDouble/up_count.toInt).toDouble,
+                                    (psh.toDouble/down_count.toInt).toDouble,
+                                    (up_small.toDouble/up_count.toInt).toDouble)
+
       }
       case _ => {return train_data}
     }
@@ -62,27 +126,47 @@ object ProduceTrain{
     return train_data
   }
 
-  def _saveToTrain(trainList:List[Double],writer1:PrintWriter,writer2:PrintWriter){
+  def _stat(data:List[List[Double]]){
+    // Stat1 : Calculate the sum and count 
+    data.foreach( row =>{
+      stat.addCount()
+      var i = 0
+      row.foreach(di =>{stat.addValue(i,di);i+=1;})
+    }) 
+    // Stat2 : Calculate the mean average
+    stat.updateMean()
+    // Sata3 : Calculate the standard dev
+    data.foreach( row => {
+      var i = 0
+      row.foreach(di =>{stat.addDev(i,di); i += 1;})
+    })
+    stat.updateDev()
+    stat.print()
+  }
+
+  def _saveToTrain(trainList:List[Double],writer:PrintWriter){
     var result:String = ""
     var tmpcount = 1
-    if (trainList.length == 7) {
-      result += counter1.toString + " "
-      trainList.foreach( di => {result += tmpcount.toString + ":" + di.toString + " "; tmpcount += 1;})
-      writer1.write(result+"\n")
-    } else if (trainList.length == 6){
-      result += counter1.toString + " "
-      trainList.foreach( di => {result += tmpcount.toString + ":" + di.toString + " "; tmpcount += 1;})
-      writer2.write(result+"\n")
-    }
-
+    result += counter.toString + " "
+    trainList.foreach( di => {
+      var tmp:Double = 0
+      if (stat.devList(tmpcount-1) > 0.000001){
+        tmp = (di - stat.meanList(tmpcount-1))/stat.devList(tmpcount-1)
+      }
+      result += tmpcount.toString + ":" + tmp.toString + " ";
+      tmpcount += 1;
+    })
+    writer.write(result+"\n")
+    counter += 1
   }
+
   def main(ars:Array[String]):Unit = {
-    val writer1 = new PrintWriter(new File("file:///usr/local/TrojanD/sample/Train1.txt"))
-    val writer2 = new PrintWriter(new File("file:///usr/local/TrojanD/sample/Train2.txt"))
-    val lines = Source.fromFile("file:///usr/local/TrojanD/sample/TrojanD.txt","iso-8859-1").getLines.toList
-    lines.map(line => _loadFromString(line))
-         .foreach(trainList => _saveToTrain(trainList,writer1,writer2))
-    writer1.close()
-    writer2.close()
+    val writer = new PrintWriter(new File("../sample/Train.txt"))
+    val lines = Source.fromFile("../sample/TrojanD.txt","iso-8859-1").getLines.toList
+    var data:List[List[Double]] = lines.map(line => _loadFromString(line)).filter(_.size == 7)
+    _stat(data)
+    stat.print()
+    data.foreach(trainList => _saveToTrain(trainList,writer))
+    writer.close()
   }
 }
