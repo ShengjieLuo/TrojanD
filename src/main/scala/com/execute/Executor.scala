@@ -1,11 +1,17 @@
 package com.execute;
 
 import com.model.other.Request
+import org.apache.spark.SparkContext
+import org.apache.spark.SparkConf
 
 class Executor {
 
-  val hiveExecutor = new HiveExecutor()
-  val normalExecutor = new NormalExecutor()
+  val sparkconf = new SparkConf().setAppName("TrojanDExecutor")
+  val sc = new SparkContext(sparkconf)
+  sc.setLogLevel("ERROR")
+
+  val hiveExecutor = new HiveExecutor(sc)
+  val normalExecutor = new NormalExecutor(sc)
 
   def execute(req:Request){
     if (req.requestMode == "OPTIMIZED") {

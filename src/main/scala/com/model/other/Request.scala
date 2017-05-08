@@ -1,6 +1,8 @@
 package com.model.other;
 
 import com.model.Vector;
+import com.rpc.Interface.IRequest.*;
+import com.rpc.Interface.*;
 
 class Request(){
 
@@ -92,6 +94,150 @@ class Request(){
     if (compare.length>0) {obj.compare = this.compare}
     if (ml.length>0) {obj.ml = this.ml}
     return obj
+  }
+
+  def copyFromInterface(ireq:IRequest){
+    setName(ireq.getName());
+    setBeginTime(ireq.getBeginTime());
+    setEndTime(ireq.getEndTime());
+    setNum(ireq.getNum());
+    setParent(ireq.getParent());
+
+    switch (ireq.getType()){
+      case ALL:
+      {
+        setRequestType("ALL");
+        AllParameter allobj = ireq.getAll();
+        String obj1 = allobj.getContent();
+        String obj2 = allobj.getKind();
+        String obj3 = allobj.getMethod();
+        setAllParameter(obj1,obj2,obj3);
+      }
+      break;
+      case SINGLE:
+      {
+        setRequestType("SINGLE");
+        SingleParameter sinobj = ireq.getSingle();
+        String obj1 = sinobj.getContent();
+        String obj2 = sinobj.getKind();
+        String obj3 = sinobj.getObject();
+        setSingleParameter(obj1,obj2,obj3);
+      }
+      break;
+      case TOOL:
+      {
+        setRequestType("TOOL");
+        ToolParameter toolobj = ireq.getTool();
+        String obj1 = toolobj.getContent();
+        String obj2 = toolobj.getKind();
+        String obj3 = toolobj.getObject();
+        setToolParameter(obj1,obj2,obj3);
+      }
+      break;
+      case COMPARE:
+      {
+        setRequestType("COMPARE");
+        CompareParameter comobj = ireq.getCompare();
+        String obj1 = comobj.getObjectAType();
+        String obj2 = comobj.getObjectA();
+        String obj3 = comobj.getObjectBType();
+        String obj4 = comobj.getObjectB();
+        String obj5 = comobj.getMethod();
+        String obj6 = comobj.getIndex();
+        String obj7 = comobj.getProblem();
+        setCompareParameter(obj1,obj2,obj3,obj4,obj5,obj6,obj7);
+      }
+      break;
+      case ML:
+      {
+        setRequestType("ML");
+        MLParameter mlobj = ireq.getMl();
+        com.rpc.Interface.Vector vectorobj = mlobj.getVector();
+        com.model.Vector obj1 = new com.model.Vector();
+        obj1.setValue(vectorobj.getValueList());
+        setMLParameter(obj1);
+      }
+      break;
+    }
+
+    switch (ireq.getMode()){
+        case DEFAULT:
+          setRequestMode("DEFAULT");
+          break;
+        case OPTIMIZED:
+          setRequestType("OPTIMIZED");
+          break;
+        case SIMPLE:
+          setRequestType("SIMPLE");
+          break;
+    }      
+  }
+
+  def copyToInterface():IRequest{
+    val iRequest:IRequest.Builder = IRequest.newBuilder();
+    iRequest.setName(name);
+    iRequest.setNum(num);
+    iRequest.setParent(parent);
+    iRequest.setBeginTime(beginTime);
+    iRequest.setEndTime(endTime);
+    
+    if ( requestType.equals("ALL")){
+      iRequest.setType(RequestType.ALL);
+      com.rpc.Interface.AllParameter.Builder iall = com.rpc.Interface.AllParameter.newBuilder();
+      com.model.other.AllParameter all = getAllParameter();
+      iall.setContent(all.getContent());
+      iall.setKind(all.getKind());
+      iall.setMethod(all.getMethod());
+      iRequest.setAll(iall.build());
+    } else if ( requestType.equals("SINGLE")){
+      iRequest.setType(RequestType.SINGLE);
+      com.rpc.Interface.SingleParameter.Builder isin = com.rpc.Interface.SingleParameter.newBuilder();
+      com.model.other.SingleParameter sin = getSingleParameter();
+      isin.setContent(sin.getContent());
+      isin.setKind(sin.getKind());
+      isin.setObject(sin.getObj());
+      iRequest.setSingle(isin.build());
+    } else if ( requestType().equals("COMPARE")){
+      iRequest.setType(RequestType.COMPARE);
+      com.rpc.Interface.CompareParameter.Builder icom = com.rpc.Interface.CompareParameter.newBuilder();
+      com.model.other.CompareParameter com = getCompareParameter();
+      icom.setObjectAType(com.getObjectAType());
+      icom.setObjectBType(com.getObjectBType());
+      icom.setObjectA(com.getObjectA());
+      icom.setObjectB(com.getObjectB());
+      icom.setMethod(com.getMethod());
+      icom.setIndex(com.getMethod());
+      icom.setProblem(com.getProblem());
+      iRequest.setCompare(icom.build());
+    } else if ( requestType.equals("TOOL")){
+      iRequest.setType(RequestType.TOOL);
+      com.rpc.Interface.ToolParameter.Builder itool = com.rpc.Interface.ToolParameter.newBuilder();
+      com.model.other.ToolParameter tool = getToolParameter();
+      itool.setContent(tool.getContent());
+      itool.setKind(tool.getKind());
+      itool.setObject(tool.getObj());
+      iRequest.setTool(itool.build());
+    } else if ( requestType().equals("ML")){
+      iRequest.setType(RequestType.ML);
+      var iml:com.rpc.Interface.MLParameter.Builder = com.rpc.Interface.MLParameter.newBuilder();
+      var ivector:com.rpc.Interface.Vector.Builder = com.rpc.Interface.Vector.newBuilder();
+      var ml:com.model.other.ML  = getMLParameter();
+      var vector:com.model.Vector = ml.getVector();
+      var values:java.util.List<java.lang.Double> = vector.getValue("java");
+      for (int j=0; j<values.size();j++){ivector.addValue(values.get(j));};
+      iml.setVector(ivector.build());
+      iRequest.setMl(iml.build());
+     }
+
+     if ( requestMode.equals("DEFAULT")){
+       iRequest.setMode(RequestMode.DEFAULT);
+     } else if ( requestMode.equals("OPTIMIZED")){
+       iRequest.setMode(RequestMode.OPTIMIZED);
+     } else if ( requestMode.equals("SIMPLE")){
+       iRequest.setMode(RequestMode.SIMPLE);
+     }
+
+     return iRequest.build()
   }
 
   def print(){

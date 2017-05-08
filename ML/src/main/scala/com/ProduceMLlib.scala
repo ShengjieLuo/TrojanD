@@ -43,7 +43,7 @@ object ProduceMLlib{
     data match {
       case pattern9(syn,up_count,up_size,up_small,psh,down_count,down_size,down_small,dns,session_count,session_total) => {
         if (session_count.toInt==0) {return train_data}
-        println("Pattern9",syn,up_count,up_size,up_small,psh,down_count,down_size,down_small,dns,session_count,session_total)
+        //println("Pattern9",syn,up_count,up_size,up_small,psh,down_count,down_size,down_small,dns,session_count,session_total)
         train_data =            List((session_total.toDouble/session_count.toInt).toDouble,
                                     dns.toDouble,
                                     (up_size.toDouble/down_size.toLong).toDouble,
@@ -55,7 +55,7 @@ object ProduceMLlib{
       case pattern4(syn,up_count,up_size,up_small,psh,down_count,down_size,down_small,session_count,session_total) => {
         if (session_count.toInt==0) {return train_data}
 	val dns:Double = 0
-        println("Pattern4",syn,up_count,up_size,up_small,psh,down_count,down_size,down_small,session_count,session_total)
+        //println("Pattern4",syn,up_count,up_size,up_small,psh,down_count,down_size,down_small,session_count,session_total)
         train_data =            List((session_total.toDouble/session_count.toInt).toDouble,
                                     dns,
                                     (up_size.toDouble/down_size.toLong).toDouble,
@@ -92,14 +92,11 @@ object ProduceMLlib{
   def _saveToPredict(trainList:List[Double],writer:PrintWriter){
     var result:String = ""
     var tmpcount:Int = 0
-    println(stat.devList(5))
+    //println(stat.devList(5))
     trainList.foreach( di => {
       var tmp:Double = 0
       if (stat.devList(tmpcount) > 0.01){
         tmp = (di - stat.meanList(tmpcount))/stat.devList(tmpcount)
-        println(tmp,tmpcount,stat.devList.apply(tmpcount))
-      } else {
-        println(tmp,tmpcount,stat.devList.apply(tmpcount))
       }
       result += tmp.toString + " ";
       tmpcount += 1
@@ -110,11 +107,13 @@ object ProduceMLlib{
 
   def main(ars:Array[String]):Unit = {
     val writer = new PrintWriter(new File("../sample/MLlib.txt"))
+    val metadataWriter = new PrintWriter(new File("../sample/KMeansMeta/metadata.txt"))
     val lines = Source.fromFile("../sample/TrojanD.txt","iso-8859-1").getLines.toList
     var data:List[List[Double]] = lines.map(line => _loadFromString(line)).filter(_.size == 7)
     _stat(data)
-    stat.print()
+    stat.record(metadataWriter)
     data.foreach(predictItem => _saveToPredict(predictItem,writer))
     writer.close()
+    metadataWriter.close()
   }
 }

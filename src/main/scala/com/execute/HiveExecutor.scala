@@ -7,10 +7,9 @@ import org.apache.spark.sql.hive.HiveContext
 import org.apache.spark.SparkConf
 import org.apache.spark.sql.SQLContext
 
-class HiveExecutor{
+class HiveExecutor(sparkContext:SparkContext){
 
-  val sparkconf = new SparkConf().setAppName("TrojanHiveExecutor")
-  val sc = new SparkContext(sparkconf)
+  val sc = sparkContext
   val sqlContext = new SQLContext(sc)
   val hiveCtx = new HiveContext(sc)
   

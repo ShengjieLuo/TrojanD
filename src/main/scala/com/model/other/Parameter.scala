@@ -119,6 +119,7 @@ class ToolParameter(obj1:String,obj2:String,obj3:String){
 class ML(obj:Vector){
 
    var vector = obj
+   var problem:String = ""
    
    def print(){
      var str:String = ""
@@ -132,4 +133,6 @@ class ML(obj:Vector){
 
    def getVector():Vector = {return vector}
 
+   def setProblem(a:String){problem=a}
+   def getProblem():String = problem
 }

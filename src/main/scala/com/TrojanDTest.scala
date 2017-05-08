@@ -42,7 +42,7 @@ object TrojanDTest {
     val sparkconf = new SparkConf().setAppName("TrojanDetectionTest")
     val sc = new SparkContext(sparkconf)
 
-    val data = List("223.166.24.90 syn 14 248 up 248 40866 small 193 psh 138 138 down 138 120081 small 36 com 19 31 14")
+    val data = List("202.121.66.121 syn 35 104 up 104 7173 small 42 psh 199 199 down 199 15216 small 106 dns 2255 0 com 3 0 14")
     println("  [Debug] Begin Execution!")
 
     val pairRDD = sc.parallelize(data.map(p=>p.trim),1)

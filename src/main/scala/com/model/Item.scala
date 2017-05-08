@@ -17,6 +17,11 @@ class Vector(){
   var values:List[Double] = List()
   def addValue(a:Double){values = values :+ a}
   def getValue():List[Double] = {values}
+
+  def setValue(values:java.util.List[java.lang.Double]) = {
+    for (i <- 0 to values.size()-1 ){ addValue( values.get(i).doubleValue() ) }
+  }
+
   def getValue(option:String):java.util.List[java.lang.Double] = {
     var result:java.util.List[java.lang.Double] = null
     if (option=="java") {result = values.map(new java.lang.Double(_)).toBuffer.asJava}
@@ -36,7 +41,7 @@ class Item(itemname:String,itemobj:String) {
   var down_count:Int = -1
   var down_size:Int = -1
   var down_small:Int = -1
-  var dns:Int = -1
+  var dns:Int = 0
   var session_total:Int = -1
   var session_count:Int = -1
   var dimensions:List[Dimension] = List()
@@ -112,6 +117,11 @@ class Item(itemname:String,itemobj:String) {
 
     //Match-Case
     data match {
+      case pattern9(syn,up_count,up_size,up_small,psh,down_count,down_size,down_small,dns,session_count,session_total) =>
+           {_setSYN(syn.toInt);
+            _setUP(up_count,up_size,up_small);
+            _setPSH(psh.toInt);_setDOWN(down_count,down_size,down_small);
+            _setDNS(dns.toInt);_setSession(session_count,session_total)}
       case pattern1(syn,up_count,up_size,up_small) => 
            {_setSYN(syn.toInt);
             _setUP(up_count,up_size,up_small);}
@@ -143,11 +153,6 @@ class Item(itemname:String,itemobj:String) {
             _setUP(up_count,up_size,up_small);
             _setPSH(psh.toInt);
             _setDOWN(down_count,down_size,down_small);}
-      case pattern9(syn,up_count,up_size,up_small,psh,down_count,down_size,down_small,dns,session_count,session_total) => 
-           {_setSYN(syn.toInt);
-            _setUP(up_count,up_size,up_small);
-            _setPSH(psh.toInt);_setDOWN(down_count,down_size,down_small);
-            _setDNS(dns.toInt);_setSession(session_count,session_total)}
       case pattern10(syn,up_count,up_size,up_small,dns) => 
            {_setSYN(syn.toInt);
             _setUP(up_count,up_size,up_small);
