@@ -51,10 +51,9 @@ class TroDItem(itemname:String,itemobj:String) extends Item(itemname:String,item
      request.setMLParameter(vector)
      request.setRequestType("ML")
      request.setRequestMode("DEFAULT")
-     //request.insertProblem("Detect Trojan in KMeans Model")
      var external = new Convertor("SA_KMEANS_JUDGEMENT",request)
      var internal:List[Request] = external.getInterface()
-     client.send(internal.asJava)
+     var reply:List[Request] = client.send(internal.asJava).asScala.toList
   }
 
 }

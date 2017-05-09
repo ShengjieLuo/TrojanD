@@ -26,13 +26,18 @@ public class TrojanDBackend
     Executor executor = new Executor();
 
     while (!Thread.currentThread().isInterrupted()) {
+      //Step1: Get the request from Client
       byte[] reply = responder.recv(0);
       IRequest ireq = IRequest.parseFrom(reply);
       Request req = new Request();
       req.copyFromInterface(ireq);
+
+      //Step2: Execute the request
       executor.execute(req);
+
+      //Step3: Return the request dealing result
       IRequest irep = req.copyToInterface();
-      responder.send("Request "+ ireq.getNum());
+      responder.send(irep.toByteArray(), 0);
     }
 
     responder.close();
