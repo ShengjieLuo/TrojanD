@@ -2,7 +2,7 @@
 
 Section1: External Service List
 0. SA_KMEANS_JUDGEMENT
-1. SA_BISEC_JUDGEMENT
+1. SA_BISECT_JUDGEMENT
 2. SA_GMM_JUDGEMENT
 
 Section2: Internal Service List

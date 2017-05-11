@@ -27,6 +27,7 @@ class Vector(){
     if (option=="java") {result = values.map(new java.lang.Double(_)).toBuffer.asJava}
     result
   }
+
 }
 
 class Item(itemname:String,itemobj:String) {
@@ -90,6 +91,7 @@ class Item(itemname:String,itemobj:String) {
   def setUnvalid(){valid = false}
   def isValid():Boolean = valid
   def setStatus(a:Int){status = a}
+  def clearVector(){vector = new Vector()}
   def addDimension(di:Dimension):Unit = {dimensions = dimensions :+ di}
   def addDimension(str:String,va:Double):Unit = {dimensions = dimensions :+ new Dimension(str,va)}
   def addDimension(str:String,va:Int):Unit = {dimensions = dimensions :+ new Dimension(str,va.toDouble)}

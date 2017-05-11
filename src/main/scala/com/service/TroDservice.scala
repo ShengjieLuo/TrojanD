@@ -16,6 +16,7 @@ class TroDItem(itemname:String,itemobj:String) extends Item(itemname:String,item
 
   //TrojanD service
   def SA_KMEANS_JUDGEMENT(time:Time,dnames:List[String]){
+     clearVector()
      dnames.foreach( dname => dimensions.foreach( p => if (p.name==dname){vector.addValue(p.value)}))
      var request:Request = new Request()
      request.setTime(time)
@@ -29,6 +30,7 @@ class TroDItem(itemname:String,itemobj:String) extends Item(itemname:String,item
   }
      
   def SA_KMEANS_JUDGEMENT(time:Time,dnames_java:java.util.List[String]){
+     clearVector()
      val dnames:List[String] = dnames_java.asScala.toList    
      var strvector = ""
      dnames.foreach( dname => strvector += ( dname + " ") )
@@ -56,6 +58,7 @@ class TroDItem(itemname:String,itemobj:String) extends Item(itemname:String,item
   }
 
   def SA_GMM_JUDGEMENT(time:Time,dnames_java:java.util.List[String]){
+     clearVector()
      val dnames:List[String] = dnames_java.asScala.toList
      var strvector = ""
      dnames.foreach( dname => strvector += ( dname + " ") )

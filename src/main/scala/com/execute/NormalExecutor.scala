@@ -26,7 +26,6 @@ class NormalExecutor(sparkContext:SparkContext){
     // status = 0: A new task
     // status = 1: An old task
     if (status == 0) {
-      kMeans.setModel()
       kMeans.print()
       val result:Boolean = kMeans.predict(req.ml.last.vector.values)
       if (result) { req.ml.last.setProblem("KMeans Judge Trojan Detection")}

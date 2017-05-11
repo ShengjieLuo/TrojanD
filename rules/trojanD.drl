@@ -238,11 +238,53 @@ rule "KMeans Judgement"
      $time :Time()
    then
      $item.SA_KMEANS_JUDGEMENT($time,["Session Time","DNS","Upload-Download-Count-Ratio","Upload-Download-Size-Ratio","SYN-Ratio","PSH-Ratio","Upload-Small-Ratio"])
-     $item.setStatus(3)
      update($item)
      System.out.println("  [Rule]  KMeans Judgement Execution: "+$item.obj)
+end
+
+rule "GMM Judgement"
+   lock-on-active true
+   agenda-group "Judgement"
+   salience 5
+   dialect "mvel"
+   when
+     $item :TroDItem( valid == true && status == 2)
+     $time :Time()
+   then
+     $item.SA_GMM_JUDGEMENT($time,["Session Time","DNS","Upload-Download-Count-Ratio","Upload-Download-Size-Ratio","SYN-Ratio","PSH-Ratio","Upload-Small-Ratio"])
+     update($item)
+     System.out.println("  [Rule]  GMM Judgement Execution: "+$item.obj)
+end
+
+rule "Bisect Judgement"
+   lock-on-active true
+   agenda-group "Judgement"
+   salience 5
+   dialect "mvel"
+   when
+     $item :TroDItem( valid == true && status == 2)
+     $time :Time()
+   then
+     $item.SA_BISECT_JUDGEMENT($time,["Session Time","DNS","Upload-Download-Count-Ratio","Upload-Download-Size-Ratio","SYN-Ratio","PSH-Ratio","Upload-Small-Ratio"])
+     update($item)
+     System.out.println("  [Rule]  Bisect Judgement Execution: "+$item.obj)
+end
+
+rule "Judgement Conclusion"
+   lock-on-active true
+   agenda-group "Judgement"
+   salience 4
+   dialect "mvel"
+   when
+     $item :TroDItem( valid == true && status == 2)
+     $time :Time()
+   then
+     $item.setStatus(3)
+     update($item)
+     System.out.println("  [Rule]  Judgement Conclusion: "+$item.obj)
      drools.setFocus("Conclusion")
 end
+
 
 
 //==========================================================================

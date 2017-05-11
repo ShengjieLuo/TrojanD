@@ -14,7 +14,7 @@ class Helper{
 
   def loadMean():Array[Double]={
     var meanList:Array[Double] = Array()
-    val rawData = Source.fromFile("Metadata/Statistic.txt")
+    val rawData = Source.fromFile("MetaData/Statistic.txt")
     val str:List[String] = rawData.getLines().toList
     val meanstr:String = str.apply(0)
     meanstr.split(" ").foreach( item => { meanList = meanList :+ item.toDouble })
@@ -23,7 +23,7 @@ class Helper{
 
   def loadDev():Array[Double]={
     var devList:Array[Double] = Array()
-    val rawData = Source.fromFile("Metadata/Statistic.txt")
+    val rawData = Source.fromFile("MetaData/Statistic.txt")
     val str:List[String] = rawData.getLines().toList
     val devstr:String = str.apply(1)
     devstr.split(" ").foreach( item => { devList = devList :+ item.toDouble })
