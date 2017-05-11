@@ -2,11 +2,17 @@
 
 Section1: External Service List
 0. SA_KMEANS_JUDGEMENT
+1. SA_BISEC_JUDGEMENT
+2. SA_GMM_JUDGEMENT
 
 Section2: Internal Service List
 0. _SA_KMEANS_JUDGEMENT
+1. _SA_BISECT_JUDGEMENT
+2. _SA_GMM_JUDGEMENT
 
 Section3: External-Internal Relation
 S0 => I0
+S1 => I1
+S2 => I2
 
 Section4: External-Internal Latency Binding Relation

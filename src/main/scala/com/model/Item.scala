@@ -56,6 +56,8 @@ class Item(itemname:String,itemobj:String) {
   //Member problemsRule is used for drools. Drools is easy to judge the simple data structure, but hard to judge the complex data structure. Therefore, we use a simple form -- List[String] Here.
   //It is important to note that you need insert problem to both problems and problemsRule.
   var kmeansFlag:Int = 0 //Temp Usage.
+  var bisectFlag:Int = 0 //Temp Usage.
+  var gmmFlag:Int = 0 //Temp Usage
 
   private def _setSYN(a:Int){syn=a}
   private def _setUP(a:Int,b:Int,c:Int){up_count=a;up_size=b;up_small=c;}

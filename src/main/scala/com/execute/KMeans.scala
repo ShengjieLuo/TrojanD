@@ -33,7 +33,7 @@ class KMeans(sparkContext:SparkContext){
            .foreach( item => { problemList = problemList :+ item.toInt })  
   }
 
- def setKMeansModel(){
+ def setModel(){
     if ( flag == false){
         model = KMeansModel.load(sc,"file:///usr/local/TrojanD/KMeansModel")
         _loadMeanAndDev()
