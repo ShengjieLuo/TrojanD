@@ -4,6 +4,7 @@ import com.model.problem.Trojan
 import com.model.other.Time
 import com.model.other.Type
 import com.model.Item
+import com.model.Problem
 import com.service.TroDItem
 
 // This rule is a naive simple to detect Trojan in KMeans
@@ -111,7 +112,7 @@ rule "Add Dimesion: Upload-Download-Count-Ratio "
    salience 10
    dialect "mvel"
    when
-     $item : Item( valid == true)
+     $item : Item( valid == true && status == 1)
    then
      Double newD = $item.up_count/$item.down_count
      $item.addDimension("Upload-Download-Count-Ratio",newD)
@@ -127,7 +128,7 @@ rule "Add Dimesion: Upload-Download-Size-Ratio "
    salience 10
    dialect "mvel"
    when
-     $item : Item( valid == true)
+     $item : Item( valid == true && status == 1 )
    then
      Double newD = $item.up_size/$item.down_size
      $item.addDimension("Upload-Download-Size-Ratio",newD)
@@ -142,7 +143,7 @@ rule "Add Dimesion: SYN-Ratio "
    salience 10
    dialect "mvel"
    when
-     $item : Item( valid == true)
+     $item : Item( valid == true && status == 1 )
    then
      Double newD = $item.syn/$item.up_count
      $item.addDimension("SYN-Ratio",  newD)
@@ -157,7 +158,7 @@ rule "Add Dimesion: PSH-Ratio "
    salience 10
    dialect "mvel"
    when
-     $item : Item( valid == true)
+     $item : Item( valid == true && status == 1)
    then
      Double newD = $item.psh/$item.down_count
      $item.addDimension("PSH-Ratio",newD)
@@ -172,7 +173,7 @@ rule "Add Dimension: DNS Count"
    salience 10
    dialect "mvel"
    when
-     $item : Item( valid == true)
+     $item : Item( valid == true && status == 1)
    then
      $item.addDimension("DNS",$item.dns)
      System.out.println("  [Rule]  Add Dimesion: DNS "+$item.obj+ " "+$item.dns)
@@ -186,7 +187,7 @@ rule "Add Dimension: Upload Small Ration"
    salience 10
    dialect "mvel"
    when
-     $item : Item( valid == true)
+     $item : Item( valid == true && status == 1)
    then
      Double newD = $item.up_small/$item.up_count
      $item.addDimension("Upload-Small-Ratio", newD)
@@ -201,7 +202,7 @@ rule "Add Dimension: Session Time"
    salience 10
    dialect "mvel"
    when
-     $item : Item( valid == true)
+     $item : Item( valid == true && status == 1)
    then
      Double newD = $item.session_total / $item.session_count
      $item.addDimension("Session Time",newD)
@@ -225,7 +226,7 @@ rule "Add Dimension: Conclusion"
 end
 
 //==========================================================================
-// Insert Dimension
+// Predict && Judgement
 //=========================================================================
 rule "KMeans Judgement"
    lock-on-active true
@@ -233,20 +234,64 @@ rule "KMeans Judgement"
    salience 5
    dialect "mvel"
    when
-     $item :TroDItem( valid == true)
+     $item :TroDItem( valid == true && status == 2)
      $time :Time()
    then
      $item.SA_KMEANS_JUDGEMENT($time,["Session Time","DNS","Upload-Download-Count-Ratio","Upload-Download-Size-Ratio","SYN-Ratio","PSH-Ratio","Upload-Small-Ratio"])
-     System.out.println("  [Rule]  KMeans Judgement: "+$item.obj)
+     $item.setStatus(3)
+     update($item)
+     System.out.println("  [Rule]  KMeans Judgement Execution: "+$item.obj)
+     drools.setFocus("Conclusion")
 end
 
+
+//==========================================================================
+// Conclusion
+//=========================================================================
+
+rule "Detect Abnormal"
+   lock-on-active true
+   agenda-group "Conclusion" 
+   salience 0
+   dialect "mvel"
+   when
+     $problem : Problem( name == "KMeans Judge Trojan Detection" )
+     $item :TroDItem( problems contains $problem && status == 3)
+   then
+     $item.printProblems()
+     System.out.println("  [Rule]  KMeans Judgement Report1: "+$item.obj)
+end
+
+rule "Detect Abnormal 2"
+   lock-on-active true
+   agenda-group "Conclusion"
+   salience 0
+   dialect "mvel"
+   when
+     $item :Item( problemsRule contains "KMeans Judge Trojan Detection" && status == 3)
+   then
+     $item.printProblems()
+     System.out.println("  [Rule]  KMeans Judgement Report2: "+$item.obj)
+end
+
+rule "Detect Abnormal 3"
+   lock-on-active true
+   agenda-group "Conclusion"
+   salience 0
+   dialect "mvel"
+   when
+     $item :Item( kmeansFlag == 1 && status == 3 )
+   then
+     $item.printProblems()
+     System.out.println("  [Rule]  KMeans Judgement Report3: "+$item.obj)
+end
 
 /*
 rule "Save to Data Base"
    salience 1
    dialect "mvel"
    when
-     $item : Item(problems contains "Trojan KMeans Detection Target")
+     $item : Item( problems contains "Trojan KMeans Detection Target")
    then
      $item.save_to_database()
      System.out.println("  [Rule]  Save to Data Base: "+$item.obj)

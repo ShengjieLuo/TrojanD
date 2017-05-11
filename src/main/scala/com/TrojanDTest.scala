@@ -41,6 +41,7 @@ object TrojanDTest {
     println("Run Trojan Test by Distributed Rule Engine")
     val sparkconf = new SparkConf().setAppName("TrojanDetectionTest")
     val sc = new SparkContext(sparkconf)
+    sc.setLogLevel("ERROR")
 
     val data = List("202.121.66.121 syn 35 104 up 104 7173 small 42 psh 199 199 down 199 15216 small 106 dns 2255 0 com 3 0 14")
     println("  [Debug] Begin Execution!")

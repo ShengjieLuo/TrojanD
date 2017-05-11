@@ -54,6 +54,7 @@ public class Client {
         IRequest ireply = IRequest.parseFrom(rep);
         Request reply = new Request();
         reply.copyFromInterface(ireply);
+        reply.print();
         replys.add(reply);
         System.out.println("  [RPC] Received Package: " + reply.getNum());
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {

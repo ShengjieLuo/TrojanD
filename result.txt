@@ -1,0 +1,56 @@
+Run Trojan Test by Distributed Rule Engine
+  [Debug] Begin Execution!
+  [Debug] Load the knowledge session
+  [Debug]  Rule Error:[]
+  [Debug] Begin Dealing the element: 202.121.66.121 syn 35 104 up 104 7173 small 42 psh 199 199 down 199 15216 small 106 dns 2255 0 com 3 0 14
+  [RPC] Connect to server spark-master:5556 
+  [Rule]  SET: end detection time 1490634000
+  [Rule]  SET: begin detection time 1490630400
+  [Rule]  SET: end detection type Trojan
+  [Rule]  Filter : Filter the item with both upload&download 202.121.66.121
+  [Rule]  Filter : Filter conclusion 202.121.66.121
+  [Rule]  Add Dimension: Average Session Time 202.121.66.121 0.0
+  [Rule]  Add Dimension: Upload Small Ration 202.121.66.121 0.40384615384615385
+  [Rule]  Add Dimesion: DNS 202.121.66.121 2255
+  [Rule]  Add Dimesion: PSH-Ratio 202.121.66.121 1.0
+  [Rule]  Add Dimesion: SYN-Ratio 202.121.66.121 0.33653846153846156
+  [Rule]  Add Dimesion: Upload-Download-Size-Ratio 202.121.66.121 0.47141167192429023
+  [Rule]  Add Dimesion: Upload-Download-Count-Ratio 202.121.66.121 0.5226130653266332
+  [Rule]  Add Dimension: Conclusion 202.121.66.121
+  [KMEANS] vector requirment: Session Time DNS Upload-Download-Count-Ratio Upload-Download-Size-Ratio SYN-Ratio PSH-Ratio Upload-Small-Ratio 
+  [KMEANS] dimension list: Session Time Upload-Small-Ratio DNS PSH-Ratio SYN-Ratio Upload-Download-Size-Ratio Upload-Download-Count-Ratio 
+  [Service] Initial Relation From File!
+  [Service] External Service List: List(SA_KMEANS_JUDGEMENT)
+  [Service] Internal Service List: List(_SA_KMEANS_JUDGEMENT)
+  [Service] SA_KMEANS_JUDGEMENT ConvertToInternal ... begin!
+  [Service] Internal Element Name: _SA_KMEANS_JUDGEMENT Element Number: 0
+  [Request] Build Internal Interface: _SA_KMEANS_JUDGEMENT
+  [Service] SA_KMEANS_JUDGEMENT ConvertToInternal ... done!
+============Service Request============
+  [Request] Request Number: 1
+  [Request] Request name: _SA_KMEANS_JUDGEMENT
+  [Request] Request Begin Time:1480867200
+  [Request] Request End Time:1480870000
+  [Request] Request Mode:DEFAULT
+  [Request] Request Type:ML
+  [Request] Request Parent:1
+  [ML] Machine Learning vector: 0.0 2255.0 0.5226130653266332 0.47141167192429023 0.33653846153846156 1.0 0.40384615384615385 
+  [ML] Machine Learning problem: 
+=======================================
+  [RPC] Send Package: 1
+============Service Request============
+  [Request] Request Number: 1
+  [Request] Request name: _SA_KMEANS_JUDGEMENT
+  [Request] Request Begin Time:1480867200
+  [Request] Request End Time:1480870000
+  [Request] Request Mode:DEFAULT
+  [Request] Request Type:ML
+  [Request] Request Parent:1
+  [ML] Machine Learning vector: 0.0 2255.0 0.5226130653266332 0.47141167192429023 0.33653846153846156 1.0 0.40384615384615385 
+  [ML] Machine Learning problem: KMeans Judge Trojan Detection
+=======================================
+  [RPC] Received Package: 1
+  [Rule]  KMeans Judgement Execution: 202.121.66.121
+KMeans Judge Trojan Detection
+  [Rule]  KMeans Judgement Report3: 202.121.66.121
+  [Debug] Detection Object: 202.121.66.121 syn 35 104 up 104 7173 small 42 psh 199 199 down 199 15216 small 106 dns 2255 0 com 3 0 14: Number :1

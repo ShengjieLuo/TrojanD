@@ -116,15 +116,16 @@ class ToolParameter(obj1:String,obj2:String,obj3:String){
    def getObj():String = {return obj}
 }
 
-class ML(obj:Vector){
+class ML(obj1:Vector,obj2:String){
 
-   var vector = obj
-   var problem:String = ""
+   var vector:Vector = obj1
+   var problem:String = obj2
    
    def print(){
      var str:String = ""
-     obj.values.foreach(p => str = str + p.toString + " ")
-     println("  [ML] Machine Learning vector: "+str)
+     vector.values.foreach(p => str = str + p.toString + " ")
+     println("  [ML] Machine Learning vector: " + str)
+     println("  [ML] Machine Learning problem: " + problem)
    }
 
    def equals(ml:ML):Boolean = {

@@ -53,7 +53,12 @@ class TroDItem(itemname:String,itemobj:String) extends Item(itemname:String,item
      request.setRequestMode("DEFAULT")
      var external = new Convertor("SA_KMEANS_JUDGEMENT",request)
      var internal:List[Request] = external.getInterface()
-     var reply:List[Request] = client.send(internal.asJava).asScala.toList
+     var replys:List[Request] = client.send(internal.asJava).asScala.toList
+     
+     //The KMEANS judgement would only send one request and receive one reply
+     var reply:Request = replys.apply(0)
+     if (reply.ml.last.problem != "") {insertProblem(reply.ml.last.problem); kmeansFlag = 1;}
+     //printProblems()
   }
 
 }

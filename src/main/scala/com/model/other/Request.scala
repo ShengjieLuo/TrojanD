@@ -67,7 +67,13 @@ class Request(){
   }
 
   def setMLParameter(obj1:Vector){
-      var obj:ML = new ML(obj1)
+      val obj2:String = ""
+      var obj:ML = new ML(obj1,obj2)
+      ml = ml :+ obj
+  }
+
+  def setMLParameter(obj1:Vector,obj2:String){
+      var obj:ML = new ML(obj1,obj2)
       ml = ml :+ obj
   }
 
@@ -151,7 +157,8 @@ class Request(){
         var vectorobj:com.rpc.Interface.Vector = mlobj.getVector();
         var obj1:com.model.Vector = new com.model.Vector();
         obj1.setValue(vectorobj.getValueList());
-        setMLParameter(obj1);
+        val obj2:String = mlobj.getProblem();
+        setMLParameter(obj1,obj2);
       }
     }
 
@@ -215,6 +222,7 @@ class Request(){
       var values:java.util.List[java.lang.Double] = vector.getValue("java");
       for (j <- 0 to values.size()-1 ){ivector.addValue(values.get(j));};
       iml.setVector(ivector.build());
+      iml.setProblem(ml.problem);
       iRequest.setMl(iml.build());
      }
 

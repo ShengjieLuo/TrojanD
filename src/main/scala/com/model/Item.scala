@@ -46,9 +46,16 @@ class Item(itemname:String,itemobj:String) {
   var session_count:Int = -1
   var dimensions:List[Dimension] = List()
   var problems:List[Problem] = List()
+  var problemsRule:List[String] = List()
   var vector:Vector = new Vector()
   var valid:Boolean = false
   var status:Int = 0
+  
+  //Reason Why we use problems & problemsRule Here
+  //Member problems is a data class. Now class Problem only has one attribute Name, but we can add other attributes into this class and make it more graceful and useful
+  //Member problemsRule is used for drools. Drools is easy to judge the simple data structure, but hard to judge the complex data structure. Therefore, we use a simple form -- List[String] Here.
+  //It is important to note that you need insert problem to both problems and problemsRule.
+  var kmeansFlag:Int = 0 //Temp Usage.
 
   private def _setSYN(a:Int){syn=a}
   private def _setUP(a:Int,b:Int,c:Int){up_count=a;up_size=b;up_small=c;}
@@ -84,9 +91,12 @@ class Item(itemname:String,itemobj:String) {
   def addDimension(di:Dimension):Unit = {dimensions = dimensions :+ di}
   def addDimension(str:String,va:Double):Unit = {dimensions = dimensions :+ new Dimension(str,va)}
   def addDimension(str:String,va:Int):Unit = {dimensions = dimensions :+ new Dimension(str,va.toDouble)}
-  def insertProblem(problem:String){problems = problems :+ new Problem(problem)}
   def insertProblems(problemList:List[String]){problemList.foreach(p => this.insertProblem(p))}
-  def printProblems():String = { var str = "";problems.foreach(p => str = str+p.name);str}
+  def printProblems():String = { var str = "";problems.foreach(p => str = str+p.name);println(str);str}
+  def insertProblem(problem:String){
+    problems = problems :+ new Problem(problem); 
+    problemsRule = problemsRule :+ problem;
+  }
 
   def setFromDataLine(data:String){
     //Use Regular Experssion Here

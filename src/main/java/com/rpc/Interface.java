@@ -701,6 +701,20 @@ public final class Interface {
      * <code>required .rpc.Vector vector = 1;</code>
      */
     com.rpc.Interface.VectorOrBuilder getVectorOrBuilder();
+
+    /**
+     * <code>required string problem = 2;</code>
+     */
+    boolean hasProblem();
+    /**
+     * <code>required string problem = 2;</code>
+     */
+    java.lang.String getProblem();
+    /**
+     * <code>required string problem = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getProblemBytes();
   }
   /**
    * Protobuf type {@code rpc.MLParameter}
@@ -771,6 +785,12 @@ public final class Interface {
               bitField0_ |= 0x00000001;
               break;
             }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              problem_ = bs;
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -832,8 +852,51 @@ public final class Interface {
       return vector_;
     }
 
+    public static final int PROBLEM_FIELD_NUMBER = 2;
+    private java.lang.Object problem_;
+    /**
+     * <code>required string problem = 2;</code>
+     */
+    public boolean hasProblem() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string problem = 2;</code>
+     */
+    public java.lang.String getProblem() {
+      java.lang.Object ref = problem_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          problem_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string problem = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getProblemBytes() {
+      java.lang.Object ref = problem_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        problem_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       vector_ = com.rpc.Interface.Vector.getDefaultInstance();
+      problem_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -842,6 +905,10 @@ public final class Interface {
       if (isInitialized == 0) return false;
 
       if (!hasVector()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasProblem()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -855,6 +922,9 @@ public final class Interface {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeMessage(1, vector_);
       }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getProblemBytes());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -867,6 +937,10 @@ public final class Interface {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, vector_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getProblemBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -996,6 +1070,8 @@ public final class Interface {
           vectorBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
+        problem_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -1032,6 +1108,10 @@ public final class Interface {
         } else {
           result.vector_ = vectorBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.problem_ = problem_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1051,12 +1131,21 @@ public final class Interface {
         if (other.hasVector()) {
           mergeVector(other.getVector());
         }
+        if (other.hasProblem()) {
+          bitField0_ |= 0x00000002;
+          problem_ = other.problem_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
         if (!hasVector()) {
+          
+          return false;
+        }
+        if (!hasProblem()) {
           
           return false;
         }
@@ -1196,6 +1285,82 @@ public final class Interface {
           vector_ = null;
         }
         return vectorBuilder_;
+      }
+
+      private java.lang.Object problem_ = "";
+      /**
+       * <code>required string problem = 2;</code>
+       */
+      public boolean hasProblem() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string problem = 2;</code>
+       */
+      public java.lang.String getProblem() {
+        java.lang.Object ref = problem_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            problem_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string problem = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getProblemBytes() {
+        java.lang.Object ref = problem_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          problem_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string problem = 2;</code>
+       */
+      public Builder setProblem(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        problem_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string problem = 2;</code>
+       */
+      public Builder clearProblem() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        problem_ = getDefaultInstance().getProblem();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string problem = 2;</code>
+       */
+      public Builder setProblemBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        problem_ = value;
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:rpc.MLParameter)
@@ -7937,29 +8102,29 @@ public final class Interface {
   static {
     java.lang.String[] descriptorData = {
       "\n\017interface.proto\022\003rpc\"\027\n\006Vector\022\r\n\005valu" +
-      "e\030\001 \003(\001\"*\n\013MLParameter\022\033\n\006vector\030\001 \002(\0132\013" +
-      ".rpc.Vector\"\216\001\n\020CompareParameter\022\023\n\013obje" +
-      "ctAType\030\001 \002(\t\022\017\n\007objectA\030\002 \002(\t\022\023\n\013object" +
-      "BType\030\003 \002(\t\022\017\n\007objectB\030\004 \002(\t\022\016\n\006method\030\005" +
-      " \002(\t\022\r\n\005index\030\006 \001(\t\022\017\n\007problem\030\007 \001(\t\"=\n\014" +
-      "AllParameter\022\017\n\007content\030\001 \002(\t\022\014\n\004kind\030\002 " +
-      "\002(\t\022\016\n\006method\030\003 \002(\t\"@\n\017SingleParameter\022\017" +
-      "\n\007content\030\001 \002(\t\022\014\n\004kind\030\002 \002(\t\022\016\n\006object\030" +
-      "\003 \002(\t\">\n\rToolParameter\022\017\n\007content\030\001 \002(\t\022",
-      "\014\n\004kind\030\002 \002(\t\022\016\n\006object\030\003 \002(\t\"\326\002\n\010IReque" +
-      "st\022\014\n\004name\030\001 \002(\t\022\013\n\003num\030\002 \002(\005\022\016\n\006parent\030" +
-      "\003 \002(\005\022\021\n\tbeginTime\030\004 \002(\005\022\017\n\007endTime\030\005 \002(" +
-      "\005\022$\n\004type\030\006 \002(\0162\020.rpc.RequestType:\004NONE\022" +
-      "\'\n\004mode\030\007 \001(\0162\020.rpc.RequestMode:\007DEFAULT" +
-      "\022\034\n\002ml\030\010 \001(\0132\020.rpc.MLParameter\022\036\n\003all\030\t " +
-      "\001(\0132\021.rpc.AllParameter\022$\n\006single\030\n \001(\0132\024" +
-      ".rpc.SingleParameter\022 \n\004tool\030\013 \001(\0132\022.rpc" +
-      ".ToolParameter\022&\n\007compare\030\014 \001(\0132\025.rpc.Co" +
-      "mpareParameter*5\n\013RequestMode\022\013\n\007DEFAULT",
-      "\020\000\022\r\n\tOPTIMIZED\020\001\022\n\n\006SIMPLE\020\002*K\n\013Request" +
-      "Type\022\007\n\003ALL\020\000\022\013\n\007COMPARE\020\001\022\n\n\006SINGLE\020\002\022\010" +
-      "\n\004TOOL\020\003\022\006\n\002ML\020\004\022\010\n\004NONE\020\005B\024\n\007com.rpcB\tI" +
-      "nterface"
+      "e\030\001 \003(\001\";\n\013MLParameter\022\033\n\006vector\030\001 \002(\0132\013" +
+      ".rpc.Vector\022\017\n\007problem\030\002 \002(\t\"\216\001\n\020Compare" +
+      "Parameter\022\023\n\013objectAType\030\001 \002(\t\022\017\n\007object" +
+      "A\030\002 \002(\t\022\023\n\013objectBType\030\003 \002(\t\022\017\n\007objectB\030" +
+      "\004 \002(\t\022\016\n\006method\030\005 \002(\t\022\r\n\005index\030\006 \001(\t\022\017\n\007" +
+      "problem\030\007 \001(\t\"=\n\014AllParameter\022\017\n\007content" +
+      "\030\001 \002(\t\022\014\n\004kind\030\002 \002(\t\022\016\n\006method\030\003 \002(\t\"@\n\017" +
+      "SingleParameter\022\017\n\007content\030\001 \002(\t\022\014\n\004kind" +
+      "\030\002 \002(\t\022\016\n\006object\030\003 \002(\t\">\n\rToolParameter\022",
+      "\017\n\007content\030\001 \002(\t\022\014\n\004kind\030\002 \002(\t\022\016\n\006object" +
+      "\030\003 \002(\t\"\326\002\n\010IRequest\022\014\n\004name\030\001 \002(\t\022\013\n\003num" +
+      "\030\002 \002(\005\022\016\n\006parent\030\003 \002(\005\022\021\n\tbeginTime\030\004 \002(" +
+      "\005\022\017\n\007endTime\030\005 \002(\005\022$\n\004type\030\006 \002(\0162\020.rpc.R" +
+      "equestType:\004NONE\022\'\n\004mode\030\007 \001(\0162\020.rpc.Req" +
+      "uestMode:\007DEFAULT\022\034\n\002ml\030\010 \001(\0132\020.rpc.MLPa" +
+      "rameter\022\036\n\003all\030\t \001(\0132\021.rpc.AllParameter\022" +
+      "$\n\006single\030\n \001(\0132\024.rpc.SingleParameter\022 \n" +
+      "\004tool\030\013 \001(\0132\022.rpc.ToolParameter\022&\n\007compa" +
+      "re\030\014 \001(\0132\025.rpc.CompareParameter*5\n\013Reque",
+      "stMode\022\013\n\007DEFAULT\020\000\022\r\n\tOPTIMIZED\020\001\022\n\n\006SI" +
+      "MPLE\020\002*K\n\013RequestType\022\007\n\003ALL\020\000\022\013\n\007COMPAR" +
+      "E\020\001\022\n\n\006SINGLE\020\002\022\010\n\004TOOL\020\003\022\006\n\002ML\020\004\022\010\n\004NON" +
+      "E\020\005B\024\n\007com.rpcB\tInterface"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7984,7 +8149,7 @@ public final class Interface {
     internal_static_rpc_MLParameter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_rpc_MLParameter_descriptor,
-        new java.lang.String[] { "Vector", });
+        new java.lang.String[] { "Vector", "Problem", });
     internal_static_rpc_CompareParameter_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_rpc_CompareParameter_fieldAccessorTable = new
