@@ -19,7 +19,26 @@ name hashing:
 1 items
 0 -> true
 products:
-82 items
+101 items
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKMeansPredict$$anonfun$1$$anonfun$apply$1.class
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKMeansPredict$$anonfun$1$$anonfun$apply$2.class
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKMeansPredict$$anonfun$1$$anonfun$apply$3.class
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKMeansPredict$$anonfun$1.class
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKMeansPredict$$anonfun$main$1.class
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKMeansPredict$$anonfun$main$2.class
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKMeansPredict$.class
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKMeansPredict.class
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKmeansTrain$$anonfun$1$$anonfun$apply$1.class
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKmeansTrain$$anonfun$1.class
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKmeansTrain$$anonfun$2$$anonfun$apply$2.class
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKmeansTrain$$anonfun$2$$anonfun$apply$3.class
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKmeansTrain$$anonfun$2$$anonfun$apply$4.class
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKmeansTrain$$anonfun$2.class
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKmeansTrain$$anonfun$main$1.class
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKmeansTrain$$anonfun$main$2.class
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKmeansTrain$$anonfun$main$3.class
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKmeansTrain$.class
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKmeansTrain.class
 /usr/local/TrojanD/ML/src/main/scala/com/GaussianPredict.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/GaussianPredict$$anonfun$1$$anonfun$apply$1.class
 /usr/local/TrojanD/ML/src/main/scala/com/GaussianPredict.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/GaussianPredict$$anonfun$1$$anonfun$apply$2.class
 /usr/local/TrojanD/ML/src/main/scala/com/GaussianPredict.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/GaussianPredict$$anonfun$1$$anonfun$apply$3.class
@@ -103,7 +122,16 @@ products:
 /usr/local/TrojanD/ML/src/main/scala/com/util.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/Statistic.class
 /usr/local/TrojanD/ML/src/main/scala/com/util.scala -> /usr/local/TrojanD/ML/target/scala-2.11/classes/com/Summer.class
 binary dependencies:
-36 items
+45 items
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> /root/.ivy2/cache/org.apache.spark/spark-core_2.11/jars/spark-core_2.11-2.1.0.jar
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> /root/.ivy2/cache/org.apache.spark/spark-mllib_2.11/jars/spark-mllib_2.11-2.1.0.jar
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> /root/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> /root/.ivy2/cache/org.apache.spark/spark-core_2.11/jars/spark-core_2.11-2.1.0.jar
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> /root/.ivy2/cache/org.apache.spark/spark-mllib_2.11/jars/spark-mllib_2.11-2.1.0.jar
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> /root/.ivy2/cache/org.apache.spark/spark-sql_2.11/jars/spark-sql_2.11-2.1.0.jar
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> /root/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar
 /usr/local/TrojanD/ML/src/main/scala/com/GaussianPredict.scala -> /root/.ivy2/cache/org.apache.spark/spark-core_2.11/jars/spark-core_2.11-2.1.0.jar
 /usr/local/TrojanD/ML/src/main/scala/com/GaussianPredict.scala -> /root/.ivy2/cache/org.apache.spark/spark-mllib_2.11/jars/spark-mllib_2.11-2.1.0.jar
 /usr/local/TrojanD/ML/src/main/scala/com/GaussianPredict.scala -> /root/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar
@@ -160,7 +188,26 @@ inheritance internal dependencies:
 inheritance external dependencies:
 0 items
 class names:
-82 items
+101 items
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> com.BisectingKMeansPredict
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> com.BisectingKMeansPredict$
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> com.BisectingKMeansPredict$$anonfun$1
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> com.BisectingKMeansPredict$$anonfun$1$$anonfun$apply$1
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> com.BisectingKMeansPredict$$anonfun$1$$anonfun$apply$2
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> com.BisectingKMeansPredict$$anonfun$1$$anonfun$apply$3
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> com.BisectingKMeansPredict$$anonfun$main$1
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> com.BisectingKMeansPredict$$anonfun$main$2
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> com.BisectingKmeansTrain
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> com.BisectingKmeansTrain$
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> com.BisectingKmeansTrain$$anonfun$1
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> com.BisectingKmeansTrain$$anonfun$1$$anonfun$apply$1
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> com.BisectingKmeansTrain$$anonfun$2
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> com.BisectingKmeansTrain$$anonfun$2$$anonfun$apply$2
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> com.BisectingKmeansTrain$$anonfun$2$$anonfun$apply$3
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> com.BisectingKmeansTrain$$anonfun$2$$anonfun$apply$4
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> com.BisectingKmeansTrain$$anonfun$main$1
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> com.BisectingKmeansTrain$$anonfun$main$2
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> com.BisectingKmeansTrain$$anonfun$main$3
 /usr/local/TrojanD/ML/src/main/scala/com/GaussianPredict.scala -> com.GaussianPredict
 /usr/local/TrojanD/ML/src/main/scala/com/GaussianPredict.scala -> com.GaussianPredict$
 /usr/local/TrojanD/ML/src/main/scala/com/GaussianPredict.scala -> com.GaussianPredict$$anonfun$1
@@ -244,7 +291,158 @@ class names:
 /usr/local/TrojanD/ML/src/main/scala/com/util.scala -> com.Statistic$$anonfun$updateMean$1
 /usr/local/TrojanD/ML/src/main/scala/com/util.scala -> com.Summer
 used names:
-740 items
+891 items
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> %
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> +
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> <init>
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> ==
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> AnyRef
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> Array
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> BisectingKMeans
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> BisectingKMeansModel
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> BisectingKMeansPredict
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> ClassTag
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> Double
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> Int
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> Predef
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> SparkConf
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> SparkContext
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> String
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> Unit
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> Vectors
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> apache
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> apply
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> augmentString
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> cache
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> canBuildFrom
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> clustering
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> clusters
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> collect
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> com
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> conf
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> count
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> dense
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> equals
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> filter
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> foreach
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> intArrayOps
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> item
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> linalg
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> line
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> load
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> map
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> materializeClassTag
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> mllib
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> org
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> package
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> parsedTestData
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> predict
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> predictedClusterIndex
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> println
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> rawTestData
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> refArrayOps
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> sc
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> scala
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> setAppName
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> spark
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> split
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> stat
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> testDataLine
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> textFile
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> toDouble
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> toString
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> trim
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> unary_!
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> update
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> +
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> +=
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> /
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> <
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> <init>
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> AccumulatorParam
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> AnyRef
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> Array
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> BisectingKMeans
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> BisectingKMeansModel
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> BisectingKmeansTrain
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> ClassTag
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> Double
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> File
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> Int
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> IntAccumulatorParam
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> Predef
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> PrintWriter
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> RDD
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> SparkConf
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> SparkContext
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> SparkSession
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> Statistics
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> String
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> Unit
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> Vector
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> Vectors
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> accum
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> accumulator
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> apache
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> apply
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> augmentString
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> cache
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> canBuildFrom
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> close
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> clustering
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> clusters
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> collect
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> com
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> data
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> dense
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> equals
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> filter
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> foreach
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> intArrayOps
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> io
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> item
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> java
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> linalg
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> line
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> load
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> map
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> materializeClassTag
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> mllib
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> model
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> order
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> org
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> package
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> parsedData
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> parsedTestData
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> predict
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> predictedClusterIndex
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> println
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> problemStr
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> problemWriter
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> rawTestData
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> rdd
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> refArrayOps
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> run
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> s
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> save
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> sc
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> scala
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> setAppName
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> setK
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> spark
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> sparkconf
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> split
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> sql
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> stat
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> testDataLine
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> textFile
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> toDouble
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> toString
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> trim
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> unary_!
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> update
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> value
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> write
 /usr/local/TrojanD/ML/src/main/scala/com/GaussianPredict.scala -> %
 /usr/local/TrojanD/ML/src/main/scala/com/GaussianPredict.scala -> +
 /usr/local/TrojanD/ML/src/main/scala/com/GaussianPredict.scala -> <init>
@@ -986,7 +1184,26 @@ used names:
 /usr/local/TrojanD/ML/src/main/scala/com/util.scala -> write
 /usr/local/TrojanD/ML/src/main/scala/com/util.scala -> writer
 product stamps:
-82 items
+101 items
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKMeansPredict$$anonfun$1$$anonfun$apply$1.class -> lastModified(1494527730000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKMeansPredict$$anonfun$1$$anonfun$apply$2.class -> lastModified(1494527730000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKMeansPredict$$anonfun$1$$anonfun$apply$3.class -> lastModified(1494527730000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKMeansPredict$$anonfun$1.class -> lastModified(1494527730000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKMeansPredict$$anonfun$main$1.class -> lastModified(1494527730000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKMeansPredict$$anonfun$main$2.class -> lastModified(1494527730000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKMeansPredict$.class -> lastModified(1494527730000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKMeansPredict.class -> lastModified(1494527730000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKmeansTrain$$anonfun$1$$anonfun$apply$1.class -> lastModified(1494528264000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKmeansTrain$$anonfun$1.class -> lastModified(1494528264000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKmeansTrain$$anonfun$2$$anonfun$apply$2.class -> lastModified(1494528264000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKmeansTrain$$anonfun$2$$anonfun$apply$3.class -> lastModified(1494528264000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKmeansTrain$$anonfun$2$$anonfun$apply$4.class -> lastModified(1494528264000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKmeansTrain$$anonfun$2.class -> lastModified(1494528264000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKmeansTrain$$anonfun$main$1.class -> lastModified(1494528264000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKmeansTrain$$anonfun$main$2.class -> lastModified(1494528264000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKmeansTrain$$anonfun$main$3.class -> lastModified(1494528264000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKmeansTrain$.class -> lastModified(1494528264000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKmeansTrain.class -> lastModified(1494528264000)
 /usr/local/TrojanD/ML/target/scala-2.11/classes/com/GaussianPredict$$anonfun$1$$anonfun$apply$1.class -> lastModified(1494526207000)
 /usr/local/TrojanD/ML/target/scala-2.11/classes/com/GaussianPredict$$anonfun$1$$anonfun$apply$2.class -> lastModified(1494526207000)
 /usr/local/TrojanD/ML/target/scala-2.11/classes/com/GaussianPredict$$anonfun$1$$anonfun$apply$3.class -> lastModified(1494526207000)
@@ -1014,17 +1231,17 @@ product stamps:
 /usr/local/TrojanD/ML/target/scala-2.11/classes/com/KMeansMLlibPredict$$anonfun$main$2.class -> lastModified(1494524803000)
 /usr/local/TrojanD/ML/target/scala-2.11/classes/com/KMeansMLlibPredict$.class -> lastModified(1494524803000)
 /usr/local/TrojanD/ML/target/scala-2.11/classes/com/KMeansMLlibPredict.class -> lastModified(1494524803000)
-/usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansMLlibTrain$$anonfun$1$$anonfun$apply$1.class -> lastModified(1494524803000)
-/usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansMLlibTrain$$anonfun$1.class -> lastModified(1494524803000)
-/usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansMLlibTrain$$anonfun$2$$anonfun$apply$2.class -> lastModified(1494524804000)
-/usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansMLlibTrain$$anonfun$2$$anonfun$apply$3.class -> lastModified(1494524804000)
-/usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansMLlibTrain$$anonfun$2$$anonfun$apply$4.class -> lastModified(1494524804000)
-/usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansMLlibTrain$$anonfun$2.class -> lastModified(1494524803000)
-/usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansMLlibTrain$$anonfun$main$1.class -> lastModified(1494524804000)
-/usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansMLlibTrain$$anonfun$main$2.class -> lastModified(1494524804000)
-/usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansMLlibTrain$$anonfun$main$3.class -> lastModified(1494524804000)
-/usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansMLlibTrain$.class -> lastModified(1494524803000)
-/usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansMLlibTrain.class -> lastModified(1494524803000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansMLlibTrain$$anonfun$1$$anonfun$apply$1.class -> lastModified(1494528317000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansMLlibTrain$$anonfun$1.class -> lastModified(1494528317000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansMLlibTrain$$anonfun$2$$anonfun$apply$2.class -> lastModified(1494528317000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansMLlibTrain$$anonfun$2$$anonfun$apply$3.class -> lastModified(1494528317000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansMLlibTrain$$anonfun$2$$anonfun$apply$4.class -> lastModified(1494528317000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansMLlibTrain$$anonfun$2.class -> lastModified(1494528317000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansMLlibTrain$$anonfun$main$1.class -> lastModified(1494528317000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansMLlibTrain$$anonfun$main$2.class -> lastModified(1494528317000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansMLlibTrain$$anonfun$main$3.class -> lastModified(1494528317000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansMLlibTrain$.class -> lastModified(1494528317000)
+/usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansMLlibTrain.class -> lastModified(1494528317000)
 /usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansTrain$$anonfun$main$1.class -> lastModified(1494524804000)
 /usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansTrain$$anonfun$main$2.class -> lastModified(1494524804000)
 /usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansTrain$$anonfun$main$3.class -> lastModified(1494524804000)
@@ -1070,11 +1287,13 @@ product stamps:
 /usr/local/TrojanD/ML/target/scala-2.11/classes/com/Statistic.class -> lastModified(1494524804000)
 /usr/local/TrojanD/ML/target/scala-2.11/classes/com/Summer.class -> lastModified(1494524804000)
 source stamps:
-9 items
+11 items
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> hash(580942eaae5cebecf9f5ff982d7f04c170057187)
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> hash(3a3de22a5d2ffde69b96343ae052ebd11f93f7cf)
 /usr/local/TrojanD/ML/src/main/scala/com/GaussianPredict.scala -> hash(ad77bc0a7b5f827b85c30e6b2fd643bd2f89838f)
 /usr/local/TrojanD/ML/src/main/scala/com/GaussianTrain.scala -> hash(8684a231ad2b35f5caec7706611733dea1ddfa9c)
 /usr/local/TrojanD/ML/src/main/scala/com/KmeansMLlibPredict.scala -> hash(ced8b7cfa46f752792483e108375197f97554d24)
-/usr/local/TrojanD/ML/src/main/scala/com/KmeansMLlibTrain.scala -> hash(730d2014f16377da0a930bc6da621ad1ab834e16)
+/usr/local/TrojanD/ML/src/main/scala/com/KmeansMLlibTrain.scala -> hash(120a0d515061dec1f8a4f00f5947452071b26b45)
 /usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> hash(c17c1722e11f0c10d917e82cdddebd2366607b67)
 /usr/local/TrojanD/ML/src/main/scala/com/ProduceMLlib.scala -> hash(5b89b52559c6dd080ae865b7101f35e53ba3b5fa)
 /usr/local/TrojanD/ML/src/main/scala/com/ProducePredict.scala -> hash(3bedf9ce9ad1453da0d81eb7cc50d58a2581516e)
@@ -1090,14 +1309,18 @@ binary stamps:
 /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar -> lastModified(1494039098000)
 class names:
 6 items
-/root/.ivy2/cache/org.apache.spark/spark-core_2.11/jars/spark-core_2.11-2.1.0.jar -> org.apache.spark.SparkConf$
+/root/.ivy2/cache/org.apache.spark/spark-core_2.11/jars/spark-core_2.11-2.1.0.jar -> org.apache.spark.rdd.RDD
 /root/.ivy2/cache/org.apache.spark/spark-mllib-local_2.11/jars/spark-mllib-local_2.11-2.1.0.jar -> org.apache.spark.ml.linalg.Vector
-/root/.ivy2/cache/org.apache.spark/spark-mllib_2.11/jars/spark-mllib_2.11-2.1.0.jar -> org.apache.spark.mllib.linalg.Vectors
-/root/.ivy2/cache/org.apache.spark/spark-sql_2.11/jars/spark-sql_2.11-2.1.0.jar -> org.apache.spark.sql.SparkSession$
-/root/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar -> scala.Array$
+/root/.ivy2/cache/org.apache.spark/spark-mllib_2.11/jars/spark-mllib_2.11-2.1.0.jar -> org.apache.spark.mllib.clustering.KMeansModel$
+/root/.ivy2/cache/org.apache.spark/spark-sql_2.11/jars/spark-sql_2.11-2.1.0.jar -> org.apache.spark.sql.SparkSession
+/root/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar -> scala.reflect.package$
 /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar -> java.lang.Object
 internal apis:
-9 items
+11 items
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHClnz7IAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAFXNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cLNE0GZ0ABZCaXNlY3RpbmdLTWVhbnNQcmVkaWN0c3EAfgAMB1DEKHQABm5vdGlmeXNxAH4ADHBIQdF0AAR3YWl0c3EAfgAMLe0XPHQADSRhc0luc3RhbmNlT2ZzcQB+AAyA7dr3dAAGZXF1YWxzc3EAfgAMzEk4RXQADGFzSW5zdGFuY2VPZnNxAH4ADOfxxmx0AAxzeW5jaHJvbml6ZWRzcQB+AAzOmPCodAANJGlzSW5zdGFuY2VPZnNxAH4ADGJ+x/l0AARtYWluc3EAfgAMCb9Aa3QACW5vdGlmeUFsbHNxAH4ADNavT4N0AAxpc0luc3RhbmNlT2ZzcQB+AAzb2fZgdAACPT1zcQB+AAwVJ49VdAAFY2xvbmVzcQB+AAweyhtfdAAIdG9TdHJpbmdzcQB+AAxrylW/dAACIT1zcQB+AAyPWx90dAAIZ2V0Q2xhc3NzcQB+AAza6WG8dAACbmVzcQB+AAyYIm94dAACZXFzcQB+AAwj19mzdAACIyNzcQB+AAydgktUdAAIZmluYWxpemVzcQB+AAxKmpk4dAAIaGFzaENvZGVzcgATeHNidGkuYXBpLlNvdXJjZUFQSblep/kpIzikAgACWwALZGVmaW5pdGlvbnN0ABdbTHhzYnRpL2FwaS9EZWZpbml0aW9uO1sACHBhY2thZ2VzdAAUW0x4c2J0aS9hcGkvUGFja2FnZTt4cHVyABdbTHhzYnRpLmFwaS5EZWZpbml0aW9uO4jJXOe0414OAgAAeHAAAAABc3IAE3hzYnRpLmFwaS5DbGFzc0xpa2WDNByh37CXbAIABEwADmRlZmluaXRpb25UeXBldAAaTHhzYnRpL2FwaS9EZWZpbml0aW9uVHlwZTtbABBzYXZlZEFubm90YXRpb25zdAATW0xqYXZhL2xhbmcvU3RyaW5nO0wACHNlbGZUeXBldAAQTHhzYnRpL2FwaS9MYXp5O0wACXN0cnVjdHVyZXEAfgBBeHIAIXhzYnRpLmFwaS5QYXJhbWV0ZXJpemVkRGVmaW5pdGlvbvkRbrHVUDziAgABWwAOdHlwZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9UeXBlUGFyYW1ldGVyO3hyABR4c2J0aS5hcGkuRGVmaW5pdGlvbocqG+hxQuNGAgAETAAGYWNjZXNzdAASTHhzYnRpL2FwaS9BY2Nlc3M7WwALYW5ub3RhdGlvbnN0ABdbTHhzYnRpL2FwaS9Bbm5vdGF0aW9uO0wACW1vZGlmaWVyc3QAFUx4c2J0aS9hcGkvTW9kaWZpZXJzO0wABG5hbWVxAH4ADXhwc3IAEHhzYnRpLmFwaS5QdWJsaWO6WD2ubC1gQgIAAHhyABB4c2J0aS5hcGkuQWNjZXNz3WKa+B1jMUgCAAB4cHVyABdbTHhzYnRpLmFwaS5Bbm5vdGF0aW9uO+uX6xkQ9o1IAgAAeHAAAAAAc3IAE3hzYnRpLmFwaS5Nb2RpZmllcnOX52HcEyZ7swIAAUIABWZsYWdzeHAAdAAaY29tLkJpc2VjdGluZ0tNZWFuc1ByZWRpY3R1cgAaW0x4c2J0aS5hcGkuVHlwZVBhcmFtZXRlcjvZbSYPKJ3ytgIAAHhwAAAAAH5yABh4c2J0aS5hcGkuRGVmaW5pdGlvblR5cGUAAAAAAAAAABIAAHhyAA5qYXZhLmxhbmcuRW51bQAAAAAAAAAAEgAAeHB0AAZNb2R1bGV1cgATW0xqYXZhLmxhbmcuU3RyaW5nO63SVufpHXtHAgAAeHAAAAAAc3IAIXhzYnRpLmFwaS5BYnN0cmFjdExhenkkU3RyaWN0TGF6eQ1mHGspFiq4AgABTAAFdmFsdWV0ABJMamF2YS9sYW5nL09iamVjdDt4cHNyABN4c2J0aS5hcGkuRW1wdHlUeXBlvP2eRkk7iSQCAAB4cgAUeHNidGkuYXBpLlNpbXBsZVR5cGVyeGKIISO/QAIAAHhyAA54c2J0aS5hcGkuVHlwZT9q2SEWSarKAgAAeHBzcQB+AFlzcgATeHNidGkuYXBpLlN0cnVjdHVyZamq+YCTb9gAAgADTAAIZGVjbGFyZWRxAH4AQUwACWluaGVyaXRlZHEAfgBBTAAHcGFyZW50c3EAfgBBeHEAfgBec3EAfgBZdXEAfgA8AAAAAXNyAA14c2J0aS5hcGkuRGVmUr6f4ny0NmkCAAJMAApyZXR1cm5UeXBldAAQTHhzYnRpL2FwaS9UeXBlO1sAD3ZhbHVlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1BhcmFtZXRlckxpc3Q7eHEAfgBCcQB+AEt1cQB+AEwAAAAAc3EAfgBOAHEAfgAfdXEAfgBRAAAAAHNyABR4c2J0aS5hcGkuUHJvamVjdGlvbvPSjVTpRaQtAgACTAACaWRxAH4ADUwABnByZWZpeHQAFkx4c2J0aS9hcGkvU2ltcGxlVHlwZTt4cQB+AF10AARVbml0c3IAE3hzYnRpLmFwaS5TaW5nbGV0b278p1/4z1bkRgIAAUwABHBhdGh0ABBMeHNidGkvYXBpL1BhdGg7eHEAfgBdc3IADnhzYnRpLmFwaS5QYXRomz1cCM6lJ4QCAAFbAApjb21wb25lbnRzdAAaW0x4c2J0aS9hcGkvUGF0aENvbXBvbmVudDt4cHVyABpbTHhzYnRpLmFwaS5QYXRoQ29tcG9uZW50O0PaCXQtZxZ0AgAAeHAAAAACc3IADHhzYnRpLmFwaS5JZJgybIs3U8RAAgABTAACaWRxAH4ADXhyABd4c2J0aS5hcGkuUGF0aENvbXBvbmVudF+aIlsuhp+8AgAAeHB0AAVzY2FsYXNyAA54c2J0aS5hcGkuVGhpc9sJ7abMWkBcAgAAeHEAfgB5dXIAGltMeHNidGkuYXBpLlBhcmFtZXRlckxpc3Q79dM6HfKzcO4CAAB4cAAAAAFzcgAXeHNidGkuYXBpLlBhcmFtZXRlckxpc3TWxbwcZEl04wIAAloACmlzSW1wbGljaXRbAApwYXJhbWV0ZXJzdAAcW0x4c2J0aS9hcGkvTWV0aG9kUGFyYW1ldGVyO3hwAHVyABxbTHhzYnRpLmFwaS5NZXRob2RQYXJhbWV0ZXI7z7jFXaXdtW0CAAB4cAAAAAFzcgAZeHNidGkuYXBpLk1ldGhvZFBhcmFtZXRlch9FrhfTSbDqAgAEWgAKaGFzRGVmYXVsdEwACG1vZGlmaWVydAAdTHhzYnRpL2FwaS9QYXJhbWV0ZXJNb2RpZmllcjtMAARuYW1lcQB+AA1MAAN0cGVxAH4AZnhwAH5yABt4c2J0aS5hcGkuUGFyYW1ldGVyTW9kaWZpZXIAAAAAAAAAABIAAHhxAH4AVHQABVBsYWludAAEYXJnc3NyABd4c2J0aS5hcGkuUGFyYW1ldGVyaXplZBZs7mkDybt/AgACTAAIYmFzZVR5cGVxAH4AbVsADXR5cGVBcmd1bWVudHN0ABFbTHhzYnRpL2FwaS9UeXBlO3hxAH4AXXNxAH4AbHQABUFycmF5cQB+AHJ1cgARW0x4c2J0aS5hcGkuVHlwZTt0/6Vae/npQQIAAHhwAAAAAXNxAH4AbHQABlN0cmluZ3NxAH4AcHNxAH4Ac3VxAH4AdgAAAANzcQB+AHh0AARqYXZhc3EAfgB4dAAEbGFuZ3EAfgB9c3EAfgBZdXEAfgA8AAAAAHNxAH4AWXVxAH4AkQAAAAJzcQB+AGx0AAZPYmplY3RxAH4AlXNxAH4AbHQAA0FueXEAfgBydXIAFFtMeHNidGkuYXBpLlBhY2thZ2U7WxMZN3CnJ6ECAAB4cAAAAAFzcgAReHNidGkuYXBpLlBhY2thZ2V+WY/2rs45WAIAAUwABG5hbWVxAH4ADXhwdAADY29tc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAFb+MtSmnVyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4ADUwAD3NvdXJjZURpcmVjdG9yeXEAfgANeHB0AC8vdXNyL2xvY2FsL1Ryb2phbkQvTUwvdGFyZ2V0L3NjYWxhLTIuMTEvY2xhc3Nlc3QAAS91cgACW0Ks8xf4BghU4AIAAHhwAAAAFFgJQuquXOvs+fX/mC1/BMFwBXGH
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHA+kc8KAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAFXNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cI0Oqdx0AAZub3RpZnlzcQB+AAyeGnNgdAAEd2FpdHNxAH4ADOnDda50AA0kYXNJbnN0YW5jZU9mc3EAfgAMPGUtu3QABmVxdWFsc3NxAH4ADFDzCaZ0AAxhc0luc3RhbmNlT2ZzcQB+AAwWaS98dAAMc3luY2hyb25pemVkc3EAfgAMRAMMRHQADSRpc0luc3RhbmNlT2ZzcQB+AAxRSG3VdAAEbWFpbnNxAH4ADBeHEMp0AAlub3RpZnlBbGxzcQB+AAwXNJPAdAAMaXNJbnN0YW5jZU9mc3EAfgAMSxmvOHQAAj09c3EAfgAM0UDz4HQABWNsb25lc3EAfgAMl9W9ynQAFEJpc2VjdGluZ0ttZWFuc1RyYWluc3EAfgAM7uOmPnQACHRvU3RyaW5nc3EAfgAMchsgbnQAAiE9c3EAfgAMbabI+nQACGdldENsYXNzc3EAfgAMWkRtbHQAAm5lc3EAfgAM8b3sWnQAAmVxc3EAfgAMS8hMNHQAAiMjc3EAfgAMINPXLHQACGZpbmFsaXplc3EAfgAMEAo2AHQACGhhc2hDb2Rlc3IAE3hzYnRpLmFwaS5Tb3VyY2VBUEm5Xqf5KSM4pAIAAlsAC2RlZmluaXRpb25zdAAXW0x4c2J0aS9hcGkvRGVmaW5pdGlvbjtbAAhwYWNrYWdlc3QAFFtMeHNidGkvYXBpL1BhY2thZ2U7eHB1cgAXW0x4c2J0aS5hcGkuRGVmaW5pdGlvbjuIyVzntONeDgIAAHhwAAAAAXNyABN4c2J0aS5hcGkuQ2xhc3NMaWtlgzQcod+wl2wCAARMAA5kZWZpbml0aW9uVHlwZXQAGkx4c2J0aS9hcGkvRGVmaW5pdGlvblR5cGU7WwAQc2F2ZWRBbm5vdGF0aW9uc3QAE1tMamF2YS9sYW5nL1N0cmluZztMAAhzZWxmVHlwZXQAEEx4c2J0aS9hcGkvTGF6eTtMAAlzdHJ1Y3R1cmVxAH4AQXhyACF4c2J0aS5hcGkuUGFyYW1ldGVyaXplZERlZmluaXRpb275EW6x1VA84gIAAVsADnR5cGVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvVHlwZVBhcmFtZXRlcjt4cgAUeHNidGkuYXBpLkRlZmluaXRpb26HKhvocULjRgIABEwABmFjY2Vzc3QAEkx4c2J0aS9hcGkvQWNjZXNzO1sAC2Fubm90YXRpb25zdAAXW0x4c2J0aS9hcGkvQW5ub3RhdGlvbjtMAAltb2RpZmllcnN0ABVMeHNidGkvYXBpL01vZGlmaWVycztMAARuYW1lcQB+AA14cHNyABB4c2J0aS5hcGkuUHVibGljulg9rmwtYEICAAB4cgAQeHNidGkuYXBpLkFjY2Vzc91imvgdYzFIAgAAeHB1cgAXW0x4c2J0aS5hcGkuQW5ub3RhdGlvbjvrl+sZEPaNSAIAAHhwAAAAAHNyABN4c2J0aS5hcGkuTW9kaWZpZXJzl+dh3BMme7MCAAFCAAVmbGFnc3hwAHQAGGNvbS5CaXNlY3RpbmdLbWVhbnNUcmFpbnVyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQABk1vZHVsZXVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgAheHNidGkuYXBpLkFic3RyYWN0TGF6eSRTdHJpY3RMYXp5DWYcaykWKrgCAAFMAAV2YWx1ZXQAEkxqYXZhL2xhbmcvT2JqZWN0O3hwc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHNxAH4AWXNyABN4c2J0aS5hcGkuU3RydWN0dXJlqar5gJNv2AACAANMAAhkZWNsYXJlZHEAfgBBTAAJaW5oZXJpdGVkcQB+AEFMAAdwYXJlbnRzcQB+AEF4cQB+AF5zcQB+AFl1cQB+ADwAAAABc3IADXhzYnRpLmFwaS5EZWZSvp/ifLQ2aQIAAkwACnJldHVyblR5cGV0ABBMeHNidGkvYXBpL1R5cGU7WwAPdmFsdWVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvUGFyYW1ldGVyTGlzdDt4cQB+AEJxAH4AS3VxAH4ATAAAAABzcQB+AE4AcQB+AB11cQB+AFEAAAAAc3IAFHhzYnRpLmFwaS5Qcm9qZWN0aW9u89KNVOlFpC0CAAJMAAJpZHEAfgANTAAGcHJlZml4dAAWTHhzYnRpL2FwaS9TaW1wbGVUeXBlO3hxAH4AXXQABFVuaXRzcgATeHNidGkuYXBpLlNpbmdsZXRvbvynX/jPVuRGAgABTAAEcGF0aHQAEEx4c2J0aS9hcGkvUGF0aDt4cQB+AF1zcgAOeHNidGkuYXBpLlBhdGibPVwIzqUnhAIAAVsACmNvbXBvbmVudHN0ABpbTHhzYnRpL2FwaS9QYXRoQ29tcG9uZW50O3hwdXIAGltMeHNidGkuYXBpLlBhdGhDb21wb25lbnQ7Q9oJdC1nFnQCAAB4cAAAAAJzcgAMeHNidGkuYXBpLklkmDJsizdTxEACAAFMAAJpZHEAfgANeHIAF3hzYnRpLmFwaS5QYXRoQ29tcG9uZW50X5oiWy6Gn7wCAAB4cHQABXNjYWxhc3IADnhzYnRpLmFwaS5UaGlz2wntpsxaQFwCAAB4cQB+AHl1cgAaW0x4c2J0aS5hcGkuUGFyYW1ldGVyTGlzdDv10zod8rNw7gIAAHhwAAAAAXNyABd4c2J0aS5hcGkuUGFyYW1ldGVyTGlzdNbFvBxkSXTjAgACWgAKaXNJbXBsaWNpdFsACnBhcmFtZXRlcnN0ABxbTHhzYnRpL2FwaS9NZXRob2RQYXJhbWV0ZXI7eHAAdXIAHFtMeHNidGkuYXBpLk1ldGhvZFBhcmFtZXRlcjvPuMVdpd21bQIAAHhwAAAAAXNyABl4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyH0WuF9NJsOoCAARaAApoYXNEZWZhdWx0TAAIbW9kaWZpZXJ0AB1MeHNidGkvYXBpL1BhcmFtZXRlck1vZGlmaWVyO0wABG5hbWVxAH4ADUwAA3RwZXEAfgBmeHAAfnIAG3hzYnRpLmFwaS5QYXJhbWV0ZXJNb2RpZmllcgAAAAAAAAAAEgAAeHEAfgBUdAAFUGxhaW50AARhcmdzc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJpemVkFmzuaQPJu38CAAJMAAhiYXNlVHlwZXEAfgBtWwANdHlwZUFyZ3VtZW50c3QAEVtMeHNidGkvYXBpL1R5cGU7eHEAfgBdc3EAfgBsdAAFQXJyYXlxAH4AcnVyABFbTHhzYnRpLmFwaS5UeXBlO3T/pVp7+elBAgAAeHAAAAABc3EAfgBsdAAGU3RyaW5nc3EAfgBwc3EAfgBzdXEAfgB2AAAAA3NxAH4AeHQABGphdmFzcQB+AHh0AARsYW5ncQB+AH1zcQB+AFl1cQB+ADwAAAAAc3EAfgBZdXEAfgCRAAAAAnNxAH4AbHQABk9iamVjdHEAfgCVc3EAfgBsdAADQW55cQB+AHJ1cgAUW0x4c2J0aS5hcGkuUGFja2FnZTtbExk3cKcnoQIAAHhwAAAAAXNyABF4c2J0aS5hcGkuUGFja2FnZX5Zj/auzjlYAgABTAAEbmFtZXEAfgANeHB0AANjb21zcgAVeHNidGkuYXBpLkNvbXBpbGF0aW9u7frgw2rooEICAAJKAAlzdGFydFRpbWVbAAdvdXRwdXRzdAAaW0x4c2J0aS9hcGkvT3V0cHV0U2V0dGluZzt4cAAAAVv403tBdXIAGltMeHNidGkuYXBpLk91dHB1dFNldHRpbmc7f2rC86eHpUICAAB4cAAAAAFzcgAXeHNidGkuYXBpLk91dHB1dFNldHRpbmd62ZpHdPsdewIAAkwAD291dHB1dERpcmVjdG9yeXEAfgANTAAPc291cmNlRGlyZWN0b3J5cQB+AA14cHQALy91c3IvbG9jYWwvVHJvamFuRC9NTC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAUOj3iKl0v/eabljQ64FLr0R+T988=
 /usr/local/TrojanD/ML/src/main/scala/com/GaussianPredict.scala -> 
 rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHDTnlFQAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAFXNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cPgTGUN0AAZub3RpZnlzcQB+AAxVr8w3dAAEd2FpdHNxAH4ADLX2pot0AA0kYXNJbnN0YW5jZU9mc3EAfgAMRiDXg3QABmVxdWFsc3NxAH4ADDNmuLB0AAxhc0luc3RhbmNlT2ZzcQB+AAyv3lUxdAAMc3luY2hyb25pemVkc3EAfgAMJzDLYXQADSRpc0luc3RhbmNlT2ZzcQB+AAyGckXQdAAEbWFpbnNxAH4ADMNENgR0AAlub3RpZnlBbGxzcQB+AAyc5ycAdAAMaXNJbnN0YW5jZU9mc3EAfgAM3p9uGHQAAj09c3EAfgAMwMlENXQABWNsb25lc3EAfgAM6se1XXQACHRvU3RyaW5nc3EAfgAMQ7U70HQAAiE9c3EAfgAMSkHOCnQAD0dhdXNzaWFuUHJlZGljdHNxAH4ADO8Av/50AAhnZXRDbGFzc3NxAH4ADARK7Tx0AAJuZXNxAH4ADHh0sv90AAJlcXNxAH4ADL+Xrrl0AAIjI3NxAH4ADHRo7N90AAhmaW5hbGl6ZXNxAH4ADDLj+KR0AAhoYXNoQ29kZXNyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAFzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+AEF4cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXEAfgANeHBzcgAQeHNidGkuYXBpLlB1YmxpY7pYPa5sLWBCAgAAeHIAEHhzYnRpLmFwaS5BY2Nlc3PdYpr4HWMxSAIAAHhwdXIAF1tMeHNidGkuYXBpLkFubm90YXRpb24765frGRD2jUgCAAB4cAAAAABzcgATeHNidGkuYXBpLk1vZGlmaWVyc5fnYdwTJnuzAgABQgAFZmxhZ3N4cAB0ABNjb20uR2F1c3NpYW5QcmVkaWN0dXIAGltMeHNidGkuYXBpLlR5cGVQYXJhbWV0ZXI72W0mDyid8rYCAAB4cAAAAAB+cgAYeHNidGkuYXBpLkRlZmluaXRpb25UeXBlAAAAAAAAAAASAAB4cgAOamF2YS5sYW5nLkVudW0AAAAAAAAAABIAAHhwdAAGTW9kdWxldXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAHNyACF4c2J0aS5hcGkuQWJzdHJhY3RMYXp5JFN0cmljdExhenkNZhxrKRYquAIAAUwABXZhbHVldAASTGphdmEvbGFuZy9PYmplY3Q7eHBzcgATeHNidGkuYXBpLkVtcHR5VHlwZbz9nkZJO4kkAgAAeHIAFHhzYnRpLmFwaS5TaW1wbGVUeXBlcnhiiCEjv0ACAAB4cgAOeHNidGkuYXBpLlR5cGU/atkhFkmqygIAAHhwc3EAfgBZc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AEFMAAlpbmhlcml0ZWRxAH4AQUwAB3BhcmVudHNxAH4AQXhxAH4AXnNxAH4AWXVxAH4APAAAAAFzcgANeHNidGkuYXBpLkRlZlK+n+J8tDZpAgACTAAKcmV0dXJuVHlwZXQAEEx4c2J0aS9hcGkvVHlwZTtbAA92YWx1ZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9QYXJhbWV0ZXJMaXN0O3hxAH4AQnEAfgBLdXEAfgBMAAAAAHNxAH4ATgBxAH4AHXVxAH4AUQAAAABzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+AA1MAAZwcmVmaXh0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7eHEAfgBddAAEVW5pdHNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4AXXNyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAAAnNyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AA14cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAAFc2NhbGFzcgAOeHNidGkuYXBpLlRoaXPbCe2mzFpAXAIAAHhxAH4AeXVyABpbTHhzYnRpLmFwaS5QYXJhbWV0ZXJMaXN0O/XTOh3ys3DuAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJMaXN01sW8HGRJdOMCAAJaAAppc0ltcGxpY2l0WwAKcGFyYW1ldGVyc3QAHFtMeHNidGkvYXBpL01ldGhvZFBhcmFtZXRlcjt4cAB1cgAcW0x4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyO8+4xV2l3bVtAgAAeHAAAAABc3IAGXhzYnRpLmFwaS5NZXRob2RQYXJhbWV0ZXIfRa4X00mw6gIABFoACmhhc0RlZmF1bHRMAAhtb2RpZmllcnQAHUx4c2J0aS9hcGkvUGFyYW1ldGVyTW9kaWZpZXI7TAAEbmFtZXEAfgANTAADdHBlcQB+AGZ4cAB+cgAbeHNidGkuYXBpLlBhcmFtZXRlck1vZGlmaWVyAAAAAAAAAAASAAB4cQB+AFR0AAVQbGFpbnQABGFyZ3NzcgAXeHNidGkuYXBpLlBhcmFtZXRlcml6ZWQWbO5pA8m7fwIAAkwACGJhc2VUeXBlcQB+AG1bAA10eXBlQXJndW1lbnRzdAARW0x4c2J0aS9hcGkvVHlwZTt4cQB+AF1zcQB+AGx0AAVBcnJheXEAfgBydXIAEVtMeHNidGkuYXBpLlR5cGU7dP+lWnv56UECAAB4cAAAAAFzcQB+AGx0AAZTdHJpbmdzcQB+AHBzcQB+AHN1cQB+AHYAAAADc3EAfgB4dAAEamF2YXNxAH4AeHQABGxhbmdxAH4AfXNxAH4AWXVxAH4APAAAAABzcQB+AFl1cQB+AJEAAAACc3EAfgBsdAAGT2JqZWN0cQB+AJVzcQB+AGx0AANBbnlxAH4AcnVyABRbTHhzYnRpLmFwaS5QYWNrYWdlO1sTGTdwpyehAgAAeHAAAAABc3IAEXhzYnRpLmFwaS5QYWNrYWdlflmP9q7OOVgCAAFMAARuYW1lcQB+AA14cHQAA2NvbXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABW/i0FhV1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5cQB+AA1MAA9zb3VyY2VEaXJlY3RvcnlxAH4ADXhwdAAvL3Vzci9sb2NhbC9Ucm9qYW5EL01ML3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEvdXIAAltCrPMX+AYIVOACAAB4cAAAABStd7wKe1+Ce4XDDmsv1kO9L4mDjw==
 /usr/local/TrojanD/ML/src/main/scala/com/GaussianTrain.scala -> 
@@ -1105,7 +1328,7 @@ rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhf
 /usr/local/TrojanD/ML/src/main/scala/com/KmeansMLlibPredict.scala -> 
 rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHDprdD7AHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAFXNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cA0/Bc10AAZub3RpZnlzcQB+AAz+/STqdAAEd2FpdHNxAH4ADLDZoGh0AA0kYXNJbnN0YW5jZU9mc3EAfgAM5TYOO3QABmVxdWFsc3NxAH4ADEuPQFJ0AAxhc0luc3RhbmNlT2ZzcQB+AAwHWIqPdAAMc3luY2hyb25pemVkc3EAfgAMGWL1HHQADSRpc0luc3RhbmNlT2ZzcQB+AAz587mTdAAEbWFpbnNxAH4ADMmAg6x0AAlub3RpZnlBbGxzcQB+AAwtkUvvdAASS01lYW5zTUxsaWJQcmVkaWN0c3EAfgAMnkBhg3QADGlzSW5zdGFuY2VPZnNxAH4ADDk3Cod0AAI9PXNxAH4ADDPbh250AAVjbG9uZXNxAH4ADK0fxCx0AAh0b1N0cmluZ3NxAH4ADP0ROmF0AAIhPXNxAH4ADDaYdaB0AAhnZXRDbGFzc3NxAH4ADLPxcYd0AAJuZXNxAH4ADH7RbXx0AAJlcXNxAH4ADPX3jcN0AAIjI3NxAH4ADJ92l/V0AAhmaW5hbGl6ZXNxAH4ADIrWanV0AAhoYXNoQ29kZXNyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAFzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+AEF4cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXEAfgANeHBzcgAQeHNidGkuYXBpLlB1YmxpY7pYPa5sLWBCAgAAeHIAEHhzYnRpLmFwaS5BY2Nlc3PdYpr4HWMxSAIAAHhwdXIAF1tMeHNidGkuYXBpLkFubm90YXRpb24765frGRD2jUgCAAB4cAAAAABzcgATeHNidGkuYXBpLk1vZGlmaWVyc5fnYdwTJnuzAgABQgAFZmxhZ3N4cAB0ABZjb20uS01lYW5zTUxsaWJQcmVkaWN0dXIAGltMeHNidGkuYXBpLlR5cGVQYXJhbWV0ZXI72W0mDyid8rYCAAB4cAAAAAB+cgAYeHNidGkuYXBpLkRlZmluaXRpb25UeXBlAAAAAAAAAAASAAB4cgAOamF2YS5sYW5nLkVudW0AAAAAAAAAABIAAHhwdAAGTW9kdWxldXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAHNyACF4c2J0aS5hcGkuQWJzdHJhY3RMYXp5JFN0cmljdExhenkNZhxrKRYquAIAAUwABXZhbHVldAASTGphdmEvbGFuZy9PYmplY3Q7eHBzcgATeHNidGkuYXBpLkVtcHR5VHlwZbz9nkZJO4kkAgAAeHIAFHhzYnRpLmFwaS5TaW1wbGVUeXBlcnhiiCEjv0ACAAB4cgAOeHNidGkuYXBpLlR5cGU/atkhFkmqygIAAHhwc3EAfgBZc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AEFMAAlpbmhlcml0ZWRxAH4AQUwAB3BhcmVudHNxAH4AQXhxAH4AXnNxAH4AWXVxAH4APAAAAAFzcgANeHNidGkuYXBpLkRlZlK+n+J8tDZpAgACTAAKcmV0dXJuVHlwZXQAEEx4c2J0aS9hcGkvVHlwZTtbAA92YWx1ZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9QYXJhbWV0ZXJMaXN0O3hxAH4AQnEAfgBLdXEAfgBMAAAAAHNxAH4ATgBxAH4AHXVxAH4AUQAAAABzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+AA1MAAZwcmVmaXh0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7eHEAfgBddAAEVW5pdHNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4AXXNyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAAAnNyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AA14cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAAFc2NhbGFzcgAOeHNidGkuYXBpLlRoaXPbCe2mzFpAXAIAAHhxAH4AeXVyABpbTHhzYnRpLmFwaS5QYXJhbWV0ZXJMaXN0O/XTOh3ys3DuAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJMaXN01sW8HGRJdOMCAAJaAAppc0ltcGxpY2l0WwAKcGFyYW1ldGVyc3QAHFtMeHNidGkvYXBpL01ldGhvZFBhcmFtZXRlcjt4cAB1cgAcW0x4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyO8+4xV2l3bVtAgAAeHAAAAABc3IAGXhzYnRpLmFwaS5NZXRob2RQYXJhbWV0ZXIfRa4X00mw6gIABFoACmhhc0RlZmF1bHRMAAhtb2RpZmllcnQAHUx4c2J0aS9hcGkvUGFyYW1ldGVyTW9kaWZpZXI7TAAEbmFtZXEAfgANTAADdHBlcQB+AGZ4cAB+cgAbeHNidGkuYXBpLlBhcmFtZXRlck1vZGlmaWVyAAAAAAAAAAASAAB4cQB+AFR0AAVQbGFpbnQABGFyZ3NzcgAXeHNidGkuYXBpLlBhcmFtZXRlcml6ZWQWbO5pA8m7fwIAAkwACGJhc2VUeXBlcQB+AG1bAA10eXBlQXJndW1lbnRzdAARW0x4c2J0aS9hcGkvVHlwZTt4cQB+AF1zcQB+AGx0AAVBcnJheXEAfgBydXIAEVtMeHNidGkuYXBpLlR5cGU7dP+lWnv56UECAAB4cAAAAAFzcQB+AGx0AAZTdHJpbmdzcQB+AHBzcQB+AHN1cQB+AHYAAAADc3EAfgB4dAAEamF2YXNxAH4AeHQABGxhbmdxAH4AfXNxAH4AWXVxAH4APAAAAABzcQB+AFl1cQB+AJEAAAACc3EAfgBsdAAGT2JqZWN0cQB+AJVzcQB+AGx0AANBbnlxAH4AcnVyABRbTHhzYnRpLmFwaS5QYWNrYWdlO1sTGTdwpyehAgAAeHAAAAABc3IAEXhzYnRpLmFwaS5QYWNrYWdlflmP9q7OOVgCAAFMAARuYW1lcQB+AA14cHQAA2NvbXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABW/ieoW11cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5cQB+AA1MAA9zb3VyY2VEaXJlY3RvcnlxAH4ADXhwdAAvL3Vzci9sb2NhbC9Ucm9qYW5EL01ML3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEvdXIAAltCrPMX+AYIVOACAAB4cAAAABTO2LfPpG91J5JIPhCDdRl/l1VNJA==
 /usr/local/TrojanD/ML/src/main/scala/com/KmeansMLlibTrain.scala -> 
-rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHDHyl2PAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAFXNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cEuDv6l0AAZub3RpZnlzcQB+AAxGbo64dAAEd2FpdHNxAH4ADIsV2AN0AA0kYXNJbnN0YW5jZU9mc3EAfgAM3ORSknQABmVxdWFsc3NxAH4ADAyOzuZ0AAxhc0luc3RhbmNlT2ZzcQB+AAxUjcQbdAAMc3luY2hyb25pemVkc3EAfgAMsyyWtXQADSRpc0luc3RhbmNlT2ZzcQB+AAwOXYZ9dAAQS21lYW5zTUxsaWJUcmFpbnNxAH4ADAz5a3h0AARtYWluc3EAfgAMQPAkH3QACW5vdGlmeUFsbHNxAH4ADPowqhp0AAxpc0luc3RhbmNlT2ZzcQB+AAy2uqbSdAACPT1zcQB+AAwyzmL9dAAFY2xvbmVzcQB+AAxzQ75AdAAIdG9TdHJpbmdzcQB+AAxJDx3odAACIT1zcQB+AAxi06PSdAAIZ2V0Q2xhc3NzcQB+AAwPR67pdAACbmVzcQB+AAz640a1dAACZXFzcQB+AAxfzF3xdAACIyNzcQB+AAyIQBuQdAAIZmluYWxpemVzcQB+AAzWFPHqdAAIaGFzaENvZGVzcgATeHNidGkuYXBpLlNvdXJjZUFQSblep/kpIzikAgACWwALZGVmaW5pdGlvbnN0ABdbTHhzYnRpL2FwaS9EZWZpbml0aW9uO1sACHBhY2thZ2VzdAAUW0x4c2J0aS9hcGkvUGFja2FnZTt4cHVyABdbTHhzYnRpLmFwaS5EZWZpbml0aW9uO4jJXOe0414OAgAAeHAAAAABc3IAE3hzYnRpLmFwaS5DbGFzc0xpa2WDNByh37CXbAIABEwADmRlZmluaXRpb25UeXBldAAaTHhzYnRpL2FwaS9EZWZpbml0aW9uVHlwZTtbABBzYXZlZEFubm90YXRpb25zdAATW0xqYXZhL2xhbmcvU3RyaW5nO0wACHNlbGZUeXBldAAQTHhzYnRpL2FwaS9MYXp5O0wACXN0cnVjdHVyZXEAfgBBeHIAIXhzYnRpLmFwaS5QYXJhbWV0ZXJpemVkRGVmaW5pdGlvbvkRbrHVUDziAgABWwAOdHlwZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9UeXBlUGFyYW1ldGVyO3hyABR4c2J0aS5hcGkuRGVmaW5pdGlvbocqG+hxQuNGAgAETAAGYWNjZXNzdAASTHhzYnRpL2FwaS9BY2Nlc3M7WwALYW5ub3RhdGlvbnN0ABdbTHhzYnRpL2FwaS9Bbm5vdGF0aW9uO0wACW1vZGlmaWVyc3QAFUx4c2J0aS9hcGkvTW9kaWZpZXJzO0wABG5hbWVxAH4ADXhwc3IAEHhzYnRpLmFwaS5QdWJsaWO6WD2ubC1gQgIAAHhyABB4c2J0aS5hcGkuQWNjZXNz3WKa+B1jMUgCAAB4cHVyABdbTHhzYnRpLmFwaS5Bbm5vdGF0aW9uO+uX6xkQ9o1IAgAAeHAAAAAAc3IAE3hzYnRpLmFwaS5Nb2RpZmllcnOX52HcEyZ7swIAAUIABWZsYWdzeHAAdAAUY29tLkttZWFuc01MbGliVHJhaW51cgAaW0x4c2J0aS5hcGkuVHlwZVBhcmFtZXRlcjvZbSYPKJ3ytgIAAHhwAAAAAH5yABh4c2J0aS5hcGkuRGVmaW5pdGlvblR5cGUAAAAAAAAAABIAAHhyAA5qYXZhLmxhbmcuRW51bQAAAAAAAAAAEgAAeHB0AAZNb2R1bGV1cgATW0xqYXZhLmxhbmcuU3RyaW5nO63SVufpHXtHAgAAeHAAAAAAc3IAIXhzYnRpLmFwaS5BYnN0cmFjdExhenkkU3RyaWN0TGF6eQ1mHGspFiq4AgABTAAFdmFsdWV0ABJMamF2YS9sYW5nL09iamVjdDt4cHNyABN4c2J0aS5hcGkuRW1wdHlUeXBlvP2eRkk7iSQCAAB4cgAUeHNidGkuYXBpLlNpbXBsZVR5cGVyeGKIISO/QAIAAHhyAA54c2J0aS5hcGkuVHlwZT9q2SEWSarKAgAAeHBzcQB+AFlzcgATeHNidGkuYXBpLlN0cnVjdHVyZamq+YCTb9gAAgADTAAIZGVjbGFyZWRxAH4AQUwACWluaGVyaXRlZHEAfgBBTAAHcGFyZW50c3EAfgBBeHEAfgBec3EAfgBZdXEAfgA8AAAAAXNyAA14c2J0aS5hcGkuRGVmUr6f4ny0NmkCAAJMAApyZXR1cm5UeXBldAAQTHhzYnRpL2FwaS9UeXBlO1sAD3ZhbHVlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1BhcmFtZXRlckxpc3Q7eHEAfgBCcQB+AEt1cQB+AEwAAAAAc3EAfgBOAHEAfgAfdXEAfgBRAAAAAHNyABR4c2J0aS5hcGkuUHJvamVjdGlvbvPSjVTpRaQtAgACTAACaWRxAH4ADUwABnByZWZpeHQAFkx4c2J0aS9hcGkvU2ltcGxlVHlwZTt4cQB+AF10AARVbml0c3IAE3hzYnRpLmFwaS5TaW5nbGV0b278p1/4z1bkRgIAAUwABHBhdGh0ABBMeHNidGkvYXBpL1BhdGg7eHEAfgBdc3IADnhzYnRpLmFwaS5QYXRomz1cCM6lJ4QCAAFbAApjb21wb25lbnRzdAAaW0x4c2J0aS9hcGkvUGF0aENvbXBvbmVudDt4cHVyABpbTHhzYnRpLmFwaS5QYXRoQ29tcG9uZW50O0PaCXQtZxZ0AgAAeHAAAAACc3IADHhzYnRpLmFwaS5JZJgybIs3U8RAAgABTAACaWRxAH4ADXhyABd4c2J0aS5hcGkuUGF0aENvbXBvbmVudF+aIlsuhp+8AgAAeHB0AAVzY2FsYXNyAA54c2J0aS5hcGkuVGhpc9sJ7abMWkBcAgAAeHEAfgB5dXIAGltMeHNidGkuYXBpLlBhcmFtZXRlckxpc3Q79dM6HfKzcO4CAAB4cAAAAAFzcgAXeHNidGkuYXBpLlBhcmFtZXRlckxpc3TWxbwcZEl04wIAAloACmlzSW1wbGljaXRbAApwYXJhbWV0ZXJzdAAcW0x4c2J0aS9hcGkvTWV0aG9kUGFyYW1ldGVyO3hwAHVyABxbTHhzYnRpLmFwaS5NZXRob2RQYXJhbWV0ZXI7z7jFXaXdtW0CAAB4cAAAAAFzcgAZeHNidGkuYXBpLk1ldGhvZFBhcmFtZXRlch9FrhfTSbDqAgAEWgAKaGFzRGVmYXVsdEwACG1vZGlmaWVydAAdTHhzYnRpL2FwaS9QYXJhbWV0ZXJNb2RpZmllcjtMAARuYW1lcQB+AA1MAAN0cGVxAH4AZnhwAH5yABt4c2J0aS5hcGkuUGFyYW1ldGVyTW9kaWZpZXIAAAAAAAAAABIAAHhxAH4AVHQABVBsYWludAAEYXJnc3NyABd4c2J0aS5hcGkuUGFyYW1ldGVyaXplZBZs7mkDybt/AgACTAAIYmFzZVR5cGVxAH4AbVsADXR5cGVBcmd1bWVudHN0ABFbTHhzYnRpL2FwaS9UeXBlO3hxAH4AXXNxAH4AbHQABUFycmF5cQB+AHJ1cgARW0x4c2J0aS5hcGkuVHlwZTt0/6Vae/npQQIAAHhwAAAAAXNxAH4AbHQABlN0cmluZ3NxAH4AcHNxAH4Ac3VxAH4AdgAAAANzcQB+AHh0AARqYXZhc3EAfgB4dAAEbGFuZ3EAfgB9c3EAfgBZdXEAfgA8AAAAAHNxAH4AWXVxAH4AkQAAAAJzcQB+AGx0AAZPYmplY3RxAH4AlXNxAH4AbHQAA0FueXEAfgBydXIAFFtMeHNidGkuYXBpLlBhY2thZ2U7WxMZN3CnJ6ECAAB4cAAAAAFzcgAReHNidGkuYXBpLlBhY2thZ2V+WY/2rs45WAIAAUwABG5hbWVxAH4ADXhwdAADY29tc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAFb+J6hbXVyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4ADUwAD3NvdXJjZURpcmVjdG9yeXEAfgANeHB0AC8vdXNyL2xvY2FsL1Ryb2phbkQvTUwvdGFyZ2V0L3NjYWxhLTIuMTEvY2xhc3Nlc3QAAS91cgACW0Ks8xf4BghU4AIAAHhwAAAAFHMNIBTxY3faCpMLxtpiGtGrg04W
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHDHyl2PAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAFXNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cEuDv6l0AAZub3RpZnlzcQB+AAxGbo64dAAEd2FpdHNxAH4ADIsV2AN0AA0kYXNJbnN0YW5jZU9mc3EAfgAM3ORSknQABmVxdWFsc3NxAH4ADAyOzuZ0AAxhc0luc3RhbmNlT2ZzcQB+AAxUjcQbdAAMc3luY2hyb25pemVkc3EAfgAMsyyWtXQADSRpc0luc3RhbmNlT2ZzcQB+AAwOXYZ9dAAQS21lYW5zTUxsaWJUcmFpbnNxAH4ADAz5a3h0AARtYWluc3EAfgAMQPAkH3QACW5vdGlmeUFsbHNxAH4ADPowqhp0AAxpc0luc3RhbmNlT2ZzcQB+AAy2uqbSdAACPT1zcQB+AAwyzmL9dAAFY2xvbmVzcQB+AAxzQ75AdAAIdG9TdHJpbmdzcQB+AAxJDx3odAACIT1zcQB+AAxi06PSdAAIZ2V0Q2xhc3NzcQB+AAwPR67pdAACbmVzcQB+AAz640a1dAACZXFzcQB+AAxfzF3xdAACIyNzcQB+AAyIQBuQdAAIZmluYWxpemVzcQB+AAzWFPHqdAAIaGFzaENvZGVzcgATeHNidGkuYXBpLlNvdXJjZUFQSblep/kpIzikAgACWwALZGVmaW5pdGlvbnN0ABdbTHhzYnRpL2FwaS9EZWZpbml0aW9uO1sACHBhY2thZ2VzdAAUW0x4c2J0aS9hcGkvUGFja2FnZTt4cHVyABdbTHhzYnRpLmFwaS5EZWZpbml0aW9uO4jJXOe0414OAgAAeHAAAAABc3IAE3hzYnRpLmFwaS5DbGFzc0xpa2WDNByh37CXbAIABEwADmRlZmluaXRpb25UeXBldAAaTHhzYnRpL2FwaS9EZWZpbml0aW9uVHlwZTtbABBzYXZlZEFubm90YXRpb25zdAATW0xqYXZhL2xhbmcvU3RyaW5nO0wACHNlbGZUeXBldAAQTHhzYnRpL2FwaS9MYXp5O0wACXN0cnVjdHVyZXEAfgBBeHIAIXhzYnRpLmFwaS5QYXJhbWV0ZXJpemVkRGVmaW5pdGlvbvkRbrHVUDziAgABWwAOdHlwZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9UeXBlUGFyYW1ldGVyO3hyABR4c2J0aS5hcGkuRGVmaW5pdGlvbocqG+hxQuNGAgAETAAGYWNjZXNzdAASTHhzYnRpL2FwaS9BY2Nlc3M7WwALYW5ub3RhdGlvbnN0ABdbTHhzYnRpL2FwaS9Bbm5vdGF0aW9uO0wACW1vZGlmaWVyc3QAFUx4c2J0aS9hcGkvTW9kaWZpZXJzO0wABG5hbWVxAH4ADXhwc3IAEHhzYnRpLmFwaS5QdWJsaWO6WD2ubC1gQgIAAHhyABB4c2J0aS5hcGkuQWNjZXNz3WKa+B1jMUgCAAB4cHVyABdbTHhzYnRpLmFwaS5Bbm5vdGF0aW9uO+uX6xkQ9o1IAgAAeHAAAAAAc3IAE3hzYnRpLmFwaS5Nb2RpZmllcnOX52HcEyZ7swIAAUIABWZsYWdzeHAAdAAUY29tLkttZWFuc01MbGliVHJhaW51cgAaW0x4c2J0aS5hcGkuVHlwZVBhcmFtZXRlcjvZbSYPKJ3ytgIAAHhwAAAAAH5yABh4c2J0aS5hcGkuRGVmaW5pdGlvblR5cGUAAAAAAAAAABIAAHhyAA5qYXZhLmxhbmcuRW51bQAAAAAAAAAAEgAAeHB0AAZNb2R1bGV1cgATW0xqYXZhLmxhbmcuU3RyaW5nO63SVufpHXtHAgAAeHAAAAAAc3IAIXhzYnRpLmFwaS5BYnN0cmFjdExhenkkU3RyaWN0TGF6eQ1mHGspFiq4AgABTAAFdmFsdWV0ABJMamF2YS9sYW5nL09iamVjdDt4cHNyABN4c2J0aS5hcGkuRW1wdHlUeXBlvP2eRkk7iSQCAAB4cgAUeHNidGkuYXBpLlNpbXBsZVR5cGVyeGKIISO/QAIAAHhyAA54c2J0aS5hcGkuVHlwZT9q2SEWSarKAgAAeHBzcQB+AFlzcgATeHNidGkuYXBpLlN0cnVjdHVyZamq+YCTb9gAAgADTAAIZGVjbGFyZWRxAH4AQUwACWluaGVyaXRlZHEAfgBBTAAHcGFyZW50c3EAfgBBeHEAfgBec3EAfgBZdXEAfgA8AAAAAXNyAA14c2J0aS5hcGkuRGVmUr6f4ny0NmkCAAJMAApyZXR1cm5UeXBldAAQTHhzYnRpL2FwaS9UeXBlO1sAD3ZhbHVlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1BhcmFtZXRlckxpc3Q7eHEAfgBCcQB+AEt1cQB+AEwAAAAAc3EAfgBOAHEAfgAfdXEAfgBRAAAAAHNyABR4c2J0aS5hcGkuUHJvamVjdGlvbvPSjVTpRaQtAgACTAACaWRxAH4ADUwABnByZWZpeHQAFkx4c2J0aS9hcGkvU2ltcGxlVHlwZTt4cQB+AF10AARVbml0c3IAE3hzYnRpLmFwaS5TaW5nbGV0b278p1/4z1bkRgIAAUwABHBhdGh0ABBMeHNidGkvYXBpL1BhdGg7eHEAfgBdc3IADnhzYnRpLmFwaS5QYXRomz1cCM6lJ4QCAAFbAApjb21wb25lbnRzdAAaW0x4c2J0aS9hcGkvUGF0aENvbXBvbmVudDt4cHVyABpbTHhzYnRpLmFwaS5QYXRoQ29tcG9uZW50O0PaCXQtZxZ0AgAAeHAAAAACc3IADHhzYnRpLmFwaS5JZJgybIs3U8RAAgABTAACaWRxAH4ADXhyABd4c2J0aS5hcGkuUGF0aENvbXBvbmVudF+aIlsuhp+8AgAAeHB0AAVzY2FsYXNyAA54c2J0aS5hcGkuVGhpc9sJ7abMWkBcAgAAeHEAfgB5dXIAGltMeHNidGkuYXBpLlBhcmFtZXRlckxpc3Q79dM6HfKzcO4CAAB4cAAAAAFzcgAXeHNidGkuYXBpLlBhcmFtZXRlckxpc3TWxbwcZEl04wIAAloACmlzSW1wbGljaXRbAApwYXJhbWV0ZXJzdAAcW0x4c2J0aS9hcGkvTWV0aG9kUGFyYW1ldGVyO3hwAHVyABxbTHhzYnRpLmFwaS5NZXRob2RQYXJhbWV0ZXI7z7jFXaXdtW0CAAB4cAAAAAFzcgAZeHNidGkuYXBpLk1ldGhvZFBhcmFtZXRlch9FrhfTSbDqAgAEWgAKaGFzRGVmYXVsdEwACG1vZGlmaWVydAAdTHhzYnRpL2FwaS9QYXJhbWV0ZXJNb2RpZmllcjtMAARuYW1lcQB+AA1MAAN0cGVxAH4AZnhwAH5yABt4c2J0aS5hcGkuUGFyYW1ldGVyTW9kaWZpZXIAAAAAAAAAABIAAHhxAH4AVHQABVBsYWludAAEYXJnc3NyABd4c2J0aS5hcGkuUGFyYW1ldGVyaXplZBZs7mkDybt/AgACTAAIYmFzZVR5cGVxAH4AbVsADXR5cGVBcmd1bWVudHN0ABFbTHhzYnRpL2FwaS9UeXBlO3hxAH4AXXNxAH4AbHQABUFycmF5cQB+AHJ1cgARW0x4c2J0aS5hcGkuVHlwZTt0/6Vae/npQQIAAHhwAAAAAXNxAH4AbHQABlN0cmluZ3NxAH4AcHNxAH4Ac3VxAH4AdgAAAANzcQB+AHh0AARqYXZhc3EAfgB4dAAEbGFuZ3EAfgB9c3EAfgBZdXEAfgA8AAAAAHNxAH4AWXVxAH4AkQAAAAJzcQB+AGx0AAZPYmplY3RxAH4AlXNxAH4AbHQAA0FueXEAfgBydXIAFFtMeHNidGkuYXBpLlBhY2thZ2U7WxMZN3CnJ6ECAAB4cAAAAAFzcgAReHNidGkuYXBpLlBhY2thZ2V+WY/2rs45WAIAAUwABG5hbWVxAH4ADXhwdAADY29tc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAFb+NRI9XVyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4ADUwAD3NvdXJjZURpcmVjdG9yeXEAfgANeHB0AC8vdXNyL2xvY2FsL1Ryb2phbkQvTUwvdGFyZ2V0L3NjYWxhLTIuMTEvY2xhc3Nlc3QAAS91cgACW0Ks8xf4BghU4AIAAHhwAAAAFBIKDVFQYd7B+KTwD1lHRSBxsmtF
 /usr/local/TrojanD/ML/src/main/scala/com/KmeansTrain.scala -> 
 rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHAtu4r/AHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAFXNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cPwhQQd0AAZub3RpZnlzcQB+AAwi2eqgdAAEd2FpdHNxAH4ADJ/bh1V0AA0kYXNJbnN0YW5jZU9mc3EAfgAMv3K8lnQABmVxdWFsc3NxAH4ADKS3LV50AAxhc0luc3RhbmNlT2ZzcQB+AAypJ8IBdAAMc3luY2hyb25pemVkc3EAfgAMHxapZXQADSRpc0luc3RhbmNlT2ZzcQB+AAy0WUffdAAEbWFpbnNxAH4ADHcA41F0AAlub3RpZnlBbGxzcQB+AAzOqBmzdAAMaXNJbnN0YW5jZU9mc3EAfgAMefDscHQAC0ttZWFuc1RyYWluc3EAfgAMu57v3XQAAj09c3EAfgAMIRYPE3QABWNsb25lc3EAfgAM9wJju3QACHRvU3RyaW5nc3EAfgAMYfjKp3QAAiE9c3EAfgAMLDMNF3QACGdldENsYXNzc3EAfgAMKD1W93QAAm5lc3EAfgAMIXE1LXQAAmVxc3EAfgAMQZFFR3QAAiMjc3EAfgAMRcDT1nQACGZpbmFsaXplc3EAfgAMjh+HFHQACGhhc2hDb2Rlc3IAE3hzYnRpLmFwaS5Tb3VyY2VBUEm5Xqf5KSM4pAIAAlsAC2RlZmluaXRpb25zdAAXW0x4c2J0aS9hcGkvRGVmaW5pdGlvbjtbAAhwYWNrYWdlc3QAFFtMeHNidGkvYXBpL1BhY2thZ2U7eHB1cgAXW0x4c2J0aS5hcGkuRGVmaW5pdGlvbjuIyVzntONeDgIAAHhwAAAAAXNyABN4c2J0aS5hcGkuQ2xhc3NMaWtlgzQcod+wl2wCAARMAA5kZWZpbml0aW9uVHlwZXQAGkx4c2J0aS9hcGkvRGVmaW5pdGlvblR5cGU7WwAQc2F2ZWRBbm5vdGF0aW9uc3QAE1tMamF2YS9sYW5nL1N0cmluZztMAAhzZWxmVHlwZXQAEEx4c2J0aS9hcGkvTGF6eTtMAAlzdHJ1Y3R1cmVxAH4AQXhyACF4c2J0aS5hcGkuUGFyYW1ldGVyaXplZERlZmluaXRpb275EW6x1VA84gIAAVsADnR5cGVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvVHlwZVBhcmFtZXRlcjt4cgAUeHNidGkuYXBpLkRlZmluaXRpb26HKhvocULjRgIABEwABmFjY2Vzc3QAEkx4c2J0aS9hcGkvQWNjZXNzO1sAC2Fubm90YXRpb25zdAAXW0x4c2J0aS9hcGkvQW5ub3RhdGlvbjtMAAltb2RpZmllcnN0ABVMeHNidGkvYXBpL01vZGlmaWVycztMAARuYW1lcQB+AA14cHNyABB4c2J0aS5hcGkuUHVibGljulg9rmwtYEICAAB4cgAQeHNidGkuYXBpLkFjY2Vzc91imvgdYzFIAgAAeHB1cgAXW0x4c2J0aS5hcGkuQW5ub3RhdGlvbjvrl+sZEPaNSAIAAHhwAAAAAHNyABN4c2J0aS5hcGkuTW9kaWZpZXJzl+dh3BMme7MCAAFCAAVmbGFnc3hwAHQAD2NvbS5LbWVhbnNUcmFpbnVyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQABk1vZHVsZXVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgAheHNidGkuYXBpLkFic3RyYWN0TGF6eSRTdHJpY3RMYXp5DWYcaykWKrgCAAFMAAV2YWx1ZXQAEkxqYXZhL2xhbmcvT2JqZWN0O3hwc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHNxAH4AWXNyABN4c2J0aS5hcGkuU3RydWN0dXJlqar5gJNv2AACAANMAAhkZWNsYXJlZHEAfgBBTAAJaW5oZXJpdGVkcQB+AEFMAAdwYXJlbnRzcQB+AEF4cQB+AF5zcQB+AFl1cQB+ADwAAAABc3IADXhzYnRpLmFwaS5EZWZSvp/ifLQ2aQIAAkwACnJldHVyblR5cGV0ABBMeHNidGkvYXBpL1R5cGU7WwAPdmFsdWVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvUGFyYW1ldGVyTGlzdDt4cQB+AEJxAH4AS3VxAH4ATAAAAABzcQB+AE4AcQB+AB11cQB+AFEAAAAAc3IAFHhzYnRpLmFwaS5Qcm9qZWN0aW9u89KNVOlFpC0CAAJMAAJpZHEAfgANTAAGcHJlZml4dAAWTHhzYnRpL2FwaS9TaW1wbGVUeXBlO3hxAH4AXXQABFVuaXRzcgATeHNidGkuYXBpLlNpbmdsZXRvbvynX/jPVuRGAgABTAAEcGF0aHQAEEx4c2J0aS9hcGkvUGF0aDt4cQB+AF1zcgAOeHNidGkuYXBpLlBhdGibPVwIzqUnhAIAAVsACmNvbXBvbmVudHN0ABpbTHhzYnRpL2FwaS9QYXRoQ29tcG9uZW50O3hwdXIAGltMeHNidGkuYXBpLlBhdGhDb21wb25lbnQ7Q9oJdC1nFnQCAAB4cAAAAAJzcgAMeHNidGkuYXBpLklkmDJsizdTxEACAAFMAAJpZHEAfgANeHIAF3hzYnRpLmFwaS5QYXRoQ29tcG9uZW50X5oiWy6Gn7wCAAB4cHQABXNjYWxhc3IADnhzYnRpLmFwaS5UaGlz2wntpsxaQFwCAAB4cQB+AHl1cgAaW0x4c2J0aS5hcGkuUGFyYW1ldGVyTGlzdDv10zod8rNw7gIAAHhwAAAAAXNyABd4c2J0aS5hcGkuUGFyYW1ldGVyTGlzdNbFvBxkSXTjAgACWgAKaXNJbXBsaWNpdFsACnBhcmFtZXRlcnN0ABxbTHhzYnRpL2FwaS9NZXRob2RQYXJhbWV0ZXI7eHAAdXIAHFtMeHNidGkuYXBpLk1ldGhvZFBhcmFtZXRlcjvPuMVdpd21bQIAAHhwAAAAAXNyABl4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyH0WuF9NJsOoCAARaAApoYXNEZWZhdWx0TAAIbW9kaWZpZXJ0AB1MeHNidGkvYXBpL1BhcmFtZXRlck1vZGlmaWVyO0wABG5hbWVxAH4ADUwAA3RwZXEAfgBmeHAAfnIAG3hzYnRpLmFwaS5QYXJhbWV0ZXJNb2RpZmllcgAAAAAAAAAAEgAAeHEAfgBUdAAFUGxhaW50AARhcmdzc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJpemVkFmzuaQPJu38CAAJMAAhiYXNlVHlwZXEAfgBtWwANdHlwZUFyZ3VtZW50c3QAEVtMeHNidGkvYXBpL1R5cGU7eHEAfgBdc3EAfgBsdAAFQXJyYXlxAH4AcnVyABFbTHhzYnRpLmFwaS5UeXBlO3T/pVp7+elBAgAAeHAAAAABc3EAfgBsdAAGU3RyaW5nc3EAfgBwc3EAfgBzdXEAfgB2AAAAA3NxAH4AeHQABGphdmFzcQB+AHh0AARsYW5ncQB+AH1zcQB+AFl1cQB+ADwAAAAAc3EAfgBZdXEAfgCRAAAAAnNxAH4AbHQABk9iamVjdHEAfgCVc3EAfgBsdAADQW55cQB+AHJ1cgAUW0x4c2J0aS5hcGkuUGFja2FnZTtbExk3cKcnoQIAAHhwAAAAAXNyABF4c2J0aS5hcGkuUGFja2FnZX5Zj/auzjlYAgABTAAEbmFtZXEAfgANeHB0AANjb21zcgAVeHNidGkuYXBpLkNvbXBpbGF0aW9u7frgw2rooEICAAJKAAlzdGFydFRpbWVbAAdvdXRwdXRzdAAaW0x4c2J0aS9hcGkvT3V0cHV0U2V0dGluZzt4cAAAAVv4nqFtdXIAGltMeHNidGkuYXBpLk91dHB1dFNldHRpbmc7f2rC86eHpUICAAB4cAAAAAFzcgAXeHNidGkuYXBpLk91dHB1dFNldHRpbmd62ZpHdPsdewIAAkwAD291dHB1dERpcmVjdG9yeXEAfgANTAAPc291cmNlRGlyZWN0b3J5cQB+AA14cHQALy91c3IvbG9jYWwvVHJvamFuRC9NTC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAUwXwXIuEfDBDZF+gs3d69I2Zge2c=
 /usr/local/TrojanD/ML/src/main/scala/com/ProduceMLlib.scala -> 
@@ -1119,7 +1342,11 @@ rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhf
 external apis:
 0 items
 source infos:
-9 items
+11 items
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansPredict.scala -> 
+AAAAAAAAAAA=
+/usr/local/TrojanD/ML/src/main/scala/com/BisectingKmeansTrain.scala -> 
+AAAAAAAAAAA=
 /usr/local/TrojanD/ML/src/main/scala/com/GaussianPredict.scala -> 
 AAAAAAAAAAA=
 /usr/local/TrojanD/ML/src/main/scala/com/GaussianTrain.scala -> 
@@ -1139,7 +1366,7 @@ AAAAAAAAAAA=
 /usr/local/TrojanD/ML/src/main/scala/com/util.scala -> 
 AAAAAAAAAAA=
 compilations:
-80 items
+84 items
 00 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABW8lCG1Z1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQALy91c3IvbG9jYWwvVHJvamFuRC9NTC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
 01 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABW8lD1Sx1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQALy91c3IvbG9jYWwvVHJvamFuRC9NTC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
 02 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABW8l5+5d1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQALy91c3IvbG9jYWwvVHJvamFuRC9NTC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
@@ -1220,3 +1447,7 @@ compilations:
 77 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABW/ip2xt1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQALy91c3IvbG9jYWwvVHJvamFuRC9NTC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
 78 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABW/iuV211cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQALy91c3IvbG9jYWwvVHJvamFuRC9NTC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
 79 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABW/i0FhV1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQALy91c3IvbG9jYWwvVHJvamFuRC9NTC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
+80 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABW/jHEiJ1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQALy91c3IvbG9jYWwvVHJvamFuRC9NTC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
+81 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABW/jLUpp1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQALy91c3IvbG9jYWwvVHJvamFuRC9NTC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
+82 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABW/jTe0F1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQALy91c3IvbG9jYWwvVHJvamFuRC9NTC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
+83 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABW/jUSPV1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQALy91c3IvbG9jYWwvVHJvamFuRC9NTC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
