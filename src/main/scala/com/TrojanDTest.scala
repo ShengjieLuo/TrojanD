@@ -15,6 +15,7 @@ import org.drools.event.KnowledgeRuntimeEventManager
 
 import org.apache.spark._
 import org.apache.spark.rdd.RDD
+import org.apache.spark.sql.{SQLContext, Row}
 
 import org.drools.event._
 import org.drools.runtime._
@@ -31,6 +32,7 @@ import org.apache.spark.streaming.kafka._
 import org.apache.spark.streaming.StreamingContext._
 import org.apache.spark.streaming.kafka.KafkaUtils
 import scala.util.matching.Regex
+import java.util.Properties
 
 //This progrma is only used in test, DO NOT incude in the released version
 
@@ -39,10 +41,18 @@ object TrojanDTest {
   def main(args : Array[String]):Unit ={
     
     println("Run Trojan Test by Distributed Rule Engine")
+
+    //Prepare Spark Environment
     val sparkconf = new SparkConf().setAppName("TrojanDetectionTest")
     val sc = new SparkContext(sparkconf)
+    val sqlContext = new SQLContext(sc)
     sc.setLogLevel("ERROR")
+    val prop = new Properties()
+    prop.put("user", "root")
+    prop.put("password", "123456")
+    prop.put("driver","com.mysql.jdbc.Driver")    
 
+    //Prepare Data
     val data = List("202.121.66.121 syn 35 104 up 104 7173 small 42 psh 199 199 down 199 15216 small 106 dns 2255 0 com 3 0 14")
     println("  [Debug] Begin Execution!")
 
@@ -61,6 +71,7 @@ object TrojanDTest {
 			  item.setFromDataLine(p);
 			  ksession.insert(item);
                           ksession.fireAllRules();
+                          println(p);
 			  (p,1)
 			})						
     			//println("  [Debug] Finish the data partition!");
@@ -68,7 +79,8 @@ object TrojanDTest {
                         }
                      }
                     .reduceByKey(_+_)
-                    .foreach{p => println("  [Debug] Detection Object: " + p._1.toString + ": Number :"+ p._2.toString)}
+                    .top(1)
+                    //.foreach{p => println("  [Debug] Detection Object Finished")}
   }
 
   def GetKnowledgeSession() : StatefulKnowledgeSession = {

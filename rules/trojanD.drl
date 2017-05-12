@@ -325,17 +325,8 @@ rule "Detect Abnormal 3"
      $item :Item( kmeansFlag == 1 && status == 3 )
    then
      $item.printProblems()
+     $item.saveToSQL()
      System.out.println("  [Rule]  KMeans Judgement Report3: "+$item.obj)
 end
 
-/*
-rule "Save to Data Base"
-   salience 1
-   dialect "mvel"
-   when
-     $item : Item( problems contains "Trojan KMeans Detection Target")
-   then
-     $item.save_to_database()
-     System.out.println("  [Rule]  Save to Data Base: "+$item.obj)
-end
-*/
+

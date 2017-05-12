@@ -58,6 +58,8 @@
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/model/other/ToolParameter.class[0m
 [0m[[0mdebug[0m] [0m	com/model/other/ML$$anonfun$print$1.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/model/other/ML$$anonfun$print$1.class[0m
+[0m[[0mdebug[0m] [0m	com/model/SQLWriter.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/model/SQLWriter.class[0m
 [0m[[0mdebug[0m] [0m	com/model/Dimension.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/model/Dimension.class[0m
 [0m[[0mdebug[0m] [0m	com/TrojanTestFrontend$$anonfun$3$$anonfun$apply$2$$anonfun$4.class[0m
@@ -134,6 +136,8 @@
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com[0m
 [0m[[0mdebug[0m] [0m	com/convert/ExternalElement$$anonfun$buildInterface$1.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/convert/ExternalElement$$anonfun$buildInterface$1.class[0m
+[0m[[0mdebug[0m] [0m	com/model/SQLHelper.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/model/SQLHelper.class[0m
 [0m[[0mdebug[0m] [0m	com/convert/Relation$$anonfun$_dealSection4$1$$anonfun$apply$2.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/convert/Relation$$anonfun$_dealSection4$1$$anonfun$apply$2.class[0m
 [0m[[0mdebug[0m] [0m	com/execute/Helper$$anonfun$loadProblems$1.class[0m
@@ -150,6 +154,8 @@
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/execute/Helper$$anonfun$loadMean$1.class[0m
 [0m[[0mdebug[0m] [0m	com/rpc/Interface$MLParameter$1.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/rpc/Interface$MLParameter$1.class[0m
+[0m[[0mdebug[0m] [0m	com/model/SQLClient.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/model/SQLClient.class[0m
 [0m[[0mdebug[0m] [0m	com/execute/HiveRecord.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/execute/HiveRecord.class[0m
 [0m[[0mdebug[0m] [0m	com/execute/GMM$$anonfun$print$3.class[0m
@@ -170,6 +176,8 @@
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/model/problem/Trojan$$anonfun$insertProblems$1.class[0m
 [0m[[0mdebug[0m] [0m	com/model/other/SingleParameter.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/model/other/SingleParameter.class[0m
+[0m[[0mdebug[0m] [0m	com/model/SQLHelper$.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/model/SQLHelper$.class[0m
 [0m[[0mdebug[0m] [0m	com/rpc/Interface$IRequestOrBuilder.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/rpc/Interface$IRequestOrBuilder.class[0m
 [0m[[0mdebug[0m] [0m	com/rpc/Interface$Vector$1.class[0m
@@ -196,12 +204,12 @@
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/rpc/Interface$CompareParameter$1.class[0m
 [0m[[0mdebug[0m] [0m	com/execute[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/execute[0m
-[0m[[0mdebug[0m] [0m	com/TrojanDTest$$anonfun$5.class[0m
-[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/TrojanDTest$$anonfun$5.class[0m
 [0m[[0mdebug[0m] [0m	com/rpc/Interface$ToolParameter$1.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/rpc/Interface$ToolParameter$1.class[0m
 [0m[[0mdebug[0m] [0m	com/execute/Helper$$anonfun$loadDev$1.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/execute/Helper$$anonfun$loadDev$1.class[0m
+[0m[[0mdebug[0m] [0m	com/model/SQLWriter$.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/model/SQLWriter$.class[0m
 [0m[[0mdebug[0m] [0m	com/model/problem[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/model/problem[0m
 [0m[[0mdebug[0m] [0m	com/convert/ExternalNumber.class[0m
@@ -296,6 +304,8 @@
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/service/TroDItem$$anonfun$SA_KMEANS_JUDGEMENT$1$$anonfun$apply$1.class[0m
 [0m[[0mdebug[0m] [0m	com/TrojanDTest$.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/TrojanDTest$.class[0m
+[0m[[0mdebug[0m] [0m	com/model/SQLClient$.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/model/SQLClient$.class[0m
 [0m[[0mdebug[0m] [0m	com/execute/KMeans$$anonfun$predict$1.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/execute/KMeans$$anonfun$predict$1.class[0m
 [0m[[0mdebug[0m] [0m	com/service/TroDItem$$anonfun$SA_GMM_JUDGEMENT$1.class[0m

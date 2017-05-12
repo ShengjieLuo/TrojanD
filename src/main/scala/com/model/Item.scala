@@ -3,6 +3,12 @@ package com.model
 import com.service.TroDItem
 import scala.collection.JavaConverters._
 import scala.util.matching.Regex
+import org.apache.spark.sql.Row
+import org.apache.spark.sql.SQLContext
+import org.apache.spark.sql.types._
+import java.util.Properties
+import org.apache.spark.SparkContext
+import org.apache.spark.SparkConf
 
 class Dimension(dname:String,dvalue:Double){
   var name:String = dname
@@ -51,7 +57,16 @@ class Item(itemname:String,itemobj:String) {
   var vector:Vector = new Vector()
   var valid:Boolean = false
   var status:Int = 0
-  
+
+  /*var sc:SparkContext = null
+  var sqlContext:SQLContext = null
+  var prop:Properties = null
+  def setSpark(obj1:SparkContext, obj3:Properties){
+    sc = obj1
+    sqlContext = new SQLContext(sc)
+    prop = obj3
+  }*/
+
   //Reason Why we use problems & problemsRule Here
   //Member problems is a data class. Now class Problem only has one attribute Name, but we can add other attributes into this class and make it more graceful and useful
   //Member problemsRule is used for drools. Drools is easy to judge the simple data structure, but hard to judge the complex data structure. Therefore, we use a simple form -- List[String] Here.
@@ -100,6 +115,29 @@ class Item(itemname:String,itemobj:String) {
   def insertProblem(problem:String){
     problems = problems :+ new Problem(problem); 
     problemsRule = problemsRule :+ problem;
+  }
+
+     
+  def saveToSQL(){
+    val schema = SQLHelper.getSchema()
+    var row:Row = Row(
+        SQLHelper.queryId(),
+        obj,
+        up_count.toLong,
+        down_count.toLong,
+        up_size.toLong,
+        down_size.toLong,
+        up_small.toLong,
+        up_count.toDouble/down_count,
+        up_size.toDouble/down_size,
+        syn.toDouble/up_count,
+        psh.toDouble/down_count,
+        session_total.toDouble/session_count.toDouble,
+        dns.toLong,
+	up_small.toDouble/up_count,
+        SQLHelper.getTime()
+        )
+    SQLWriter.send(row)
   }
 
   def setFromDataLine(data:String){
