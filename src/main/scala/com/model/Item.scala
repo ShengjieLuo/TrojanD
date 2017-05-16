@@ -117,6 +117,17 @@ class Item(itemname:String,itemobj:String) {
     problemsRule = problemsRule :+ problem;
   }
 
+  def print(){
+    println("=========Item Debug=====")
+    println("name:"+name.toString)
+    println("obj:"+obj.toString)
+    println("Upstream Size:" + up_size.toString)
+    println("Upstream Count:" + up_count.toString)
+    println("Downstream Size:" + down_size.toString)
+    println("Downstream Count:" + down_count.toString)
+    println("========================")
+
+  }
      
   def saveToSQL(){
     val schema = SQLHelper.getSchema()
@@ -173,7 +184,8 @@ class Item(itemname:String,itemobj:String) {
            {_setSYN(syn.toInt);
             _setUP(up_count,up_size,up_small);
             _setPSH(psh.toInt);_setDOWN(down_count,down_size,down_small);
-            _setDNS(dns.toInt);_setSession(session_count,session_total)}
+            _setDNS(dns.toInt);_setSession(session_count,session_total);
+            println("  [Debug] Load the intact item!");}
       case pattern1(syn,up_count,up_size,up_small) => 
            {_setSYN(syn.toInt);
             _setUP(up_count,up_size,up_small);}
@@ -186,7 +198,8 @@ class Item(itemname:String,itemobj:String) {
            {_setSYN(syn.toInt);_setPSH(psh.toInt);
             _setUP(up_count,up_size,up_small);
             _setDOWN(down_count,down_size,down_small);
-            _setSession(session_count,session_total)}
+            _setSession(session_count,session_total);
+            println("  [Debug] Load the intact item!");}
       case pattern5(syn,up_count,up_size,up_small,psh,down_count,down_size,down_small,dns) => 
            {_setSYN(syn.toInt);_setPSH(psh.toInt);
             _setUP(up_count,up_size,up_small);

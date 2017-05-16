@@ -1,0 +1,13 @@
+name := "Intelligent Trojan Detection"
+version := "1.0"
+scalaVersion := "2.11.8"
+libraryDependencies += "org.apache.spark" %% "spark-core" % "2.1.0"
+libraryDependencies += "org.apache.spark" % "spark-streaming_2.11" % "2.1.0"
+libraryDependencies += "org.apache.spark" % "spark-streaming-kafka-0-8_2.11" % "2.1.0"
+libraryDependencies += "org.apache.spark" %% "spark-hive" % "2.1.0"
+libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.1.0" 
+libraryDependencies += "org.apache.spark" %% "spark-mllib" % "2.1.0"
+libraryDependencies += "com.google.protobuf" % "protobuf-java" % "3.2.0"
+libraryDependencies += "org.zeromq" % "jzmq" % "3.1.0"
+
+resolvers += "jboss-releases" at "https://repository.jboss.org/nexus/content/repositories/releases"

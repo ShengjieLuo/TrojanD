@@ -79,7 +79,8 @@ rule "Filter : Filter the item with both upload&download"
    salience 25
    dialect "mvel"
    when
-     $item : Item( up_count>=0 && down_count>=0 && syn>=0 && psh>=0 && up_size>=0 && down_size>=0 && session_total>=0 && session_count>=0 && dns>0 && up_small>=0 && down_small>=0 && status == 0)
+     //$item : Item( up_count>=0 && down_count>=0 && syn>=0 && psh>=0 && up_size>=0 && down_size>=0 && session_total>=0 && session_count>=0 && dns>0 && up_small>=0 && down_small>=0 && status == 0)
+     $item : Item( up_count > 0 && down_count > 0 && up_size > 0 && down_size > 0 && syn >= 0 && psh >= 0 && session_count >=0 && session_total >= 0 && dns >= 0 && up_small >= 0)
    then
      $item.setValid()
      System.out.println("  [Rule]  Filter : Filter the item with both upload&download "+$item.obj)

@@ -39,10 +39,10 @@ object TrojanTestFrontend {
     println("Run Trojan Test by Distributed Rule Engine")
     val sparkconf = new SparkConf().setAppName("TrojanDetectionTest")
     val sc = new SparkContext(sparkconf)
-    val ssc = new StreamingContext(sc,Seconds(60))
+    val ssc = new StreamingContext(sc,Seconds(10))
 
     //Step1:Receive Data From Kafka
-    val zkQuorum = "spark-master:2182" //Zookeeper服务器地址
+    val zkQuorum = "master:2181" //Zookeeper服务器地址
     val group = "trojanD"  //Kafka Group Name
     val topic = "trojanD" //Kafka Topic Name
     val numThreads = 1
@@ -53,7 +53,7 @@ object TrojanTestFrontend {
     println("  [Debug] Begin Execution!")
     val pairRDD = lines.foreachRDD( dataRDD =>
                      dataRDD.mapPartitions{ partition => {
-			println("  [Debug] Load the knowledge session");
+			//println("  [Debug] Load the knowledge session");
 			var ksession:StatefulKnowledgeSession = GetKnowledgeSession()
 			val time = new Time();
 			ksession.insert(time);
@@ -61,19 +61,19 @@ object TrojanTestFrontend {
 			ksession.insert(ty);
 			
                         val newPartition = partition.map(p => {
-			  println("  [Debug] Begin Dealing the element: "+p);
+			  //println("  [Debug] Begin Dealing the element: "+p);
 			  val item = new TroDItem("IP-hostmachine",p.split(" ")(0));
 			  item.setFromDataLine(p);
+                          item.print();
 			  ksession.insert(item);
                           ksession.fireAllRules();
 			  (p,1)
-			})						
+			})			
     			//println("  [Debug] Finish the data partition!");
 			newPartition
                         }
                      }
-                    .reduceByKey(_+_)
-                    .foreach{p => println("  [Debug] Detection Object: " + p._1.toString + ": Number :"+ p._2.toString)}
+                    .reduceByKey(_+_).top(1)
                   )
     ssc.start
     ssc.awaitTermination
@@ -83,12 +83,12 @@ object TrojanTestFrontend {
     val config:KnowledgeBuilderConfiguration = KnowledgeBuilderFactory.newKnowledgeBuilderConfiguration()
     config.setProperty("drools.dialect.mvel.strict", "false")
     var kbuilder : KnowledgeBuilder  = KnowledgeBuilderFactory.newKnowledgeBuilder(config)
-    kbuilder.add(ResourceFactory.newFileResource("/usr/local/DBNS/mini.drl"), ResourceType.DRL)
+    kbuilder.add(ResourceFactory.newFileResource("/usr/local/TrojanD/rules/trojanD.drl"), ResourceType.DRL)
     println("  [Debug]  Rule Error:"+kbuilder.getErrors().toString())
     var kbase : KnowledgeBase = KnowledgeBaseFactory.newKnowledgeBase()
     kbase.addKnowledgePackages(kbuilder.getKnowledgePackages())
     var ksession : StatefulKnowledgeSession = kbase.newStatefulKnowledgeSession()
-    var logger : KnowledgeRuntimeLogger = KnowledgeRuntimeLoggerFactory.newFileLogger(ksession,"/usr/local/DBNS/drools.log")
+    var logger : KnowledgeRuntimeLogger = KnowledgeRuntimeLoggerFactory.newFileLogger(ksession,"/usr/local/TrojanD/rules/")
     ksession
   }
 }

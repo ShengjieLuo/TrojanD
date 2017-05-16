@@ -27,10 +27,6 @@ import com.model.other.Type
 import com.model.problem.Trojan
 import com.service.TroDItem
 
-import org.apache.spark.streaming._
-import org.apache.spark.streaming.kafka._
-import org.apache.spark.streaming.StreamingContext._
-import org.apache.spark.streaming.kafka.KafkaUtils
 import scala.util.matching.Regex
 import java.util.Properties
 

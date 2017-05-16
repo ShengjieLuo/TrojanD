@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mPackaging /usr/local/TrojanD/target/scala-2.11/simple-project_2.11-1.0.jar ...[0m
+[0m[[0minfo[0m] [0mPackaging /usr/local/TrojanD/target/scala-2.11/intelligent-trojan-detection_2.11-1.0.jar ...[0m
 [0m[[0mdebug[0m] [0mInput file mappings:[0m
 [0m[[0mdebug[0m] [0m	com/rpc/Client.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/rpc/Client.class[0m
@@ -230,8 +230,6 @@
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/internal/InternalTrigger$.class[0m
 [0m[[0mdebug[0m] [0m	com/rpc/Interface$VectorOrBuilder.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/rpc/Interface$VectorOrBuilder.class[0m
-[0m[[0mdebug[0m] [0m	com/TrojanTestFrontend$$anonfun$3$$anonfun$apply$3.class[0m
-[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/TrojanTestFrontend$$anonfun$3$$anonfun$apply$3.class[0m
 [0m[[0mdebug[0m] [0m	com/TrojanTestFrontend$$anonfun$1.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/TrojanTestFrontend$$anonfun$1.class[0m
 [0m[[0mdebug[0m] [0m	ItemTest.class[0m
