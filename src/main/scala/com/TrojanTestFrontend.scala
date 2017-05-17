@@ -27,9 +27,12 @@ import com.model.problem.Trojan
 import com.service.TroDItem
 
 import org.apache.spark.streaming._
-import org.apache.spark.streaming.kafka._
+import org.apache.spark.streaming.kafka010._
 import org.apache.spark.streaming.StreamingContext._
-import org.apache.spark.streaming.kafka.KafkaUtils
+import org.apache.spark.streaming.kafka010.KafkaUtils
+import org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent
+import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
+import org.apache.kafka.common.serialization.StringDeserializer
 import scala.util.matching.Regex
 
 object TrojanTestFrontend {
@@ -42,13 +45,33 @@ object TrojanTestFrontend {
     val ssc = new StreamingContext(sc,Seconds(10))
 
     //Step1:Receive Data From Kafka
+
+    //Used in kafka-0.8
+    /*
     val zkQuorum = "master:2181" //Zookeeper服务器地址
     val group = "trojanD"  //Kafka Group Name
     val topic = "trojanD" //Kafka Topic Name
     val numThreads = 1
     val topicMap = topic.split(",").map((_,numThreads.toInt)).toMap
     val lineMap = KafkaUtils.createStream(ssc,zkQuorum,group,topicMap)
-    val lines = lineMap.map(_._2)
+    val lines = lineMap.map(_._2)*/
+
+    //Used in kafka-0.10
+    val kafkaParams = Map[String, Object](
+      "bootstrap.servers" -> "master:9092",
+      "key.deserializer" -> classOf[StringDeserializer],
+      "value.deserializer" -> classOf[StringDeserializer],
+      "group.id" -> "trojanD",
+      "auto.offset.reset" -> "latest",
+      "enable.auto.commit" -> (false: java.lang.Boolean)
+    )
+    val topics = Array("trojanD")
+    val stream = KafkaUtils.createDirectStream[String, String](
+      ssc,
+      PreferConsistent,
+      Subscribe[String, String](topics, kafkaParams)
+    )
+    val lines = stream.map(_.value)
 
     println("  [Debug] Begin Execution!")
     val pairRDD = lines.foreachRDD( dataRDD =>

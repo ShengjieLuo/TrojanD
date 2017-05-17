@@ -1,7 +1,7 @@
 import java.util.HashMap
 import org.apache.kafka.clients.producer.{ProducerConfig, KafkaProducer, ProducerRecord}
 import org.apache.spark.streaming._
-import org.apache.spark.streaming.kafka._
+import org.apache.spark.streaming.kafka010._
 import org.apache.spark.SparkConf
 import scala.io.Source
 import java.util.concurrent.{Executors, ExecutorService}
