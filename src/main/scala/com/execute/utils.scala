@@ -17,6 +17,7 @@ class ProblemHelper{
 
 object Helper{
 
+  val source:String = sys.env("TROJAND_HOME")+"/MetaData/Statistic.txt"
   val mean = loadMean()
   val dev = loadDev()
   val ten = loadTenPercentage()
@@ -29,7 +30,7 @@ object Helper{
 
   def loadMean():Array[Double]={
     var meanList:Array[Double] = Array()
-    val rawData = Source.fromFile("MetaData/Statistic.txt")
+    val rawData = Source.fromFile(source)
     val str:List[String] = rawData.getLines().toList
     val meanstr:String = str.apply(0)
     meanstr.split(" ").foreach( item => { meanList = meanList :+ item.toDouble })
@@ -38,7 +39,7 @@ object Helper{
 
   def loadDev():Array[Double]={
     var devList:Array[Double] = Array()
-    val rawData = Source.fromFile("MetaData/Statistic.txt")
+    val rawData = Source.fromFile(source)
     val str:List[String] = rawData.getLines().toList
     val devstr:String = str.apply(1)
     devstr.split(" ").foreach( item => { devList = devList :+ item.toDouble })
@@ -47,7 +48,7 @@ object Helper{
 
   def loadTenPercentage():Array[Double] = {
     var tenList:Array[Double] = Array()
-    val rawData = Source.fromFile("MetaData/Statistic.txt")
+    val rawData = Source.fromFile(source)
     val str:List[String] = rawData.getLines().toList
     val tenstr:String = str.apply(2)
     tenstr.split(" ").foreach( item => { tenList = tenList :+ item.toDouble })
@@ -56,7 +57,7 @@ object Helper{
   
   def loadOnePercentage():Array[Double] = {
     var oneList:Array[Double] = Array()
-    val rawData = Source.fromFile("MetaData/Statistic.txt")
+    val rawData = Source.fromFile(source)
     val str:List[String] = rawData.getLines().toList
     val onestr:String = str.apply(3)
     onestr.split(" ").foreach( item => { oneList = oneList :+ item.toDouble })

@@ -11,12 +11,14 @@ import org.apache.spark.mllib.linalg.Vector
 
 class Bisect(sparkContext:SparkContext){
 
+  var modelPath = "file://" + sys.env("TROJAND_HOME")+"/BisectingKMeansModel"
+  var metaPath = sys.env("TROJAND_HOME")+"/MetaData/BisectingKMeansModel.txt"
   var sc:SparkContext = sparkContext
   var helper:ProblemHelper = new ProblemHelper()
-  var model:BisectingKMeansModel = BisectingKMeansModel.load(sc,"file:///usr/local/TrojanD/BisectingKMeansModel")
+  var model:BisectingKMeansModel = BisectingKMeansModel.load(sc,modelPath)
   var meanList:Array[Double] = Helper.getMean()
   var devList:Array[Double] = Helper.getDev()
-  var problemList:Array[Int] = helper.loadProblems("MetaData/BisectingKMeansModel.txt")
+  var problemList:Array[Int] = helper.loadProblems(metaPath)
   
   def print(){
     var meanStr = "  [Bisect] Mean: "

@@ -4,7 +4,7 @@ import scala.io.Source
 
 object Relation{
 
-  val sourceFile = sys.env("DBNS_HOME")+"/src/main/scala/com/convert/Relation.txt"
+  val sourceFile = sys.env("TROJAND_HOME")+"/src/main/scala/com/convert/Relation.txt"
   var relationMap:Map[Tuple2[Int,String],Map[String,List[Int]]] = Map()
   // relationMap Explanation
   // Right Case: S1 => S2 + S3 (Convert To) (1,("External",[2,3]))

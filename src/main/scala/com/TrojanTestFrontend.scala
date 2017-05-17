@@ -82,12 +82,14 @@ object TrojanTestFrontend {
     val config:KnowledgeBuilderConfiguration = KnowledgeBuilderFactory.newKnowledgeBuilderConfiguration()
     config.setProperty("drools.dialect.mvel.strict", "false")
     var kbuilder : KnowledgeBuilder  = KnowledgeBuilderFactory.newKnowledgeBuilder(config)
-    kbuilder.add(ResourceFactory.newFileResource("/usr/local/TrojanD/rules/trojanD.drl"), ResourceType.DRL)
+    val rules:String = sys.env("TROJAND_HOME")+"/rules/trojanD.drl"
+    val logs:String = sys.env("TROJAND_HOME")+"/logs"
+    kbuilder.add(ResourceFactory.newFileResource(rules), ResourceType.DRL)
     println("  [Debug]  Rule Error:"+kbuilder.getErrors().toString())
     var kbase : KnowledgeBase = KnowledgeBaseFactory.newKnowledgeBase()
     kbase.addKnowledgePackages(kbuilder.getKnowledgePackages())
     var ksession : StatefulKnowledgeSession = kbase.newStatefulKnowledgeSession()
-    var logger : KnowledgeRuntimeLogger = KnowledgeRuntimeLoggerFactory.newFileLogger(ksession,"/usr/local/TrojanD/rules/")
+    var logger : KnowledgeRuntimeLogger = KnowledgeRuntimeLoggerFactory.newFileLogger(ksession,logs)
     ksession
   }
 }

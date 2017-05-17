@@ -357,6 +357,7 @@ rule "Save to SQL"
      $item :Item( flag == 1 && status == 4)
    then
      $item.saveToSQL()
+     delete($item)
      System.out.println("  [Rule]  Save to SQL: "+$item.obj)
 end
 

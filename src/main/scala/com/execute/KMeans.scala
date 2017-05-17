@@ -11,12 +11,14 @@ import org.apache.spark.mllib.linalg.Vector
 
 class KMeans(sparkContext:SparkContext){
 
+  var modelPath = "file://" + sys.env("TROJAND_HOME")+"/KMeansModel"
+  var metaPath = sys.env("TROJAND_HOME")+"/MetaData/KMeansModel.txt"
   var sc:SparkContext = sparkContext
   var helper:ProblemHelper = new ProblemHelper()
-  var model:KMeansModel = KMeansModel.load(sc,"file:///usr/local/TrojanD/KMeansModel")
+  var model:KMeansModel = KMeansModel.load(sc,modelPath)
   var meanList:Array[Double] = Helper.getMean()
   var devList:Array[Double] = Helper.getDev()
-  var problemList:Array[Int] = helper.loadProblems("MetaData/KMeansModel.txt")
+  var problemList:Array[Int] = helper.loadProblems(metaPath)
   
   def print(){
     var meanStr = "  [Bisect] Mean: "

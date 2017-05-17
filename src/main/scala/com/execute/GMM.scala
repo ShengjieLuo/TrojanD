@@ -11,12 +11,14 @@ import org.apache.spark.mllib.linalg.Vector
 
 class GMM(sparkContext:SparkContext){
 
+  var modelPath = "file://" + sys.env("TROJAND_HOME")+"/GaussianModel"
+  var metaPath = sys.env("TROJAND_HOME")+"/MetaData/GaussianModel.txt"  
   var sc:SparkContext = sparkContext
   var helper:ProblemHelper = new ProblemHelper()
-  var model:GaussianMixtureModel = GaussianMixtureModel.load(sc,"file:///usr/local/TrojanD/GaussianModel")
+  var model:GaussianMixtureModel = GaussianMixtureModel.load(sc,modelPath)
   var meanList:Array[Double] = Helper.loadMean()
   var devList:Array[Double] = Helper.loadDev()
-  var problemList:Array[Int] = helper.loadProblems("MetaData/GaussianModel.txt")
+  var problemList:Array[Int] = helper.loadProblems(metaPath)
 
   def print(){
     var meanStr = "  [GMM] Mean: "
