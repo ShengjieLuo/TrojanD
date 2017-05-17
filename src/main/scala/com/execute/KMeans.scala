@@ -12,10 +12,10 @@ import org.apache.spark.mllib.linalg.Vector
 class KMeans(sparkContext:SparkContext){
 
   var sc:SparkContext = sparkContext
-  var helper:Helper = new Helper()
+  var helper:ProblemHelper = new ProblemHelper()
   var model:KMeansModel = KMeansModel.load(sc,"file:///usr/local/TrojanD/KMeansModel")
-  var meanList:Array[Double] = helper.loadMean()
-  var devList:Array[Double] = helper.loadDev()
+  var meanList:Array[Double] = Helper.getMean()
+  var devList:Array[Double] = Helper.getDev()
   var problemList:Array[Int] = helper.loadProblems("MetaData/KMeansModel.txt")
   
   def print(){

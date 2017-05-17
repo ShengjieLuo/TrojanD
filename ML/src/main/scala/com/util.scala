@@ -27,6 +27,9 @@ class Statistic(){
   var summerList:List[Summer] = List()
   var meanList:Array[Double] = Array(0,0,0,0,0,0,0)
   var devList:Array[Double] = Array(0,0,0,0,0,0,0)
+  var tenPer:Array[Double] = Array(0,0,0,0,0,0,0)
+  var onePer:Array[Double] = Array(0,0,0,0,0,0,0)
+  var valueList:Array[List[Double]] = Array(List(),List(),List(),List(),List(),List(),List())
   summerListInit()
 
   def summerListInit(){
@@ -39,8 +42,16 @@ class Statistic(){
     summerList = summerList :+ new Summer("Small-Ratio")
   }
 
-  def addValue(index:Int,va:Double){ summerList.apply(index).addValue(va)}
-  def addValue(index:Int,va:Int){ summerList.apply(index).addValue(va)}
+  def addValue(index:Int,va:Double){ 
+    summerList.apply(index).addValue(va);
+    valueList(index) = valueList(index) :+ va;
+  }
+
+  def addValue(index:Int,va:Int){ 
+    summerList.apply(index).addValue(va);
+    valueList(index) = valueList(index) :+ va.toDouble;
+  }
+
   def addDev(index:Int,va:Double){ devList(index) = devList(index) + (va-meanList(index))*(va-meanList(index))}
   def addCount(){counter += 1}
 
@@ -60,13 +71,35 @@ class Statistic(){
     devList.foreach(println)
   }
 
+  def update_ten_percentage(){
+    for (i <- 0 to 6) {
+      val location:Int = counter/10
+      val num = valueList(i).sortWith( _.compareTo(_) > 0)(location)
+      tenPer(i) = num
+    }
+  }
+
+  def update_one_percentage(){
+    for (i <- 0 to 6) {
+      val location:Int = counter/100
+      val num = valueList(i).sortWith( _.compareTo(_) > 0)(location)
+      onePer(i) = num
+    }
+  }
+
   def record(writer:PrintWriter){
-    var meanstr:String = "Mean: "
-    var devstr:String = "Dev: "
+    var meanstr:String = ""
+    var devstr:String = ""
+    var tenstr:String = ""
+    var onestr:String = ""
     meanList.foreach( item => meanstr += item.toString + " ")
     devList.foreach( item => devstr += item.toString + " ")
+    tenPer.foreach( item => tenstr += item.toString + " ")
+    onePer.foreach( item => onestr += item.toString + " ")
     writer.write( meanstr + "\n" )
     writer.write( devstr + "\n" )
+    writer.write( tenstr + "\n" )
+    writer.write( onestr + "\n" )
   }
 }
 

@@ -12,10 +12,10 @@ import org.apache.spark.mllib.linalg.Vector
 class GMM(sparkContext:SparkContext){
 
   var sc:SparkContext = sparkContext
-  var helper:Helper = new Helper()
+  var helper:ProblemHelper = new ProblemHelper()
   var model:GaussianMixtureModel = GaussianMixtureModel.load(sc,"file:///usr/local/TrojanD/GaussianModel")
-  var meanList:Array[Double] = helper.loadMean()
-  var devList:Array[Double] = helper.loadDev()
+  var meanList:Array[Double] = Helper.loadMean()
+  var devList:Array[Double] = Helper.loadDev()
   var problemList:Array[Int] = helper.loadProblems("MetaData/GaussianModel.txt")
 
   def print(){

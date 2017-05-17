@@ -108,6 +108,8 @@
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/execute/HiveRecorder.class[0m
 [0m[[0mdebug[0m] [0m	com/TrojanDTest.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/TrojanDTest.class[0m
+[0m[[0mdebug[0m] [0m	com/execute/ProblemHelper.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/execute/ProblemHelper.class[0m
 [0m[[0mdebug[0m] [0m	com/TrojanDTest$$anonfun$1.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/TrojanDTest$$anonfun$1.class[0m
 [0m[[0mdebug[0m] [0m	com/internal/InternalTrigger$$anonfun$querySourceTable$1.class[0m
@@ -140,8 +142,6 @@
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/model/SQLHelper.class[0m
 [0m[[0mdebug[0m] [0m	com/convert/Relation$$anonfun$_dealSection4$1$$anonfun$apply$2.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/convert/Relation$$anonfun$_dealSection4$1$$anonfun$apply$2.class[0m
-[0m[[0mdebug[0m] [0m	com/execute/Helper$$anonfun$loadProblems$1.class[0m
-[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/execute/Helper$$anonfun$loadProblems$1.class[0m
 [0m[[0mdebug[0m] [0m	com/execute/HiveExecutor.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/execute/HiveExecutor.class[0m
 [0m[[0mdebug[0m] [0m	com/model/Item$$anonfun$printProblems$1.class[0m
@@ -206,10 +206,14 @@
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/TrojanDTest$$anonfun$4$$anonfun$apply$1.class[0m
 [0m[[0mdebug[0m] [0m	com/execute[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/execute[0m
+[0m[[0mdebug[0m] [0m	com/execute/ProblemHelper$$anonfun$loadProblems$1.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/execute/ProblemHelper$$anonfun$loadProblems$1.class[0m
 [0m[[0mdebug[0m] [0m	com/rpc/Interface$ToolParameter$1.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/rpc/Interface$ToolParameter$1.class[0m
 [0m[[0mdebug[0m] [0m	com/execute/Helper$$anonfun$loadDev$1.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/execute/Helper$$anonfun$loadDev$1.class[0m
+[0m[[0mdebug[0m] [0m	com/execute/Helper$$anonfun$loadOnePercentage$1.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/execute/Helper$$anonfun$loadOnePercentage$1.class[0m
 [0m[[0mdebug[0m] [0m	com/model/SQLWriter$.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/model/SQLWriter$.class[0m
 [0m[[0mdebug[0m] [0m	com/model/problem[0m
@@ -252,6 +256,8 @@
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/execute/Bisect$$anonfun$print$3.class[0m
 [0m[[0mdebug[0m] [0m	com/execute/GMM.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/execute/GMM.class[0m
+[0m[[0mdebug[0m] [0m	com/execute/Helper$$anonfun$loadTenPercentage$1.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/execute/Helper$$anonfun$loadTenPercentage$1.class[0m
 [0m[[0mdebug[0m] [0m	com/model/Problem.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/model/Problem.class[0m
 [0m[[0mdebug[0m] [0m	com/execute/GMM$$anonfun$print$2.class[0m
@@ -306,6 +312,8 @@
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/execute/KMeans$$anonfun$predict$1.class[0m
 [0m[[0mdebug[0m] [0m	com/service/TroDItem$$anonfun$SA_GMM_JUDGEMENT$1.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/service/TroDItem$$anonfun$SA_GMM_JUDGEMENT$1.class[0m
+[0m[[0mdebug[0m] [0m	com/execute/Helper$.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/execute/Helper$.class[0m
 [0m[[0mdebug[0m] [0m	com/convert[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/target/scala-2.11/classes/com/convert[0m
 [0m[[0mdebug[0m] [0m	com/TrojanTestFrontend$$anonfun$3$$anonfun$apply$1$$anonfun$4.class[0m

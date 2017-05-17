@@ -78,14 +78,24 @@ object ProduceMLlib{
       var i = 0
       row.foreach(di =>{stat.addValue(i,di);i+=1;})
     }) 
+
     // Stat2 : Calculate the mean average
+    println("Calculate Mean")
     stat.updateMean()
+
     // Sata3 : Calculate the standard dev
+    println("Calculate Dev")
     data.foreach( row => {
       var i = 0
       row.foreach(di =>{stat.addDev(i,di); i += 1;})
     })
     stat.updateDev()
+
+    // Stat4 : Calculate percentage
+    println("Calculate Percentage")
+    stat.update_ten_percentage()
+    stat.update_one_percentage()
+
     stat.print()
   }
 
@@ -107,7 +117,7 @@ object ProduceMLlib{
 
   def main(ars:Array[String]):Unit = {
     val writer = new PrintWriter(new File("../sample/MLlib.txt"))
-    val metadataWriter = new PrintWriter(new File("../sample/KMeansMeta/metadata.txt"))
+    val metadataWriter = new PrintWriter(new File("../metadata.txt"))
     val lines = Source.fromFile("../sample/TrojanD.txt","iso-8859-1").getLines.toList
     var data:List[List[Double]] = lines.map(line => _loadFromString(line)).filter(_.size == 7)
     _stat(data)

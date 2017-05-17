@@ -9,6 +9,7 @@ import org.apache.spark.sql.types._
 import java.util.Properties
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkConf
+import com.execute.Helper
 
 class Item(itemname:String,itemobj:String) {
   
@@ -96,13 +97,63 @@ class Item(itemname:String,itemobj:String) {
   }
 
 
-  def statistical(){
-    
+  def _statistical():List[String] = {
+     val ten:Array[Double] = Helper.getTen()
+     val one:Array[Double] = Helper.getOne()
+     var tenstr:String = ""
+     var onestr:String = ""
 
+     if (session_total.toDouble/session_count.toDouble > one(0)){
+       onestr += "SessionTime "
+     } else if (session_total.toDouble/session_count.toDouble > ten(0)){
+       tenstr += "SessionTime "
+     }
+ 
+     if (dns > one(1)+0.00001){
+       onestr += "DNS "
+     } else if ( dns > ten(1)+0.00001){
+       tenstr += "DNS "
+     }
+
+     if (up_size/down_size > one(2)+0.00001){
+       onestr += "SizeRatio "
+     } else if (up_size/down_size > ten(2)+0.00001){
+       tenstr += "SizeRatio "
+     }
+
+     if (up_count/down_count > one(3)+0.00001){
+       onestr += "CountRatio "
+     } else if (up_count/down_count > ten(3)+0.00001){
+       tenstr += "CountRatio "
+     }
+
+     if ( syn/up_count > one(4)+0.00001){
+       onestr += "SYNRatio "
+     } else if (up_count/down_count > ten(4)+0.00001){
+       tenstr += "SYNRatio "
+     }
+
+     if ( psh/down_count > one(5)+0.00001){
+       onestr += "PSHRatio "
+     } else if (up_count/down_count > ten(5)+0.00001){
+       tenstr += "PSHRatio "
+     }
+
+     if ( up_small/up_count > one(6)+0.00001){
+       onestr += "SmallRatio "
+     } else if (up_count/down_count > ten(6)+0.00001){
+       tenstr += "SmallRatio "
+     }
+
+     return List(onestr,tenstr)
   }
+
      
   def saveToSQL(){
     val schema = SQLHelper.getSchema()
+    val percent = _statistical()
+    val onestr = percent.apply(0)
+    val tenstr = percent.apply(1)
     var row:Row = Row(
         SQLHelper.queryId(),
         obj,
@@ -121,7 +172,9 @@ class Item(itemname:String,itemobj:String) {
         SQLHelper.getTime(),
         kmeansFlag.toInt,
         bisectFlag.toInt,
-        gmmFlag.toInt       
+        gmmFlag.toInt,
+        onestr,
+        tenstr       
         )
     SQLWriter.send(row)
   }

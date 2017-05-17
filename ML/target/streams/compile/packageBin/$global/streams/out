@@ -6,6 +6,8 @@
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com/ProducePredict$$anonfun$_stat$1$$anonfun$apply$1.class[0m
 [0m[[0mdebug[0m] [0m	com/ProduceTrain.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com/ProduceTrain.class[0m
+[0m[[0mdebug[0m] [0m	com/Statistic$$anonfun$record$4.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com/Statistic$$anonfun$record$4.class[0m
 [0m[[0mdebug[0m] [0m	com/ProduceMLlib$$anonfun$_stat$1.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com/ProduceMLlib$$anonfun$_stat$1.class[0m
 [0m[[0mdebug[0m] [0m	com/KmeansMLlibTrain.class[0m
@@ -26,6 +28,8 @@
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKmeansTrain$$anonfun$1.class[0m
 [0m[[0mdebug[0m] [0m	com/KMeansMLlibPredict$.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com/KMeansMLlibPredict$.class[0m
+[0m[[0mdebug[0m] [0m	com/Statistic$$anonfun$update_ten_percentage$1$$anonfun$1.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com/Statistic$$anonfun$update_ten_percentage$1$$anonfun$1.class[0m
 [0m[[0mdebug[0m] [0m	com/ProduceMLlib$$anonfun$main$1.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com/ProduceMLlib$$anonfun$main$1.class[0m
 [0m[[0mdebug[0m] [0m	com/Statistic$$anonfun$print$2.class[0m
@@ -40,6 +44,8 @@
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKmeansTrain$$anonfun$1$$anonfun$apply$1.class[0m
 [0m[[0mdebug[0m] [0m	com/ProduceTrain$$anonfun$1.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com/ProduceTrain$$anonfun$1.class[0m
+[0m[[0mdebug[0m] [0m	com/Statistic$$anonfun$update_one_percentage$1.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com/Statistic$$anonfun$update_one_percentage$1.class[0m
 [0m[[0mdebug[0m] [0m	com/ProducePredict$$anonfun$_stat$1.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com/ProducePredict$$anonfun$_stat$1.class[0m
 [0m[[0mdebug[0m] [0m	com/GaussianPredict$$anonfun$main$2.class[0m
@@ -106,6 +112,8 @@
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com/ProduceTrain$.class[0m
 [0m[[0mdebug[0m] [0m	com/ProduceTrain$$anonfun$_stat$2.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com/ProduceTrain$$anonfun$_stat$2.class[0m
+[0m[[0mdebug[0m] [0m	com/Statistic$$anonfun$update_ten_percentage$1.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com/Statistic$$anonfun$update_ten_percentage$1.class[0m
 [0m[[0mdebug[0m] [0m	com/GaussianTrain$$anonfun$1.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com/GaussianTrain$$anonfun$1.class[0m
 [0m[[0mdebug[0m] [0m	com/BisectingKmeansTrain$$anonfun$main$3.class[0m
@@ -126,6 +134,8 @@
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com/KMeansMLlibPredict$$anonfun$1$$anonfun$apply$2.class[0m
 [0m[[0mdebug[0m] [0m	com/KmeansTrain$$anonfun$main$3.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com/KmeansTrain$$anonfun$main$3.class[0m
+[0m[[0mdebug[0m] [0m	com/Statistic$$anonfun$update_one_percentage$1$$anonfun$2.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com/Statistic$$anonfun$update_one_percentage$1$$anonfun$2.class[0m
 [0m[[0mdebug[0m] [0m	com/BisectingKmeansTrain$$anonfun$2.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKmeansTrain$$anonfun$2.class[0m
 [0m[[0mdebug[0m] [0m	com/BisectingKmeansTrain$$anonfun$2$$anonfun$apply$2.class[0m
@@ -204,4 +214,6 @@
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com/Summer.class[0m
 [0m[[0mdebug[0m] [0m	com/BisectingKMeansPredict$$anonfun$1.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com/BisectingKMeansPredict$$anonfun$1.class[0m
+[0m[[0mdebug[0m] [0m	com/Statistic$$anonfun$record$3.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/local/TrojanD/ML/target/scala-2.11/classes/com/Statistic$$anonfun$record$3.class[0m
 [0m[[0minfo[0m] [0mDone packaging.[0m

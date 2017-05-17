@@ -337,7 +337,7 @@ rule "Save to SQL"
    salience 2
    dialect "mvel"
    when
-     $item :Item( flag == 1 )
+     $item :Item( flag == 1 && status == 3)
    then
      $item.saveToSQL()
      System.out.println("  [Rule]  Save to SQL: "+$item.obj)

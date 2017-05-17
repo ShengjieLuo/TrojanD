@@ -12,10 +12,10 @@ import org.apache.spark.mllib.linalg.Vector
 class Bisect(sparkContext:SparkContext){
 
   var sc:SparkContext = sparkContext
-  var helper:Helper = new Helper()
+  var helper:ProblemHelper = new ProblemHelper()
   var model:BisectingKMeansModel = BisectingKMeansModel.load(sc,"file:///usr/local/TrojanD/BisectingKMeansModel")
-  var meanList:Array[Double] = helper.loadMean()
-  var devList:Array[Double] = helper.loadDev()
+  var meanList:Array[Double] = Helper.getMean()
+  var devList:Array[Double] = Helper.getDev()
   var problemList:Array[Int] = helper.loadProblems("MetaData/BisectingKMeansModel.txt")
   
   def print(){
