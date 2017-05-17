@@ -1,3 +1,4 @@
 derby.log
+rules/*.log
 ./ML/target/resolution-cache/reports/ivy-report.xsl
 ./target/resolution-cache/reports/ivy-report.xsl
