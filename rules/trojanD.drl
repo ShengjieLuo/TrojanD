@@ -80,7 +80,7 @@ rule "Filter : Filter the item with both upload&download"
    dialect "mvel"
    when
      //$item : Item( up_count>=0 && down_count>=0 && syn>=0 && psh>=0 && up_size>=0 && down_size>=0 && session_total>=0 && session_count>=0 && dns>0 && up_small>=0 && down_small>=0 && status == 0)
-     $item : Item( up_count > 0 && down_count > 0 && up_size > 0 && down_size > 0 && syn >= 0 && psh >= 0 && session_count >=0 && session_total >= 0 && dns >= 0 && up_small >= 0)
+     $item : Item( up_count > 0 && down_count > 0 && up_size > 0 && down_size > 0 && syn >= 0 && psh >= 0 && session_count >=0 && session_total >= 0 && dns >= 0 && up_small >= 0 && status == 0)
    then
      $item.setValid()
      System.out.println("  [Rule]  Filter : Filter the item with both upload&download "+$item.obj)
@@ -331,13 +331,30 @@ rule "Detect Abnormal 3"
      System.out.println("  [Rule]  KMeans Judgement Report3: "+$item.obj)
 end
 
-rule "Save to SQL"
+rule "Conclusion Finish"
    lock-on-active true
    agenda-group "Conclusion"
    salience 2
    dialect "mvel"
    when
-     $item :Item( flag == 1 && status == 3)
+     $item :Item( status == 3 )
+   then
+     $item.setStatus(4)
+     update($item)
+     drools.setFocus("Save")
+end
+
+//==========================================================================
+// Save
+//=========================================================================
+
+rule "Save to SQL"
+   lock-on-active true
+   agenda-group "Save"
+   salience 1
+   dialect "mvel"
+   when
+     $item :Item( flag == 1 && status == 4)
    then
      $item.saveToSQL()
      System.out.println("  [Rule]  Save to SQL: "+$item.obj)
