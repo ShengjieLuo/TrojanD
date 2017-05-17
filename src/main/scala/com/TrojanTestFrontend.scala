@@ -57,15 +57,17 @@ object TrojanTestFrontend {
     val lines = lineMap.map(_._2)*/
 
     //Used in kafka-0.10
+    val server:String = sys.env("KAFKA_SERVER")
+    val topic:String = sys.env("KAFKA_TOPIC")
     val kafkaParams = Map[String, Object](
-      "bootstrap.servers" -> "master:9092",
+      "bootstrap.servers" -> server,
       "key.deserializer" -> classOf[StringDeserializer],
       "value.deserializer" -> classOf[StringDeserializer],
       "group.id" -> "trojanD",
       "auto.offset.reset" -> "latest",
       "enable.auto.commit" -> (false: java.lang.Boolean)
     )
-    val topics = Array("trojanD")
+    val topics = Array(topic)
     val stream = KafkaUtils.createDirectStream[String, String](
       ssc,
       PreferConsistent,

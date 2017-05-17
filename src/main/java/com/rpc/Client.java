@@ -25,8 +25,9 @@ public class Client {
     public Client(){
       context = ZMQ.context(1);
       System.out.println("  [RPC] Connect to server spark-master:5556 ");
+      String zmqport = System.getenv("ZMQ_IP_FRONT");
       requester = context.socket(ZMQ.REQ);
-      requester.connect("tcp://master:5556");
+      requester.connect(zmqport);
     }
 
     protected void finalize(){
