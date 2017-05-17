@@ -43,7 +43,7 @@ object SQLWriter{
   def send(data: Row): Unit = { 
     var conn: Connection= null 
     var ps:java.sql.PreparedStatement=null 
-    val sql = "insert into target(id, IP, UP_COUNT, DOWN_COUNT, UP_SIZE, DOWN_SIZE, UP_SMALL, UP_DOWN_COUNT_RATIO, UP_DOWN_SIZE_RATIO, SYN_RATIO, PSH_RATIO, SESSION_TIME, DNS, SMALL_RATIO, TIME) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
+    val sql = "insert into target(id, IP, UP_COUNT, DOWN_COUNT, UP_SIZE, DOWN_SIZE, UP_SMALL, UP_DOWN_COUNT_RATIO, UP_DOWN_SIZE_RATIO, SYN_RATIO, PSH_RATIO, SESSION_TIME, DNS, SMALL_RATIO, TIME,KMEANS,BISECT,GMM) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
     conn=DriverManager.getConnection(url,"root","123456") 
     ps = conn.prepareStatement(sql) 
     ps.setLong(1,data.get(0).asInstanceOf[Long]) 
@@ -61,6 +61,9 @@ object SQLWriter{
     ps.setLong(13, data.get(12).asInstanceOf[Long])
     ps.setDouble(14, data.get(13).asInstanceOf[Double])
     ps.setString(15, data.get(14).asInstanceOf[String])
+    ps.setInt(16,data.get(15).asInstanceOf[Int])
+    ps.setInt(17,data.get(16).asInstanceOf[Int])
+    ps.setInt(18,data.get(17).asInstanceOf[Int])
     ps.executeUpdate() //执行了Sql语句 
   }
 }

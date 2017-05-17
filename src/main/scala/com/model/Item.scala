@@ -10,32 +10,6 @@ import java.util.Properties
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkConf
 
-class Dimension(dname:String,dvalue:Double){
-  var name:String = dname
-  var value:Double = dvalue
-}
-
-class Problem(pname:String){
-  var name:String = pname
-}
-
-class Vector(){
-  var values:List[Double] = List()
-  def addValue(a:Double){values = values :+ a}
-  def getValue():List[Double] = {values}
-
-  def setValue(values:java.util.List[java.lang.Double]) = {
-    for (i <- 0 to values.size()-1 ){ addValue( values.get(i).doubleValue() ) }
-  }
-
-  def getValue(option:String):java.util.List[java.lang.Double] = {
-    var result:java.util.List[java.lang.Double] = null
-    if (option=="java") {result = values.map(new java.lang.Double(_)).toBuffer.asJava}
-    result
-  }
-
-}
-
 class Item(itemname:String,itemobj:String) {
   
   var name:String = itemname
@@ -57,15 +31,7 @@ class Item(itemname:String,itemobj:String) {
   var vector:Vector = new Vector()
   var valid:Boolean = false
   var status:Int = 0
-
-  /*var sc:SparkContext = null
-  var sqlContext:SQLContext = null
-  var prop:Properties = null
-  def setSpark(obj1:SparkContext, obj3:Properties){
-    sc = obj1
-    sqlContext = new SQLContext(sc)
-    prop = obj3
-  }*/
+  var flag:Int = 0
 
   //Reason Why we use problems & problemsRule Here
   //Member problems is a data class. Now class Problem only has one attribute Name, but we can add other attributes into this class and make it more graceful and useful
@@ -106,6 +72,7 @@ class Item(itemname:String,itemobj:String) {
   def setUnvalid(){valid = false}
   def isValid():Boolean = valid
   def setStatus(a:Int){status = a}
+  def setFlag(a:Int){flag = a}
   def clearVector(){vector = new Vector()}
   def addDimension(di:Dimension):Unit = {dimensions = dimensions :+ di}
   def addDimension(str:String,va:Double):Unit = {dimensions = dimensions :+ new Dimension(str,va)}
@@ -126,6 +93,11 @@ class Item(itemname:String,itemobj:String) {
     println("Downstream Size:" + down_size.toString)
     println("Downstream Count:" + down_count.toString)
     println("========================")
+  }
+
+
+  def statistical(){
+    
 
   }
      
@@ -146,7 +118,10 @@ class Item(itemname:String,itemobj:String) {
         session_total.toDouble/session_count.toDouble,
         dns.toLong,
 	up_small.toDouble/up_count,
-        SQLHelper.getTime()
+        SQLHelper.getTime(),
+        kmeansFlag.toInt,
+        bisectFlag.toInt,
+        gmmFlag.toInt       
         )
     SQLWriter.send(row)
   }

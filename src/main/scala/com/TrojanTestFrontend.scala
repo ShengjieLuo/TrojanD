@@ -52,29 +52,28 @@ object TrojanTestFrontend {
 
     println("  [Debug] Begin Execution!")
     val pairRDD = lines.foreachRDD( dataRDD =>
-                     dataRDD.mapPartitions{ partition => {
-			//println("  [Debug] Load the knowledge session");
-			var ksession:StatefulKnowledgeSession = GetKnowledgeSession()
-			val time = new Time();
-			ksession.insert(time);
-			val ty   = new Type();
-			ksession.insert(ty);
-			
-                        val newPartition = partition.map(p => {
-			  //println("  [Debug] Begin Dealing the element: "+p);
-			  val item = new TroDItem("IP-hostmachine",p.split(" ")(0));
-			  item.setFromDataLine(p);
-                          item.print();
-			  ksession.insert(item);
-                          ksession.fireAllRules();
-			  (p,1)
-			})			
-    			//println("  [Debug] Finish the data partition!");
-			newPartition
-                        }
-                     }
-                    .reduceByKey(_+_).top(1)
-                  )
+      dataRDD.mapPartitions{ partition => {
+        val newPartition = partition.map(p => {
+          println("  [Debug] Begin Dealing the element: "+p);
+          val item = new TroDItem("IP-hostmachine",p.split(" ")(0));
+          item.setFromDataLine(p);
+          item
+        })
+        println("  [Debug] Finish the data partition!");
+        newPartition
+        }
+      }
+      .foreachPartition( itemList => {
+        var ksession:StatefulKnowledgeSession = GetKnowledgeSession()
+        val time = new Time()
+        ksession.insert(time)
+        val ty   = new Type()
+        ksession.insert(ty)
+        itemList.foreach(item => ksession.insert(item))
+        ksession.fireAllRules()
+      })
+    )
+
     ssc.start
     ssc.awaitTermination
   }
