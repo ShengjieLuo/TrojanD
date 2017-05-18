@@ -38,13 +38,13 @@ object SQLHelper{
 
 object SQLWriter{
 
-  val url="jdbc:MySQL://127.0.0.1:3306/trojanD"
+  val url=sys.env("SQL_URL")
 
   def send(data: Row): Unit = { 
     var conn: Connection= null 
     var ps:java.sql.PreparedStatement=null 
     val sql = "insert into target(id, IP, UP_COUNT, DOWN_COUNT, UP_SIZE, DOWN_SIZE, UP_SMALL, UP_DOWN_COUNT_RATIO, UP_DOWN_SIZE_RATIO, SYN_RATIO, PSH_RATIO, SESSION_TIME, DNS, SMALL_RATIO, TIME,KMEANS,BISECT,GMM,ONE_PERCENT,TEN_PERCENT) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
-    conn=DriverManager.getConnection(url,"root","123456") 
+    conn=DriverManager.getConnection(url,sys.env("SQL_USER"),sys.env("SQL_PASSWD")) 
     ps = conn.prepareStatement(sql) 
     ps.setLong(1,data.get(0).asInstanceOf[Long]) 
     ps.setString(2, data.get(1).asInstanceOf[String]) 

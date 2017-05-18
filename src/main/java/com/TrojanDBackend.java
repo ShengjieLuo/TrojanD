@@ -21,8 +21,9 @@ public class TrojanDBackend
     Context context = ZMQ.context(1);
 
     //  Socket to talk to server
+    String zmqport = System.getenv("ZMQ_IP_BACK");
     Socket responder = context.socket(ZMQ.REP);
-    responder.connect("tcp://localhost:5557");
+    responder.connect(zmqport);
     Executor executor = new Executor();
 
     while (!Thread.currentThread().isInterrupted()) {

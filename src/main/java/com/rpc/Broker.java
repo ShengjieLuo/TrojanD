@@ -13,8 +13,11 @@ public class Broker{
 
         Socket frontend = context.socket(ZMQ.ROUTER);
         Socket backend  = context.socket(ZMQ.DEALER);
-        frontend.bind("tcp://*:5556");
-        backend.bind("tcp://*:5557");
+        String zmqportf = "tcp://*:" + System.getenv("ZMQ_PORT_FRONT");
+        String zmqportb = "tcp://*:" + System.getenv("ZMQ_PORT_BACK");
+
+        frontend.bind(zmqportf);
+        backend.bind(zmqportb);
 
         System.out.println("launch and connect broker.");
 
